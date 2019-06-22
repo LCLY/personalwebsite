@@ -9,7 +9,7 @@ var options = {
 var typed = new Typed('.element', options);
 
 const AutoWriting = () => {
-	return <div>{{ typed }}</div>;
+	return <div>{typed}</div>;
 };
 
 export default AutoWriting;
