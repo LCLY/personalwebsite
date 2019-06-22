@@ -1,7 +1,15 @@
 import React from 'react';
+import Typed from 'typed.js';
 
-const autoWriting = () => {
-	return <div>test</div>;
+var options = {
+	strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+	typeSpeed: 40,
 };
 
-export default autoWriting;
+var typed = new Typed('.element', options);
+
+const AutoWriting = () => {
+	return <div>{{ typed }}</div>;
+};
+
+export default AutoWriting;
