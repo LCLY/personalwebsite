@@ -15,7 +15,7 @@
 	.wrap {
 		display: flex;
 		flex-direction: column;
-		font-size: 1.2em;
+		font-size: 1em;
 		border: 1px solid black;
 	}
 
@@ -54,7 +54,7 @@
 	.wrap {
 		display: flex;
 		flex-direction: column;
-		font-size: 1.2em;
+		font-size: 1em;
 		border: 1px solid black;
 	}
 
@@ -87,13 +87,13 @@
 	}
 
 	.titleName {
-		font-size: 4em;
+		font-size: 5em;
 		font-family: 'Righteous', cursive;
 	}
 	.wrap {
 		display: flex;
 		flex-direction: column;
-		font-size: 1.2em;
+		font-size: 1.4em;
 		border: 1px solid black;
 	}
 
@@ -126,13 +126,13 @@
 	}
 
 	.titleName {
-		font-size: 4em;
+		font-size: 5em;
 		font-family: 'Righteous', cursive;
 	}
 	.wrap {
 		display: flex;
 		flex-direction: column;
-		font-size: 1.2em;
+		font-size: 1.4em;
 		border: 1px solid black;
 	}
 
@@ -142,6 +142,7 @@
 		border: 1px solid black;
 	}
 	.buttonsDiv {
+		font-size: 0.8em;
 		justify-content: start;
 	}
 
@@ -165,13 +166,13 @@
 	}
 
 	.titleName {
-		font-size: 4em;
+		font-size: 5em;
 		font-family: 'Righteous', cursive;
 	}
 	.wrap {
 		display: flex;
 		flex-direction: column;
-		font-size: 1.2em;
+		font-size: 1.4em;
 		border: 1px solid black;
 	}
 
@@ -190,5 +191,11 @@
 
 	.buttonHover:hover {
 		cursor: pointer;
+		color: lightgrey;
+	}
+
+	.buttonHover:active {
+		cursor: pointer;
+		color: red;
 	}
 }

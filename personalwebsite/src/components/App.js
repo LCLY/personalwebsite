@@ -56,7 +56,7 @@ class App extends React.Component {
 	}
 
 	render() {
-		var playText = 'Mess with it:';
+		var playText = 'Control: ';
 		const play = getCondition(this.state.condition);
 		const { iconName } = PlayController[play];
 		return (
@@ -74,6 +74,7 @@ class App extends React.Component {
 				</div>
 				<div className="buttonsDiv" style={{ border: '1px solid' }}>
 					{/*get iconname at real time */}
+					<br />
 					{playText}
 					<i className={`${iconName} icon buttonHover`} onClick={this.onInputChange} />
 					<i className="redo alternate icon buttonHover" onClick={() => this.typed.reset()} />
