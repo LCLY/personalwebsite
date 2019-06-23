@@ -11,18 +11,16 @@ const PlayController = {
 };
 
 const getCondition = condition => {
-	return condition == true ? 'play' : 'pause';
+	return condition === true ? 'play' : 'pause';
 };
 
 var start = false;
 class App extends React.Component {
-	//play: true, pause: false
-
 	state = { condition: start };
 
 	//switch the bool val
 	onInputChange = event => {
-		if (start == true) {
+		if (start === true) {
 			start = false;
 		} else {
 			start = true;
@@ -41,9 +39,10 @@ class App extends React.Component {
 		// You can pass other options here, such as typing speed, back speed, etc.
 		const options = {
 			strings: strings,
-			typeSpeed: 50,
+			typeSpeed: 100,
 			backSpeed: 50,
 			loop: true,
+			shuffle: false,
 		};
 		// this.el refers to the <span> in the render() method
 		this.typed = new Typed(this.el, options);
@@ -57,11 +56,14 @@ class App extends React.Component {
 	}
 
 	render() {
+		var playText = 'Mess with it:';
 		const play = getCondition(this.state.condition);
 		const { iconName } = PlayController[play];
 		return (
-			<div className="wrap">
-				<h1>Henry</h1>
+			<div className="wrap ui container">
+				<div className="titleDiv">
+					<h1 className="titleName">HENRY</h1>
+				</div>
 				<div className="type-wrap">
 					<span
 						style={{ whiteSpace: 'pre' }}
@@ -70,16 +72,13 @@ class App extends React.Component {
 						}}
 					/>
 				</div>
-				<button onClick={this.onInputChange}>
+				<div className="buttonsDiv" style={{ border: '1px solid' }}>
 					{/*get iconname at real time */}
-					<i className={`${iconName} icon big`} />
-				</button>
-				<button onClick={() => this.typed.reset()}>
-					<i className="reply icon big" />
-				</button>
-				<button onClick={() => this.typed.destroy()}>
-					<i className="trash icon big" />
-				</button>
+					{playText}
+					<i className={`${iconName} icon buttonHover`} onClick={this.onInputChange} />
+					<i className="redo alternate icon buttonHover" onClick={() => this.typed.reset()} />
+					<i className="trash icon buttonHover" onClick={() => this.typed.destroy()} />
+				</div>
 			</div>
 		);
 	}

@@ -1,7 +1,194 @@
-.App {
-	text-align: center;
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+	.App {
+		text-align: center;
+	}
+
+	.logoBackground {
+		background-color: grey;
+	}
+
+	.titleName {
+		font-size: 4em;
+		font-family: 'Righteous', cursive;
+	}
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.2em;
+		border: 1px solid black;
+	}
+
+	.type-wrap {
+		justify-content: start;
+		font-family: 'Righteous', cursive;
+		border: 1px solid black;
+	}
+	.buttonsDiv {
+		justify-content: start;
+	}
+
+	.titleDiv {
+		justify-content: start;
+	}
+
+	.buttonHover:hover {
+		cursor: pointer;
+	}
 }
 
-.logoBackground {
-	background-color: grey;
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+	.App {
+		text-align: center;
+	}
+
+	.logoBackground {
+		background-color: grey;
+	}
+
+	.titleName {
+		font-size: 4em;
+		font-family: 'Righteous', cursive;
+	}
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.2em;
+		border: 1px solid black;
+	}
+
+	.type-wrap {
+		justify-content: start;
+		font-family: 'Righteous', cursive;
+		border: 1px solid black;
+	}
+	.buttonsDiv {
+		justify-content: start;
+	}
+
+	.titleDiv {
+		justify-content: start;
+	}
+
+	.buttonHover:hover {
+		cursor: pointer;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+	.App {
+		text-align: center;
+	}
+
+	.logoBackground {
+		background-color: grey;
+	}
+
+	.titleName {
+		font-size: 4em;
+		font-family: 'Righteous', cursive;
+	}
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.2em;
+		border: 1px solid black;
+	}
+
+	.type-wrap {
+		justify-content: start;
+		font-family: 'Righteous', cursive;
+		border: 1px solid black;
+	}
+	.buttonsDiv {
+		justify-content: start;
+	}
+
+	.titleDiv {
+		justify-content: start;
+	}
+
+	.buttonHover:hover {
+		cursor: pointer;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+	.App {
+		text-align: center;
+	}
+
+	.logoBackground {
+		background-color: grey;
+	}
+
+	.titleName {
+		font-size: 4em;
+		font-family: 'Righteous', cursive;
+	}
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.2em;
+		border: 1px solid black;
+	}
+
+	.type-wrap {
+		justify-content: start;
+		font-family: 'Righteous', cursive;
+		border: 1px solid black;
+	}
+	.buttonsDiv {
+		justify-content: start;
+	}
+
+	.titleDiv {
+		justify-content: start;
+	}
+
+	.buttonHover:hover {
+		cursor: pointer;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+	.App {
+		text-align: center;
+	}
+
+	.logoBackground {
+		background-color: grey;
+	}
+
+	.titleName {
+		font-size: 4em;
+		font-family: 'Righteous', cursive;
+	}
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.2em;
+		border: 1px solid black;
+	}
+
+	.type-wrap {
+		justify-content: start;
+		font-family: 'Righteous', cursive;
+		border: 1px solid black;
+	}
+	.buttonsDiv {
+		justify-content: start;
+	}
+
+	.titleDiv {
+		justify-content: start;
+	}
+
+	.buttonHover:hover {
+		cursor: pointer;
+	}
 }
