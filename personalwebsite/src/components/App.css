@@ -194,7 +194,15 @@
 		color: lightgrey;
 	}
 
-	.buttonHover:active {
+	.buttonHover1:active {
+		cursor: pointer;
+		color: lightgreen;
+	}
+	.buttonHover2:active {
+		cursor: pointer;
+		color: blue;
+	}
+	.buttonHover3:active {
 		cursor: pointer;
 		color: red;
 	}
