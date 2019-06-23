@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import Typed from 'typed.js';
+import MenuBar from './MenuBar';
+
+//Control which iconname
 const PlayController = {
 	play: {
 		iconName: 'play',
@@ -33,10 +36,8 @@ class App extends React.Component {
 
 	//Did rendered
 	componentDidMount() {
-		// If you want to pass more options as props, simply add
-		// your desired props to this destructuring assignment.
 		const { strings } = this.props;
-		// You can pass other options here, such as typing speed, back speed, etc.
+		//other options such as typing speed, back speed, etc.
 		const options = {
 			strings: strings,
 			typeSpeed: 100,
@@ -50,7 +51,7 @@ class App extends React.Component {
 
 	//Did update and rendered
 	componentWillUnmount() {
-		// Make sure to destroy Typed instance on unmounting
+		// To destroy Typed instance on unmounting
 		// to prevent memory leaks
 		this.typed.destroy();
 	}
@@ -60,25 +61,35 @@ class App extends React.Component {
 		const play = getCondition(this.state.condition);
 		const { iconName } = PlayController[play];
 		return (
-			<div className="wrap ui container">
-				<div className="titleDiv">
-					<h1 className="titleName">HENRY</h1>
-				</div>
-				<div className="type-wrap">
-					<span
-						style={{ whiteSpace: 'pre' }}
-						ref={el => {
-							this.el = el;
-						}}
-					/>
-				</div>
-				<div className="buttonsDiv" style={{ border: '1px solid' }}>
-					{/*get iconname at real time */}
-					<br />
-					{playText}
-					<i className={`${iconName} icon buttonHover buttonHover1`} onClick={this.onInputChange} />
-					<i className="redo alternate icon buttonHover buttonHover2" onClick={() => this.typed.reset()} />
-					<i className="trash icon buttonHover buttonHover3" onClick={() => this.typed.destroy()} />
+			<div>
+				<div className="pusher">
+					<div className="wrap ui inverted vertical masthead center aligned segment">
+						<MenuBar />
+						<div className="ui text container">
+							<div className="titleDiv">
+								<h1 className="titleName">HENRY</h1>
+							</div>
+							<div className="type-wrap ui inverted header">
+								<span
+									style={{ whiteSpace: 'pre' }}
+									ref={el => {
+										this.el = el;
+									}}
+								/>
+							</div>
+						</div>
+						<div className="buttonsDiv">
+							{/*get iconname at real time */}
+							<br />
+							{playText}
+							<i className={`${iconName} icon buttonHover buttonHover1`} onClick={this.onInputChange} />
+							<i
+								className="redo alternate icon buttonHover buttonHover2"
+								onClick={() => this.typed.reset()}
+							/>
+							<i className="trash icon buttonHover buttonHover3" onClick={() => this.typed.destroy()} />
+						</div>
+					</div>
 				</div>
 			</div>
 		);
