@@ -1,53 +1,38 @@
+.buttonHover:hover {
+	cursor: pointer;
+}
+.buttonHover:hover {
+	cursor: pointer;
+	color: lightgrey;
+}
+
+.buttonHover1:active {
+	cursor: pointer;
+	color: lightgreen;
+}
+.buttonHover2:active {
+	cursor: pointer;
+	color: skyblue;
+}
+.buttonHover3:active {
+	cursor: pointer;
+	color: red;
+}
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) {
-	.App {
-		text-align: center;
+	.masthead.segment {
+		min-height: 350px;
 	}
 
-	.titleName {
+	.masthead h1.ui.header {
+		margin-top: 0.5em;
+		font-weight: normal;
 		font-size: 5em;
 		font-family: 'Righteous', cursive;
 	}
-	.wrap {
-		display: flex;
-		flex-direction: column;
-		font-size: 1.4em;
-		/* border: 1px solid black; */
-	}
-
-	.type-wrap {
-		justify-content: start;
-		font-family: 'Righteous', cursive;
-		/* border: 1px solid black; */
-	}
-	.buttonsDiv {
-		font-size: 0.8em;
-		justify-content: start;
-	}
-
-	.titleDiv {
-		justify-content: start;
-	}
-
-	.buttonHover:hover {
-		cursor: pointer;
-	}
-	.buttonHover:hover {
-		cursor: pointer;
-		color: lightgrey;
-	}
-
-	.buttonHover1:active {
-		cursor: pointer;
-		color: lightgreen;
-	}
-	.buttonHover2:active {
-		cursor: pointer;
-		color: blue;
-	}
-	.buttonHover3:active {
-		cursor: pointer;
-		color: red;
+	.masthead h2 {
+		margin-top: 0.5em;
+		font-size: 1em;
 	}
 }
 
@@ -82,30 +67,34 @@
 		justify-content: start;
 	}
 
-	.buttonHover:hover {
-		cursor: pointer;
-	}
-	.buttonHover:hover {
-		cursor: pointer;
-		color: lightgrey;
+	.masthead.segment {
+		min-height: 700px;
+		padding: 1em 0em;
 	}
 
-	.buttonHover1:active {
-		cursor: pointer;
-		color: lightgreen;
+	.masthead .ui.menu .ui.button {
+		margin-left: 0.5em;
 	}
-	.buttonHover2:active {
-		cursor: pointer;
-		color: blue;
+
+	.masthead h1.ui.header {
+		margin-top: 1.4em;
+		margin-bottom: 0em;
+		font-weight: normal;
+		font-size: 7em;
+		font-family: 'Righteous', cursive;
 	}
-	.buttonHover3:active {
-		cursor: pointer;
-		color: red;
+	.masthead h2 {
+		font-size: 1.7em;
+		font-weight: normal;
 	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
+	.buttonsDiv {
+		font-size: 1.2em;
+		justify-content: start;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -114,10 +103,6 @@
 		text-align: center;
 	}
 
-	.titleName {
-		font-size: 5em;
-		font-family: 'Righteous', cursive;
-	}
 	.wrap {
 		display: flex;
 		flex-direction: column;
@@ -131,33 +116,12 @@
 		/* border: 1px solid black; */
 	}
 	.buttonsDiv {
-		font-size: 0.8em;
+		font-size: 1.2em;
 		justify-content: start;
 	}
 
 	.titleDiv {
 		justify-content: start;
-	}
-
-	.buttonHover:hover {
-		cursor: pointer;
-	}
-	.buttonHover:hover {
-		cursor: pointer;
-		color: lightgrey;
-	}
-
-	.buttonHover1:active {
-		cursor: pointer;
-		color: lightgreen;
-	}
-	.buttonHover2:active {
-		cursor: pointer;
-		color: blue;
-	}
-	.buttonHover3:active {
-		cursor: pointer;
-		color: red;
 	}
 
 	.masthead.segment {
@@ -168,6 +132,18 @@
 	.masthead .ui.menu .ui.button {
 		margin-left: 0.5em;
 	}
+
+	.masthead h1.ui.header {
+		margin-top: 1.3em;
+		margin-bottom: 0em;
+		font-weight: normal;
+		font-size: 8em;
+		font-family: 'Righteous', cursive;
+	}
+	.masthead h2 {
+		font-size: 1.7em;
+		font-weight: normal;
+	}
 }
 
 /* Large Devices, Wide Screens */
@@ -176,10 +152,6 @@
 		text-align: center;
 	}
 
-	.titleName {
-		font-size: 5em;
-		font-family: 'Righteous', cursive;
-	}
 	.wrap {
 		display: flex;
 		flex-direction: column;
@@ -201,24 +173,24 @@
 		justify-content: start;
 	}
 
-	.buttonHover:hover {
-		cursor: pointer;
-	}
-	.buttonHover:hover {
-		cursor: pointer;
-		color: lightgrey;
+	.masthead.segment {
+		min-height: 700px;
+		padding: 1em 0em;
 	}
 
-	.buttonHover1:active {
-		cursor: pointer;
-		color: lightgreen;
+	.masthead .ui.menu .ui.button {
+		margin-left: 0.5em;
 	}
-	.buttonHover2:active {
-		cursor: pointer;
-		color: blue;
+
+	.masthead h1.ui.header {
+		margin-top: 1.4em;
+		margin-bottom: 0em;
+		font-weight: normal;
+		font-size: 7em;
+		font-family: 'Righteous', cursive;
 	}
-	.buttonHover3:active {
-		cursor: pointer;
-		color: red;
+	.masthead h2 {
+		font-size: 1.7em;
+		font-weight: normal;
 	}
 }

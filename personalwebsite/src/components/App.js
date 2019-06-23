@@ -66,16 +66,16 @@ class App extends React.Component {
 					<div className="wrap ui inverted vertical masthead center aligned segment">
 						<MenuBar />
 						<div className="ui text container">
-							<div className="titleDiv">
-								<h1 className="titleName">HENRY</h1>
-							</div>
-							<div className="type-wrap ui inverted header">
-								<span
-									style={{ whiteSpace: 'pre' }}
-									ref={el => {
-										this.el = el;
-									}}
-								/>
+							<h1 className="ui inverted header">HENRY</h1>
+							<div className="type-wrap">
+								<h2>
+									<span
+										style={{ whiteSpace: 'pre' }}
+										ref={el => {
+											this.el = el;
+										}}
+									/>
+								</h2>
 							</div>
 						</div>
 						<div className="buttonsDiv">
