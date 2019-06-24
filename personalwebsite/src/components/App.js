@@ -19,19 +19,27 @@ const getCondition = condition => {
 
 var start = false;
 class App extends React.Component {
-	state = { condition: start };
+	state = { condition: start, playText: 'Playing: ' };
 
 	//switch the bool val
 	onInputChange = event => {
 		if (start === true) {
+			//playing
+			this.setState({ playText: 'Playing: ' });
 			start = false;
 		} else {
+			this.setState({ playText: 'Paused: ' });
 			start = true;
 		}
 
 		this.typed.toggle();
 		this.setState({ condition: start });
 		console.log(this.state.condition);
+	};
+
+	onClickDestroyed = event => {
+		this.typed.destroy();
+		this.setState({ playText: 'Deleted: ' });
 	};
 
 	//Did rendered
@@ -57,7 +65,6 @@ class App extends React.Component {
 	}
 
 	render() {
-		var playText = 'Control: ';
 		const play = getCondition(this.state.condition);
 		const { iconName } = PlayController[play];
 		return (
@@ -81,13 +88,13 @@ class App extends React.Component {
 						<div className="buttonsDiv">
 							{/*get iconname at real time */}
 							<br />
-							{playText}
+							{this.state.playText}
 							<i className={`${iconName} icon buttonHover buttonHover1`} onClick={this.onInputChange} />
 							<i
 								className="redo alternate icon buttonHover buttonHover2"
 								onClick={() => this.typed.reset()}
 							/>
-							<i className="trash icon buttonHover buttonHover3" onClick={() => this.typed.destroy()} />
+							<i className="trash icon buttonHover buttonHover3" onClick={this.onClickDestroyed} />
 						</div>
 					</div>
 				</div>
