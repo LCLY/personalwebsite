@@ -20,17 +20,25 @@ const getCondition = condition => {
 
 var start = false;
 class App extends React.Component {
-	state = { condition: start, playText: 'Playing: ' };
+	state = { condition: false, playText: 'Playing: ' };
 
 	//switch the bool val
 	onInputChange = event => {
-		if (start === true) {
+		// if (start === true) {
+		// 	//playing
+		// 	this.setState({ playText: 'Playing: ' });
+		// 	start = false;
+		// } else {
+		// 	this.setState({ playText: 'Paused: ' });
+		// 	start = true;
+		// }
+		if (this.state.condition === true) {
 			//playing
 			this.setState({ playText: 'Playing: ' });
-			start = false;
+			this.setState({ condition: false });
 		} else {
 			this.setState({ playText: 'Paused: ' });
-			start = true;
+			this.setState({ condition: true });
 		}
 
 		this.typed.toggle();
