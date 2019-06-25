@@ -4,7 +4,7 @@ const MenuBar = () => {
 	return (
 		<div class="ui container">
 			<div class="ui large secondary inverted pointing menu">
-				<a class="item ">My Work</a>
+				<a class="item">Projects</a>
 
 				<div class="right item">
 					<a
