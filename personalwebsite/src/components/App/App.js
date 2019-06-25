@@ -18,37 +18,36 @@ const getCondition = condition => {
 	return condition === true ? 'play' : 'pause';
 };
 
-var start = false;
 class App extends React.Component {
 	state = { condition: false, playText: 'Playing: ' };
 
 	//switch the bool val
 	onInputChange = event => {
-		// if (start === true) {
-		// 	//playing
-		// 	this.setState({ playText: 'Playing: ' });
-		// 	start = false;
-		// } else {
-		// 	this.setState({ playText: 'Paused: ' });
-		// 	start = true;
-		// }
 		if (this.state.condition === true) {
 			//playing
 			this.setState({ playText: 'Playing: ' });
-			this.setState({ condition: false });
+			this.setState({ condition: !this.state.condition });
 		} else {
 			this.setState({ playText: 'Paused: ' });
-			this.setState({ condition: true });
+			this.setState({ condition: !this.state.condition });
 		}
-
 		this.typed.toggle();
-		this.setState({ condition: start });
-		console.log(this.state.condition);
 	};
 
 	onClickDestroyed = event => {
 		this.typed.destroy();
 		this.setState({ playText: 'Deleted: ' });
+	};
+
+	onClickReset = event => {
+		this.typed.reset();
+		if (this.state.condition) {
+			//paused
+			this.setState({ playText: 'Paused: ' });
+		} else {
+			//playing
+			this.setState({ playText: 'Playing: ' });
+		}
 	};
 
 	//Did rendered
@@ -104,7 +103,7 @@ class App extends React.Component {
 							/>
 							<i
 								className="redo alternate icon buttonHover buttonHover2"
-								onClick={() => this.typed.reset()}
+								onClick={this.onClickReset}
 							/>
 							<i
 								className="trash icon buttonHover buttonHover3"
