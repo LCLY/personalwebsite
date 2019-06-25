@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Typed from 'typed.js';
-import MenuBar from './MenuBar';
+import MenuBar from '../Menu/MenuBar';
+import Content from '../Content/Content';
 
 //Control which iconname
 const PlayController = {
@@ -89,14 +90,21 @@ class App extends React.Component {
 							{/*get iconname at real time */}
 							<br />
 							{this.state.playText}
-							<i className={`${iconName} icon buttonHover buttonHover1`} onClick={this.onInputChange} />
+							<i
+								className={`${iconName} icon buttonHover buttonHover1`}
+								onClick={this.onInputChange}
+							/>
 							<i
 								className="redo alternate icon buttonHover buttonHover2"
 								onClick={() => this.typed.reset()}
 							/>
-							<i className="trash icon buttonHover buttonHover3" onClick={this.onClickDestroyed} />
+							<i
+								className="trash icon buttonHover buttonHover3"
+								onClick={this.onClickDestroyed}
+							/>
 						</div>
 					</div>
+					<Content />
 				</div>
 			</div>
 		);
