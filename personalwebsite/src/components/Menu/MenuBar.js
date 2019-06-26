@@ -8,29 +8,31 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 // offset - scroll additional px (like padding)
 // duration - time of the scroll animation, can be a number or a function
 
-const MenuBar = () => {
+class MenuBar extends React.Component {
 	// scrollToTop = () => {
 	// 	scroll.scrollToTop();
 	// };
 
-	return (
-		<div className="ui container">
-			<div className="ui large secondary inverted pointing menu ">
-				<a className="item">
-					<Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
-						Projects
-					</Link>
-				</a>
-
-				<div className="right item">
-					<a className="ui inverted button" href="./resume.pdf" download="resume.pdf">
-						Resume
+	render() {
+		return (
+			<div className="ui container">
+				<div className="ui large secondary inverted pointing menu ">
+					<a className="item" id="navProject">
+						<Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
+							Projects
+						</Link>
 					</a>
-					<a className="ui inverted button">Contact</a>
+
+					<div className="right item">
+						<a className="ui inverted button" href="./resume.pdf" download="resume.pdf">
+							Resume
+						</a>
+						<a className="ui inverted button">Contact</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	);
-};
+		);
+	}
+}
 
 export default MenuBar;
