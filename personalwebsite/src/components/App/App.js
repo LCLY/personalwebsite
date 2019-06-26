@@ -97,21 +97,12 @@ class App extends React.Component {
 							{/*get iconname at real time */}
 							<br />
 							{this.state.playText}
-							<i
-								className={`${iconName} icon buttonHover buttonHover1`}
-								onClick={this.onInputChange}
-							/>
-							<i
-								className="redo alternate icon buttonHover buttonHover2"
-								onClick={this.onClickReset}
-							/>
-							<i
-								className="trash icon buttonHover buttonHover3"
-								onClick={this.onClickDestroyed}
-							/>
+							<i className={`${iconName} icon buttonHover buttonHover1`} onClick={this.onInputChange} />
+							<i className="redo alternate icon buttonHover buttonHover2" onClick={this.onClickReset} />
+							<i className="trash icon buttonHover buttonHover3" onClick={this.onClickDestroyed} />
 						</div>
 					</div>
-					<Content />
+					<Content id="section1" />
 				</div>
 			</div>
 		);
