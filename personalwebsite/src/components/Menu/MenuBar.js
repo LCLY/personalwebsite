@@ -27,7 +27,9 @@ class MenuBar extends React.Component {
 						<a className="ui inverted button" href="./resume.pdf" download="resume.pdf">
 							Resume
 						</a>
-						<a className="ui inverted button">Contact</a>
+						<a className="ui inverted button" onClick={this.scrollToTop}>
+							Contact
+						</a>
 					</div>
 				</div>
 			</div>

@@ -3,7 +3,6 @@ import './App.css';
 import Typed from 'typed.js';
 import MenuBar from '../Menu/MenuBar';
 import Content from '../Content/Content';
-
 //Control which iconname
 const PlayController = {
 	play: {
