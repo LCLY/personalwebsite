@@ -9,15 +9,15 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 // duration - time of the scroll animation, can be a number or a function
 
 class MenuBar extends React.Component {
-	// scrollToTop = () => {
-	// 	scroll.scrollToTop();
-	// };
+	scrollToBottom = () => {
+		scroll.scrollToBottom();
+	};
 
 	render() {
 		return (
 			<div className="ui container">
 				<div className="ui large secondary inverted pointing menu ">
-					<a className="item" id="navProject">
+					<a className="item" id="navProject" href="https://lcly.github.io/Personal-Website">
 						<Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
 							Projects
 						</Link>
@@ -27,7 +27,7 @@ class MenuBar extends React.Component {
 						<a className="ui inverted button" href="./resume.pdf" download="resume.pdf">
 							Resume
 						</a>
-						<a className="ui inverted button" onClick={this.scrollToTop}>
+						<a className="ui inverted button" onClick={this.scrollToBottom}>
 							Contact
 						</a>
 					</div>
