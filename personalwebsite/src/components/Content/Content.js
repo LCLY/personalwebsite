@@ -1,32 +1,33 @@
 import React from 'react';
 import './Content.css';
+import Card from '../Cards/Cards';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 export default function Content({ id }) {
 	return (
 		<div className="ui vertical stripe segment" id={id}>
+			<button className="ui button" onClick={() => scroll.scrollToTop()}>
+				GO UP
+			</button>
 			<div className="ui middle aligned stackable grid container">
-				<div className="row">
-					<div className="eight wide column">
-						<h3 className="ui header">We Help Companies and Companions</h3>
-						<p>
-							We can give your company superpowers to do things that they never thought possible. Let us
-							delight your customers and empower your needs...through pure data analytics.
-						</p>
-						<h3 className="ui header">We Make Bananas That Can Dance</h3>
-						<p>
-							Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-							bioengineered.
-						</p>
+				<div className="ui three column grid">
+					<div className="column">
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
 					</div>
-					<div className="six wide right floated column">
-						{/* <img src="assets/images/wireframe/white-image.png" className="ui large bordered rounded image"> */}
+					<div className="column">
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
 					</div>
-				</div>
-				<div className="row">
-					<div className="center aligned column">
-						<a className="ui huge button" href="https://lcly.github.io/Personal-Website">
-							Check Them Out
-						</a>
+					<div className="column">
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
+						<Card imgUrl="https://html.com/wp-content/uploads/flamingo.jpg" headerText="TESTING" />
 					</div>
 				</div>
 			</div>

@@ -17,7 +17,7 @@ class MenuBar extends React.Component {
 		return (
 			<div className="ui container">
 				<div className="ui large secondary inverted pointing menu ">
-					<a className="item" id="navProject" href="https://lcly.github.io/Personal-Website">
+					<a className="item" id="navProject">
 						<Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
 							Projects
 						</Link>
