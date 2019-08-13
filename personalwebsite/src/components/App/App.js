@@ -3,6 +3,8 @@ import './App.css';
 import Typed from 'typed.js';
 import MenuBar from '../Menu/MenuBar';
 import Content from '../Content/Content';
+import Particles from 'react-particles-js';
+
 //Control which iconname
 const PlayController = {
 	play: {
@@ -77,8 +79,62 @@ class App extends React.Component {
 		return (
 			<div>
 				<div className="pusher">
-					<div className="wrap ui inverted vertical masthead center aligned segment">
+					
+					<div className="wrap ui inverted vertical masthead center aligned segment">						
+					<Particles params={{
+							"particles": {
+								"number": {
+									"value": 160,
+									"density": {
+										"enable": false
+									}
+								},
+								"size": {
+									"value": 5,
+									"random": true,
+									"anim": {
+										"speed": 4,
+										"size_min": 0.3
+									}
+								},
+								"line_linked": {
+									"enable": false
+								},
+								"move": {
+									"random": true,
+									"speed": 1,
+									"direction": "top",
+									"out_mode": "out"
+								}
+							},
+							"interactivity": {
+								"events": {
+									"onhover": {
+										"enable": true,
+										"mode": "bubble"
+									},
+									"onclick": {
+										"enable": true,
+										"mode": "repulse"
+									}
+								},
+								"modes": {
+									"bubble": {
+										"distance": 250,
+										"duration": 2,
+										"size": 0,
+										"opacity": 0
+									},
+									"repulse": {
+										"distance": 200,
+										"duration": 4
+									}
+								}
+							}
+						}}
+						style={{position:"absolute", left:"0"}}/>
 						<MenuBar />
+					
 						<div className="ui text container">
 							<h1 className="ui inverted header">HENRY</h1>
 							<div className="type-wrap">
@@ -95,11 +151,13 @@ class App extends React.Component {
 						<div className="buttonsDiv">
 							{/*get iconname at real time */}
 							<br />
-							{this.state.playText}
-							<i className={`${iconName} icon buttonHover buttonHover1`} onClick={this.onInputChange} />
-							<i className="redo alternate icon buttonHover buttonHover2" onClick={this.onClickReset} />
-							<i className="trash icon buttonHover buttonHover3" onClick={this.onClickDestroyed} />
-						</div>
+							<div id="play_text_container">
+								<div id="play_text">{this.state.playText}</div> 
+								<i className={`${iconName} icon buttonHover buttonHover1`} onClick={this.onInputChange} />
+								<i className="redo alternate icon buttonHover buttonHover2" onClick={this.onClickReset} />
+								<i className="trash icon buttonHover buttonHover3" onClick={this.onClickDestroyed} />
+							</div>
+						</div>					
 					</div>
 					<Content id="section1" />
 				</div>
