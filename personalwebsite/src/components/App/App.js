@@ -78,13 +78,12 @@ class App extends React.Component {
 		const { iconName } = PlayController[play];
 		return (
 			<div>
-				<div className="pusher">
-					
+				<div className="pusher">					
 					<div className="wrap ui inverted vertical masthead center aligned segment">						
 					<Particles params={{
 							"particles": {
 								"number": {
-									"value": 160,
+									"value": 200,
 									"density": {
 										"enable": false
 									}
@@ -93,8 +92,8 @@ class App extends React.Component {
 									"value": 5,
 									"random": true,
 									"anim": {
-										"speed": 4,
-										"size_min": 0.3
+										"speed": 5,
+										"size_min": 0.2
 									}
 								},
 								"line_linked": {
@@ -120,10 +119,10 @@ class App extends React.Component {
 								},
 								"modes": {
 									"bubble": {
-										"distance": 250,
-										"duration": 2,
-										"size": 0,
-										"opacity": 0
+										"distance": 300,
+										"duration": 1,
+										"size": 5,
+										"opacity": 0.8
 									},
 									"repulse": {
 										"distance": 200,
@@ -132,30 +131,32 @@ class App extends React.Component {
 								}
 							}
 						}}
-						style={{position:"absolute", left:"0"}}/>
+						style={{position:"absolute", zIndex:"0",left:"0"}}/>
 						<MenuBar />
-					
-						<div className="ui text container">
-							<h1 className="ui inverted header">HENRY</h1>
-							<div className="type-wrap">
-								<h2>
-									<span
-										style={{ whiteSpace: 'pre' }}
-										ref={el => {
-											this.el = el;
-										}}
-									/>
-								</h2>
+						
+						<div className="title_wrap">
+							<div className="ui text container">
+								<h1 className="ui inverted header">HENRY</h1>
+								<div className="type-wrap">
+									<h2>
+										<span
+											style={{ whiteSpace: 'pre' }}
+												ref={el => {
+												this.el = el;
+											}}
+										/>
+									</h2>
+								</div>
 							</div>
-						</div>
-						<div className="buttonsDiv">
-							{/*get iconname at real time */}
-							<br />
-							<div id="play_text_container">
-								<div id="play_text">{this.state.playText}</div> 
-								<i className={`${iconName} icon buttonHover buttonHover1`} onClick={this.onInputChange} />
-								<i className="redo alternate icon buttonHover buttonHover2" onClick={this.onClickReset} />
-								<i className="trash icon buttonHover buttonHover3" onClick={this.onClickDestroyed} />
+							<div className="buttonsDiv">					
+								{/*get iconname at real time */}
+								<br />
+								<div id="play_text_container">
+									<div id="play_text">{this.state.playText}</div> 
+									<i className={`${iconName} icon buttonHover buttonHover1`} onClick={this.onInputChange} />
+									<i className="redo alternate icon buttonHover buttonHover2" onClick={this.onClickReset} />
+									<i className="trash icon buttonHover buttonHover3" onClick={this.onClickDestroyed} />
+								</div>
 							</div>
 						</div>					
 					</div>
