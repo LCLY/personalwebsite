@@ -17,3 +17,7 @@
 .ui.vertical.stripe .horizontal.divider {
     margin: 3em 0em;
 }
+
+.ui.container {
+    margin-top: 1rem;
+}
