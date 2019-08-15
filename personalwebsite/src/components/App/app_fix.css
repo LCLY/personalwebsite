@@ -2,6 +2,7 @@
     height: 100vh;
 }
 
+/* to center the title*/
 .title_wrap {
     position: absolute;
     width: 100%;
@@ -24,4 +25,36 @@
     display: inline-block;
     pointer-events: none;
     padding-right: 0.5rem;
+}
+
+/* Button colors */
+.buttonHover:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.buttonHover:hover {
+    cursor: pointer;
+    color: lightgrey;
+}
+
+.buttonHover1:active {
+    cursor: pointer;
+    color: lightgreen;
+}
+.buttonHover2:active {
+    cursor: pointer;
+    color: skyblue;
+}
+.buttonHover3:active {
+    cursor: pointer;
+    color: red;
+}
+
+#navProject:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.my__name {
+    font-size: 5em;
 }
