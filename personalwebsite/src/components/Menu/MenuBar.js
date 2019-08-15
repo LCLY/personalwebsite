@@ -16,7 +16,7 @@ class MenuBar extends React.Component {
     render() {
         return (
             <div className="ui container menu__bar">
-                <div className="ui large secondary inverted pointing menu ">
+                <div className="ui large secondary inverted pointing menu">
                     <a className="item" id="navProject">
                         <Link
                             activeClass="active"

@@ -135,10 +135,12 @@ class App extends React.Component {
 						style={{position:"absolute", zIndex:"0",left:"0"}}/>
 						<MenuBar />
 					
-						<div className="title_wrap">
-							<div className="ui text container">
-								<h1 className="ui inverted header title__name">HENRY</h1>
-								<div className="type-wrap">
+						<div className="title title__wrap">
+							<div className="ui text container">								
+									<h1 id="title__name" className="ui inverted header">HENRY</h1>							
+								
+							</div>
+							<div className="type-wrap">
 									<h2>
 										<span
 											style={{ whiteSpace: 'pre' }}
@@ -148,7 +150,6 @@ class App extends React.Component {
 										/>
 									</h2>
 								</div>
-							</div>
 							<div className="buttonsDiv">					
 								{/*get iconname at real time */}
 								<br />

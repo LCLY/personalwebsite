@@ -3,7 +3,7 @@
 }
 
 /* to center the title*/
-.title_wrap {
+.title__wrap {
     position: absolute;
     width: 100%;
     margin: auto;
@@ -55,6 +55,15 @@
     transform: scale(1.2);
 }
 
-.my__name {
-    font-size: 5em;
+#title__name {
+    font-size: 13rem;
+    font-family: "Righteous", cursive;
+    margin: auto;
+}
+
+/* remove margin from the title*/
+.ui.text.container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
