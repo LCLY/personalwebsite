@@ -142,15 +142,15 @@ class App extends React.Component {
 							</div>
 							<div className="type-wrap">
 									<h2>
-										<span
+										<span id="title__type"
 											style={{ whiteSpace: 'pre' }}
 												ref={el => {
 												this.el = el;
 											}}
 										/>
 									</h2>
-								</div>
-							<div className="buttonsDiv">					
+							</div>
+							<div className="buttonsDiv" id="title__buttons">					
 								{/*get iconname at real time */}
 								<br />
 								<div id="play_text_container">
