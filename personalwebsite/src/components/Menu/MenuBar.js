@@ -15,9 +15,9 @@ class MenuBar extends React.Component {
 
     render() {
         return (
-            <div className="ui container menu__bar">
-                <div className="ui large secondary inverted pointing menu">
-                    <a className="item" id="navProject">
+            <div className="ui menu__bar">
+                <div className="ui large secondary inverted pointing menu menu__flex">
+                    <a className="item menu__flex--start" id="navProject">
                         <Link
                             activeClass="active"
                             to="section1"
@@ -30,7 +30,7 @@ class MenuBar extends React.Component {
                         </Link>
                     </a>
 
-                    <div className="right item">
+                    <div className="right item menu__flex--end">
                         <a
                             className="ui inverted button"
                             href="./resume.pdf"

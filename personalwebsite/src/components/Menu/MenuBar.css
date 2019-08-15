@@ -1,4 +1,4 @@
-.menu__bar {
+.menu--bar {
     display: block;
     position: absolute;
     left: 0;
@@ -7,4 +7,20 @@
     bottom: 0;
     height: 0;
     margin: auto;
+}
+
+.menu__flex {
+    display: flex;
+}
+
+.menu__flex--start {
+    justify-content: flex-start;
+    left: 10%;
+    margin-right: auto;
+}
+
+.menu__flex--end {
+    justify-content: flex-end;
+    margin-left: auto;
+    right: 10%;
 }
