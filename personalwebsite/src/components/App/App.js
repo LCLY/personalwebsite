@@ -80,7 +80,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<div className="pusher">					
-					<div className="wrap ui inverted vertical masthead center aligned segment top_page">						
+					<div className="wrap ui inverted vertical masthead center aligned segment top_page">					
 					<Particles params={{
 							"particles": {
 								"number": {
@@ -134,10 +134,10 @@ class App extends React.Component {
 						}}
 						style={{position:"absolute", zIndex:"0",left:"0"}}/>
 						<MenuBar />
-						
+					
 						<div className="title_wrap">
 							<div className="ui text container">
-								<h1 className="ui inverted header my__name">HENRY</h1>
+								<h1 className="ui inverted header title__name">HENRY</h1>
 								<div className="type-wrap">
 									<h2>
 										<span
@@ -158,8 +158,9 @@ class App extends React.Component {
 									<i className="redo alternate icon buttonHover buttonHover2" onClick={this.onClickReset} />
 									<i className="trash icon buttonHover buttonHover3" onClick={this.onClickDestroyed} />
 								</div>
-							</div>
-						</div>					
+							</div>							
+						</div>	
+									
 					</div>
 					<Content id="section1" />
 				</div>
