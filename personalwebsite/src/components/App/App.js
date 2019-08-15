@@ -137,7 +137,7 @@ class App extends React.Component {
 						
 						<div className="title_wrap">
 							<div className="ui text container">
-								<h1 className="ui inverted header">HENRY</h1>
+								<h1 className="ui inverted header my__name">HENRY</h1>
 								<div className="type-wrap">
 									<h2>
 										<span
