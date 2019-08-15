@@ -1,6 +1,6 @@
 import React from 'react';
 // import './App.css';
-import './app_fix.css'
+import './App.css'
 import Typed from 'typed.js';
 import MenuBar from '../Menu/MenuBar';
 import Content from '../Content/Content';

@@ -1,3 +1,32 @@
+.top_page {
+    height: 100vh;
+}
+
+/* to center the title*/
+.title__wrap {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    height: 30%;
+    top: -15%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#play_text_container {
+    display: inline-block;
+    width: 100%;
+    z-index: 2;
+}
+
+#play_text {
+    display: inline-block;
+    pointer-events: none;
+    padding-right: 0.5rem;
+}
+
+/* Button colors */
 .buttonHover:hover {
     cursor: pointer;
     transform: scale(1.1);
@@ -25,286 +54,64 @@
     transform: scale(1.2);
 }
 
-#play_text_container {
-    display: inline-block;
-    width: 100%;
-    z-index: 2;
+/* remove margin from the title*/
+.ui.text.container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
-#play_text {
-    display: inline-block;
-    pointer-events: none;
-    padding-right: 0.5rem;
-}
-
-.title_wrap {
-    margin-top: 35%;
-    margin-bottom: auto;
-    z-index: 1;
+@media only screen and (min-width: 0px) {
+    #title__name {
+        font-size: 20vw;
+        font-family: "Righteous", cursive;
+        margin: auto;
+    }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) {
-    .masthead.segment {
-        min-height: 100vh;
-    }
-
-    .masthead h1.ui.header {
-        margin-top: 40%;
-        font-weight: normal;
-        font-size: 5em;
+    #title__name {
+        font-size: 6rem;
         font-family: "Righteous", cursive;
-    }
-    .masthead h2 {
-        margin-top: 0.5em;
-        font-size: 1em;
-    }
-    .title_wrap {
-        margin-top: auto;
-        margin-bottom: auto;
-        z-index: 1;
-    }
-}
-
-/* iphone X*/
-@media only screen and (min-width: 375px) {
-    .masthead.segment {
-        min-height: 100vh;
+        margin: auto;
     }
 
-    .masthead h1.ui.header {
-        margin-top: 50%;
-        font-weight: normal;
-        font-size: 5em;
-        font-family: "Righteous", cursive;
+    #title__type {
+        font-size: 1.3rem;
     }
-    .masthead h2 {
-        margin-top: 0.5em;
-        font-size: 1em;
-    }
-    .title_wrap {
-        margin-top: auto;
-        margin-bottom: auto;
-        z-index: 1;
-    }
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
-    .App {
-        text-align: center;
-    }
-
-    .titleName {
-        font-size: 5em;
-        font-family: "Righteous", cursive;
-    }
-    .wrap {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.4em;
-        /* border: 1px solid black; */
-    }
-
-    .type-wrap {
-        justify-content: start;
-        font-family: "Righteous", cursive;
-        /* border: 1px solid black; */
-    }
-    .buttonsDiv {
-        font-size: 0.8em;
-        justify-content: start;
-        z-index: 3;
-    }
-
-    .titleDiv {
-        justify-content: start;
-    }
-
-    .masthead.segment {
-        min-height: 100vh;
-    }
-
-    .masthead .ui.menu .ui.button {
-        margin-left: 0.5em;
-    }
-
-    .masthead h1.ui.header {
-        margin-top: 0rem;
-        margin-bottom: 0em;
-        font-weight: normal;
-        font-size: 7em;
-        font-family: "Righteous", cursive;
-    }
-    .masthead h2 {
-        font-size: 1.7em;
-        font-weight: normal;
-    }
-
-    .title_wrap {
-        margin-top: 35%;
-        margin-bottom: auto;
-        z-index: 1;
+    #title__buttons {
+        font-size: 1rem;
     }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
-    .App {
-        text-align: center;
-    }
-
-    .wrap {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.4em;
-        /* border: 1px solid black; */
-    }
-
-    .type-wrap {
-        justify-content: start;
+    #title__name {
+        font-size: 13rem;
         font-family: "Righteous", cursive;
-        /* border: 1px solid black; */
+        margin: auto;
     }
-    .buttonsDiv {
-        font-size: 1.3em;
-        justify-content: start;
-        z-index: 3;
+    #title__type {
+        font-size: 2.5rem;
     }
-
-    .titleDiv {
-        justify-content: start;
-    }
-
-    .masthead.segment {
-        min-height: 100vh;
-    }
-
-    .masthead .ui.menu .ui.button {
-        margin-left: 0.5em;
-    }
-
-    .masthead h1.ui.header {
-        margin-top: 0;
-        margin-bottom: 0;
-        font-weight: normal;
-        font-size: 8em;
-        font-family: "Righteous", cursive;
-    }
-    .masthead h2 {
-        font-size: 1.7em;
-        font-weight: normal;
-    }
-
-    .title_wrap {
-        margin-top: 35%;
-        margin-bottom: auto;
-        z-index: 1;
-    }
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
-    .App {
-        text-align: center;
-    }
-
-    .wrap {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.4em;
-        /* border: 1px solid black; */
-    }
-
-    .type-wrap {
-        justify-content: start;
-        font-family: "Righteous", cursive;
-        /* border: 1px solid black; */
-    }
-    .buttonsDiv {
-        font-size: 1.3em;
-        justify-content: start;
-        z-index: 3;
-    }
-
-    .titleDiv {
-        justify-content: start;
-    }
-
-    .masthead.segment {
-        min-height: 100vh;
-    }
-
-    .masthead .ui.menu .ui.button {
-        margin-left: 0.5em;
-    }
-
-    .masthead h1.ui.header {
-        margin-top: 0rem;
-        font-weight: normal;
-        font-size: 8em;
-        font-family: "Righteous", cursive;
-    }
-    .masthead h2 {
-        font-size: 1.7em;
-        font-weight: normal;
-    }
-    .title_wrap {
-        margin-top: 40%;
-        margin-bottom: auto;
-        z-index: 1;
+    #title__buttons {
+        font-size: 1.5rem;
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
-    .App {
-        text-align: center;
-    }
-
-    .wrap {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.4em;
-        /* border: 1px solid black; */
-    }
-
-    .type-wrap {
-        justify-content: start;
+    #title__name {
+        font-size: 15rem;
         font-family: "Righteous", cursive;
-        /* border: 1px solid black; */
-    }
-    .buttonsDiv {
-        font-size: 1.3em;
-        justify-content: start;
-        z-index: 3;
+        margin: auto;
     }
 
-    .titleDiv {
-        justify-content: start;
+    #title__type {
+        font-size: 2rem;
     }
-
-    .masthead.segment {
-        min-height: 100vh;
-    }
-
-    .masthead .ui.menu .ui.button {
-        margin-left: 0.5em;
-    }
-
-    .masthead h1.ui.header {
-        margin-top: -15%;
-        font-weight: normal;
-        font-size: 8em;
-        font-family: "Righteous", cursive;
-    }
-    .masthead h2 {
-        font-size: 1.7em;
-        font-weight: normal;
-    }
-    .title_wrap {
-        margin-top: 2%;
-        margin-bottom: 20%;
-        z-index: 1;
+    #title__buttons {
+        font-size: 1rem;
     }
 }
