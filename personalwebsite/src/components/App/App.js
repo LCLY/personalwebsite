@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
+import './app_fix.css'
 import Typed from 'typed.js';
 import MenuBar from '../Menu/MenuBar';
 import Content from '../Content/Content';
@@ -79,7 +80,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<div className="pusher">					
-					<div className="wrap ui inverted vertical masthead center aligned segment">						
+					<div className="wrap ui inverted vertical masthead center aligned segment top_page">						
 					<Particles params={{
 							"particles": {
 								"number": {

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
-
+import React from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
+import "./MenuBar.css";
 // activeClass - class applied when element is reached
 // to - target to scroll to
 // spy - make Link selected when scroll is at its targets position
@@ -9,32 +9,46 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 // duration - time of the scroll animation, can be a number or a function
 
 class MenuBar extends React.Component {
-	scrollToBottom = () => {
-		scroll.scrollToBottom();
-	};
+    scrollToBottom = () => {
+        scroll.scrollToBottom();
+    };
 
-	render() {
-		return (
-			<div className="ui container">
-				<div className="ui large secondary inverted pointing menu ">
-					<a className="item" id="navProject">
-						<Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
-							Projects
-						</Link>
-					</a>
+    render() {
+        return (
+            <div className="ui container menu_bar">
+                <div className="ui large secondary inverted pointing menu ">
+                    <a className="item" id="navProject">
+                        <Link
+                            activeClass="active"
+                            to="section1"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            Projects
+                        </Link>
+                    </a>
 
-					<div className="right item">
-						<a className="ui inverted button" href="./resume.pdf" download="resume.pdf">
-							Resume
-						</a>
-						<a className="ui inverted button" onClick={this.scrollToBottom}>
-							Contact
-						</a>
-					</div>
-				</div>
-			</div>
-		);
-	}
+                    <div className="right item">
+                        <a
+                            className="ui inverted button"
+                            href="./resume.pdf"
+                            download="resume.pdf"
+                        >
+                            Resume
+                        </a>
+                        <a
+                            className="ui inverted button"
+                            onClick={this.scrollToBottom}
+                        >
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default MenuBar;
