@@ -15,7 +15,7 @@ class MenuBar extends React.Component {
 
     render() {
         return (
-            <div className="ui container menu_bar">
+            <div className="ui container menuBar">
                 <div className="ui large secondary inverted pointing menu ">
                     <a className="item" id="navProject">
                         <Link
@@ -38,6 +38,7 @@ class MenuBar extends React.Component {
                         >
                             Resume
                         </a>
+                        &nbsp;
                         <a
                             className="ui inverted button"
                             onClick={this.scrollToBottom}
