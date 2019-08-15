@@ -1,0 +1,27 @@
+.top_page {
+    height: 100vh;
+}
+
+.title_wrap {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    height: 30%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* margin: auto; */
+}
+
+#play_text_container {
+    display: inline-block;
+    width: 100%;
+    z-index: 2;
+}
+
+#play_text {
+    display: inline-block;
+    pointer-events: none;
+    padding-right: 0.5rem;
+}
