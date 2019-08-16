@@ -1,5 +1,4 @@
 import React from "react";
-import "./Content.css";
 import Card from "../Cards/Cards";
 import fliegen from "../../images/fliegen.PNG";
 import { Link, animateScroll as scroll } from "react-scroll";
