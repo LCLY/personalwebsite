@@ -1,8 +1,8 @@
 import React from 'react';
-// import './App.css';
 import "../../css/style.min.css";
 import Typed from 'typed.js';
 import MenuBar from '../Menu/MenuBar';
+import HiddenMenuBar from '../Menu/HiddenMenuBar';
 import Content from '../Content/Content';
 import Particles from 'react-particles-js';
 
@@ -133,7 +133,7 @@ class App extends React.Component {
 							}
 						}}
 						style={{position:"absolute", zIndex:"0",left:"0"}}/>
-					
+						<HiddenMenuBar/>
 						<MenuBar />	
 						<div className="title title__wrap">
 							<div className="ui text container">								
