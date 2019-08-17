@@ -29,6 +29,15 @@
     .menu__bar {
         display: none;
     }
+
+    .hidden--bar {
+        font-size: 100px;
+
+        &:hover {
+            cursor: pointer;
+            transform: translatey(-0.5rem);
+        }
+    }
 }
 
 /* Small Devices, Tablets */
@@ -46,6 +55,9 @@
     }
     .menu__bar {
         display: block;
+    }
+    .hidden--bar {
+        display: none;
     }
 }
 
@@ -65,5 +77,8 @@
     }
     .menu__bar {
         display: block;
+    }
+    .hidden--bar {
+        display: none;
     }
 }
