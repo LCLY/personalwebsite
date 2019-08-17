@@ -22,10 +22,12 @@ class HiddenMenuBar extends React.Component {
             //when the user scroll until it passes the next page, change color to black
             console.log(window.pageYOffset);
             console.log("the window height:", window.innerHeight);
-            if (window.pageYOffset === window.innerHeight) {
+            if (window.pageYOffset < window.innerHeight) {
+                this.setState({ iconColor: "white" }); //change the icon color to white if still in first page
+            } else if (window.pageYOffset >= window.innerHeight) {
                 this.setState({ iconColor: "black" }); //change the icon color to black
             }
-        };
+        }.bind(this);
     }
 
     componentWillUnmount() {
@@ -34,14 +36,14 @@ class HiddenMenuBar extends React.Component {
 
     render() {
         return (
-            <div style={{ position: "fixed" }} className="">
+            <div style={{ position: "fixed", zIndex: 4 }} className="">
                 SUP
                 <i
                     style={{
                         position: "fixed",
                         color: `${this.state.iconColor}`,
                     }}
-                    class="fas fa-ellipsis-v"
+                    className="fas fa-bars"
                 />
             </div>
         );
