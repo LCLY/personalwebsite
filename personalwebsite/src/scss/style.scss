@@ -2,3 +2,68 @@
 @import "card";
 @import "content";
 @import "menubar";
+
+@media only screen and (min-width: 0px) {
+    #title__name {
+        font-size: 20vw;
+        font-family: "Righteous", cursive;
+        margin: auto;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+    #title__name {
+        font-size: 6rem;
+        font-family: "Righteous", cursive;
+        margin: auto;
+    }
+
+    #title__type {
+        font-size: 1.3rem;
+    }
+    #title__buttons {
+        font-size: 1rem;
+    }
+
+    .menu__bar {
+        display: none;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+    #title__name {
+        font-size: 13rem;
+        font-family: "Righteous", cursive;
+        margin: auto;
+    }
+    #title__type {
+        font-size: 2.5rem;
+    }
+    #title__buttons {
+        font-size: 1.5rem;
+    }
+    .menu__bar {
+        display: block;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+    #title__name {
+        font-size: 15rem;
+        font-family: "Righteous", cursive;
+        margin: auto;
+    }
+
+    #title__type {
+        font-size: 2rem;
+    }
+    #title__buttons {
+        font-size: 1rem;
+    }
+    .menu__bar {
+        display: block;
+    }
+}

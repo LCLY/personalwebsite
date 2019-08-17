@@ -79,8 +79,8 @@ class App extends React.Component {
 		const { iconName } = PlayController[play];
 		return (
 			<div>
-				<div className="pusher">					
-					<div className="wrap ui inverted vertical masthead center aligned segment top_page">					
+				<div className="pusher">								
+					<div className="wrap ui inverted vertical masthead center aligned segment top_page">						
 					<Particles params={{
 							"particles": {
 								"number": {
@@ -133,8 +133,8 @@ class App extends React.Component {
 							}
 						}}
 						style={{position:"absolute", zIndex:"0",left:"0"}}/>
-						<MenuBar />
 					
+						<MenuBar />	
 						<div className="title title__wrap">
 							<div className="ui text container">								
 									<h1 id="title__name" className="ui inverted header">HENRY</h1>							
