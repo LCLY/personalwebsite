@@ -30,12 +30,14 @@
         display: none;
     }
 
-    .hidden--bar {
-        font-size: 100px;
+    .hidden {
+        right: 1.5rem;
+    }
 
+    .hidden--bar {
+        font-size: 2rem;
         &:hover {
             cursor: pointer;
-            transform: translatey(-0.5rem);
         }
     }
 }
@@ -56,7 +58,7 @@
     .menu__bar {
         display: block;
     }
-    .hidden--bar {
+    .hidden {
         display: none;
     }
 }
@@ -78,7 +80,7 @@
     .menu__bar {
         display: block;
     }
-    .hidden--bar {
+    .hidden {
         display: none;
     }
 }

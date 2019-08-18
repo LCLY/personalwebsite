@@ -10,7 +10,12 @@ import { Link, animateScroll as scroll } from "react-scroll";
 class HiddenMenuBar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { iconColor: "white" };
+        this.state = {
+            iconColor: "white",
+            iconName: "fa-bars",
+            activated: false,
+        };
+        this.handleBarClick = this.handleBarClick.bind(this);
     }
 
     scrollToBottom = () => {
@@ -34,15 +39,27 @@ class HiddenMenuBar extends React.Component {
         window.onscroll = null;
     }
 
+    handleBarClick() {
+        //if the hidden bars is clicked and activated, change to cross else change to bars
+        if (this.state.activated === true) {
+            this.setState({ iconName: "fa-times", activated: false });
+        } else {
+            this.setState({ iconName: "fa-bars", activated: true });
+        }
+    }
+
     render() {
+        const toPresent = <div> Yes </div>;
         return (
             <div style={{ position: "fixed", zIndex: 4 }} className="hidden">
                 <i
-                    className="fas fa-bars hidden--bar"
+                    className={`fas ${this.state.iconName} hidden--bar`}
                     style={{
                         color: `${this.state.iconColor}`,
                     }}
+                    onClick={this.handleBarClick}
                 />
+                {this.state.activated ? toPresent : <div> No </div>}
             </div>
         );
     }
