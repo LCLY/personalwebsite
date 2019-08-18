@@ -12,6 +12,7 @@ class HiddenMenuBar extends React.Component {
         super(props);
         this.state = {
             iconColor: "white",
+            fontColor: "white",
             iconName: "fa-bars",
             activated: false,
         };
@@ -23,14 +24,20 @@ class HiddenMenuBar extends React.Component {
     };
 
     componentDidMount() {
+        var windowHeightY = (window.innerHeight * 90) / 100;
         window.onscroll = function() {
             //when the user scroll until it passes the next page, change color to black
-            // console.log(window.pageYOffset);
+            console.log(window.pageYOffset);
             // console.log("the window height:", window.innerHeight);
-            if (window.pageYOffset < window.innerHeight) {
-                this.setState({ iconColor: "white" }); //change the icon color to white if still in first page
-            } else if (window.pageYOffset >= window.innerHeight) {
-                this.setState({ iconColor: "black" }); //change the icon color to black
+            if (window.pageYOffset < windowHeightY) {
+                this.setState({ iconColor: "white", fontColor: "white" }); //change the icon color to white if still in first page
+            } else if (
+                window.pageYOffset >= windowHeightY - 30 &&
+                window.pageYOffset < window.innerHeight - 50
+            ) {
+                this.setState({ iconColor: "white", fontColor: "black" }); //change the icon color to black
+            } else if (window.pageYOffset >= window.innerHeight - 50) {
+                this.setState({ iconColor: "black", fontColor: "black" }); //change the icon color to black
             }
         }.bind(this);
     }
@@ -53,10 +60,13 @@ class HiddenMenuBar extends React.Component {
             <div
                 className="hidden--list"
                 style={{
-                    color: `${this.state.iconColor}`,
+                    color: `${this.state.fontColor}`,
                 }}
             >
                 <div className="col">
+                    <div className="row row--2">
+                        <a onClick={() => scroll.scrollToTop()}>Home</a>
+                    </div>
                     <div className="row row--1">
                         <Link
                             activeClass="active"
@@ -70,7 +80,11 @@ class HiddenMenuBar extends React.Component {
                         </Link>
                     </div>
                     <div className="row row--2">
-                        <a href="./resume.pdf" download="resume.pdf">
+                        <a
+                            href="./resume.pdf"
+                            download="resume.pdf"
+                            style={{ color: `${this.state.fontColor}` }}
+                        >
                             Resume
                         </a>
                     </div>
