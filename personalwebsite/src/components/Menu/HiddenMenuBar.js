@@ -103,8 +103,8 @@ class HiddenMenuBar extends React.Component {
             </div>
         );
         return (
-            <div style={{ position: "fixed", zIndex: 4 }} className="hidden">
-                <div>
+            <div className="hidden">
+                <div className="hidden__background">
                     <i
                         className={`fas ${this.state.iconName} hidden--bar`}
                         style={{

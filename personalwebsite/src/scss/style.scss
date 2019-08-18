@@ -9,6 +9,26 @@
         font-family: "Righteous", cursive;
         margin: auto;
     }
+    .menu__bar {
+        display: none;
+    }
+    .hidden {
+        position: fixed;
+        right: 1.5rem;
+        z-index: 10;
+    }
+
+    .hidden--bar {
+        font-size: 2rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .hidden--list {
+        position: fixed;
+        right: 2rem;
+    }
 }
 
 /* Custom, iPhone Retina */
@@ -28,22 +48,6 @@
 
     .menu__bar {
         display: none;
-    }
-
-    .hidden {
-        right: 1.5rem;
-    }
-
-    .hidden--bar {
-        font-size: 2rem;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    .hidden--list {
-        position: fixed;
-        right: 2rem;
     }
 }
 
