@@ -27,7 +27,7 @@ class HiddenMenuBar extends React.Component {
         var windowHeightY = (window.innerHeight * 90) / 100;
         window.onscroll = function() {
             //when the user scroll until it passes the next page, change color to black
-            console.log(window.pageYOffset);
+            // console.log(window.pageYOffset);
             // console.log("the window height:", window.innerHeight);
             if (window.pageYOffset < windowHeightY) {
                 this.setState({ iconColor: "white", fontColor: "white" }); //change the icon color to white if still in first page
@@ -61,13 +61,17 @@ class HiddenMenuBar extends React.Component {
                 className="hidden--list"
                 style={{
                     color: `${this.state.fontColor}`,
+                    fontSize: "1.5rem",
                 }}
             >
                 <div className="col">
-                    <div className="row row--2">
-                        <a onClick={() => scroll.scrollToTop()}>Home</a>
-                    </div>
                     <div className="row row--1">
+                        <i
+                            className="fas fa-home"
+                            onClick={() => scroll.scrollToTop()}
+                        />
+                    </div>
+                    <div className="row row--2">
                         <Link
                             activeClass="active"
                             to="section1"
@@ -76,20 +80,23 @@ class HiddenMenuBar extends React.Component {
                             offset={70}
                             duration={500}
                         >
-                            Projects
+                            <i class="fas fa-file-code" />
                         </Link>
                     </div>
-                    <div className="row row--2">
+                    <div className="row row--3">
                         <a
                             href="./resume.pdf"
                             download="resume.pdf"
                             style={{ color: `${this.state.fontColor}` }}
                         >
-                            Resume
+                            <i className="fas fa-file-download" />
                         </a>
                     </div>
-                    <div className="row row--3">
-                        <a onClick={this.scrollToBottom}>Contact</a>
+                    <div className="row row--4">
+                        <i
+                            className="fas fa-address-card"
+                            onClick={this.scrollToBottom}
+                        />
                     </div>
                 </div>
             </div>
