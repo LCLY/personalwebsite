@@ -2,6 +2,7 @@
 @import "card";
 @import "content";
 @import "menubar";
+$widthHeightRadius: 9rem;
 
 @media only screen and (min-width: 0px) {
     #title__name {
@@ -34,13 +35,13 @@
         position: fixed;
         top: 0;
         right: 0;
-        width: 100px;
-        height: 100px;
+        width: $widthHeightRadius;
+        height: $widthHeightRadius;
         z-index: 9;
         background: rgba(175, 175, 170, 0.431);
-        border-radius: 0 0 0 100px;
-        -moz-border-radius: 0 0 0 100px;
-        -webkit-border-radius: 0 0 0 100px;
+        border-radius: 0 0 0 $widthHeightRadius;
+        -moz-border-radius: 0 0 0 $widthHeightRadius;
+        -webkit-border-radius: 0 0 0 $widthHeightRadius;
     }
 }
 
