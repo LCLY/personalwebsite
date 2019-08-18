@@ -104,16 +104,14 @@ class HiddenMenuBar extends React.Component {
         );
         return (
             <div className="hidden">
-                <div className="hidden__background">
-                    <i
-                        className={`fas ${this.state.iconName} hidden--bar`}
-                        style={{
-                            color: `${this.state.iconColor}`,
-                        }}
-                        onClick={this.handleBarClick}
-                    />
-                    {this.state.activated ? toPresent : ""}
-                </div>
+                <i
+                    className={`fas ${this.state.iconName} hidden--bar`}
+                    style={{
+                        color: `${this.state.iconColor}`,
+                    }}
+                    onClick={this.handleBarClick}
+                />
+                {this.state.activated ? toPresent : ""}
             </div>
         );
     }

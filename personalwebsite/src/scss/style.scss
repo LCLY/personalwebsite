@@ -29,6 +29,19 @@
         position: fixed;
         right: 2rem;
     }
+
+    .hidden__background {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        z-index: 9;
+        background: rgba(175, 175, 170, 0.431);
+        border-radius: 0 0 0 100px;
+        -moz-border-radius: 0 0 0 100px;
+        -webkit-border-radius: 0 0 0 100px;
+    }
 }
 
 /* Custom, iPhone Retina */
