@@ -13,3 +13,21 @@
     margin-left: auto;
     right: 10%;
 }
+
+.row--1 {
+    &:active {
+        color: black;
+    }
+}
+
+.row--2 {
+    &:active {
+        color: black;
+    }
+}
+
+.row--3 {
+    &:active {
+        color: black;
+    }
+}

@@ -41,15 +41,45 @@ class HiddenMenuBar extends React.Component {
 
     handleBarClick() {
         //if the hidden bars is clicked and activated, change to cross else change to bars
-        if (this.state.activated === true) {
-            this.setState({ iconName: "fa-times", activated: false });
+        if (this.state.activated === false) {
+            this.setState({ iconName: "fa-times", activated: true });
         } else {
-            this.setState({ iconName: "fa-bars", activated: true });
+            this.setState({ iconName: "fa-bars", activated: false });
         }
     }
 
     render() {
-        const toPresent = <div> Yes </div>;
+        const toPresent = (
+            <div
+                className="hidden--list"
+                style={{
+                    color: `${this.state.iconColor}`,
+                }}
+            >
+                <div className="col">
+                    <div className="row row--1">
+                        <Link
+                            activeClass="active"
+                            to="section1"
+                            spy={true}
+                            smooth={true}
+                            offset={70}
+                            duration={500}
+                        >
+                            Projects
+                        </Link>
+                    </div>
+                    <div className="row row--2">
+                        <a href="./resume.pdf" download="resume.pdf">
+                            Resume
+                        </a>
+                    </div>
+                    <div className="row row--3">
+                        <a onClick={this.scrollToBottom}>Contact</a>
+                    </div>
+                </div>
+            </div>
+        );
         return (
             <div style={{ position: "fixed", zIndex: 4 }} className="hidden">
                 <i
@@ -59,7 +89,7 @@ class HiddenMenuBar extends React.Component {
                     }}
                     onClick={this.handleBarClick}
                 />
-                {this.state.activated ? toPresent : <div> No </div>}
+                {this.state.activated ? toPresent : ""}
             </div>
         );
     }

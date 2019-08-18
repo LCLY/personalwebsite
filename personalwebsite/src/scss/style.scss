@@ -40,6 +40,11 @@
             cursor: pointer;
         }
     }
+
+    .hidden--list {
+        position: fixed;
+        right: 2rem;
+    }
 }
 
 /* Small Devices, Tablets */
