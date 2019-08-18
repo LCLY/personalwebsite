@@ -80,7 +80,7 @@ class HiddenMenuBar extends React.Component {
                             offset={70}
                             duration={500}
                         >
-                            <i class="fas fa-file-code" />
+                            <i className="fas fa-file-code" />
                         </Link>
                     </div>
                     <div className="row row--3">
@@ -94,8 +94,9 @@ class HiddenMenuBar extends React.Component {
                     </div>
                     <div className="row row--4">
                         <i
-                            className="fas fa-address-card"
+                            className="fas fa-mobile-alt"
                             onClick={this.scrollToBottom}
+                            style={{ fontSize: "1.7rem" }}
                         />
                     </div>
                 </div>
@@ -103,14 +104,16 @@ class HiddenMenuBar extends React.Component {
         );
         return (
             <div style={{ position: "fixed", zIndex: 4 }} className="hidden">
-                <i
-                    className={`fas ${this.state.iconName} hidden--bar`}
-                    style={{
-                        color: `${this.state.iconColor}`,
-                    }}
-                    onClick={this.handleBarClick}
-                />
-                {this.state.activated ? toPresent : ""}
+                <div>
+                    <i
+                        className={`fas ${this.state.iconName} hidden--bar`}
+                        style={{
+                            color: `${this.state.iconColor}`,
+                        }}
+                        onClick={this.handleBarClick}
+                    />
+                    {this.state.activated ? toPresent : ""}
+                </div>
             </div>
         );
     }
