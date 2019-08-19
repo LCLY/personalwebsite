@@ -109,12 +109,10 @@ class HiddenMenuBar extends React.Component {
                 {/* {this.state.activated ? ( */}
                 <CSSTransition
                     in={this.state.activated}
-                    appear={true}
                     timeout={300}
                     classNames="bg"
                 >
-                    <div className="hidden__background" />
-                    {/* <HiddenBG /> */}
+                    <HiddenBG />
                 </CSSTransition>
                 {/* ) : (
                     ""
