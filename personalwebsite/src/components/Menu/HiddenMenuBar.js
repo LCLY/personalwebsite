@@ -106,21 +106,19 @@ class HiddenMenuBar extends React.Component {
         );
         return (
             <div className="hidden">
-                {this.state.activated ? (
-                    <CSSTransition
-                        in={this.state.activated}
-                        timeout={400}
-                        classNames="list-transition"
-                        unmountOnExit
-                        appear
-                        onEntered={this.listSwitch}
-                        onExit={this.listSwitch}
-                    >
-                        <HiddenBG />
-                    </CSSTransition>
-                ) : (
+                {/* {this.state.activated ? ( */}
+                <CSSTransition
+                    in={this.state.activated}
+                    appear={true}
+                    timeout={300}
+                    classNames="bg"
+                >
+                    <div className="hidden__background" />
+                    {/* <HiddenBG /> */}
+                </CSSTransition>
+                {/* ) : (
                     ""
-                )}
+                )} */}
                 <i
                     className={`fas ${this.state.iconName} hidden--bar`}
                     style={{

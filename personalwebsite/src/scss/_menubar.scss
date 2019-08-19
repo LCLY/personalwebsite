@@ -48,3 +48,34 @@
         color: black;
     }
 }
+
+.bg-appear {
+    opacity: 0;
+}
+
+.bg-appear-active {
+    opacity: 1;
+    transition: opacity 300ms linear;
+}
+
+.bg-enter {
+    opacity: 0;
+}
+
+.bg-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear;
+}
+
+.bg-exit {
+    opacity: 1;
+}
+
+.bg-exit-active {
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.bg-exit-done {
+    opacity: 0;
+}
