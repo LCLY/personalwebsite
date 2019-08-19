@@ -135,7 +135,6 @@ class App extends React.Component {
 						}}
 						style={{position:"absolute", zIndex:"0",left:"0"}}/>
 						<HiddenMenuBar/>
-						<HiddenBG/>
 						<MenuBar />	
 						<div className="title title__wrap">
 							<div className="ui text container">								

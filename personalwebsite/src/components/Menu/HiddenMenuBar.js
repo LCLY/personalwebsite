@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { CSSTransition } from "react-transition-group";
+import HiddenBG from "../Menu/HiddenBG";
 // activeClass - class applied when element is reached
 // to - target to scroll to
 // spy - make Link selected when scroll is at its targets position
@@ -104,6 +106,21 @@ class HiddenMenuBar extends React.Component {
         );
         return (
             <div className="hidden">
+                {this.state.activated ? (
+                    <CSSTransition
+                        in={this.state.activated}
+                        timeout={400}
+                        classNames="list-transition"
+                        unmountOnExit
+                        appear
+                        onEntered={this.listSwitch}
+                        onExit={this.listSwitch}
+                    >
+                        <HiddenBG />
+                    </CSSTransition>
+                ) : (
+                    ""
+                )}
                 <i
                     className={`fas ${this.state.iconName} hidden--bar`}
                     style={{

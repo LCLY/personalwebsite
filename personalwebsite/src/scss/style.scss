@@ -15,7 +15,7 @@ $widthHeightRadius: 9rem;
     }
     .hidden {
         position: fixed;
-        right: 1.5rem;
+        right: 1.3rem;
         z-index: 10;
     }
 
@@ -37,7 +37,7 @@ $widthHeightRadius: 9rem;
         right: 0;
         width: $widthHeightRadius;
         height: $widthHeightRadius;
-        z-index: 9;
+        z-index: -1;
         background: rgba(175, 175, 170, 0.431);
         border-radius: 0 0 0 $widthHeightRadius;
         -moz-border-radius: 0 0 0 $widthHeightRadius;
