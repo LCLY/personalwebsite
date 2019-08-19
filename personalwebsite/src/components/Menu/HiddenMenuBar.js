@@ -88,7 +88,7 @@ class HiddenMenuBar extends React.Component {
                     <CSSTransition
                         in={this.state.activated}
                         appear={true}
-                        timeout={{ enter: 500, exit: 700 }}
+                        timeout={{ enter: 500, exit: 600 }}
                         classNames="bg-icon-2"
                     >
                         <div className="row row--2">
@@ -123,7 +123,7 @@ class HiddenMenuBar extends React.Component {
                     <CSSTransition
                         in={this.state.activated}
                         appear={true}
-                        timeout={{ enter: 1000, exit: 300 }}
+                        timeout={{ enter: 800, exit: 500 }}
                         classNames="bg-icon-4"
                     >
                         <div className="row row--4">
