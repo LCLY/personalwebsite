@@ -67,40 +67,68 @@ class HiddenMenuBar extends React.Component {
                 }}
             >
                 <div className="col">
-                    <div className="row row--1">
-                        <i
-                            className="fas fa-home"
-                            onClick={() => scroll.scrollToTop()}
-                        />
-                    </div>
-                    <div className="row row--2">
-                        <Link
-                            activeClass="active"
-                            to="section1"
-                            spy={true}
-                            smooth={true}
-                            offset={70}
-                            duration={500}
-                        >
-                            <i className="fas fa-file-code" />
-                        </Link>
-                    </div>
-                    <div className="row row--3">
-                        <a
-                            href="./resume.pdf"
-                            download="resume.pdf"
-                            style={{ color: `${this.state.fontColor}` }}
-                        >
-                            <i className="fas fa-file-download" />
-                        </a>
-                    </div>
-                    <div className="row row--4">
-                        <i
-                            className="fas fa-mobile-alt"
-                            onClick={this.scrollToBottom}
-                            style={{ fontSize: "1.7rem" }}
-                        />
-                    </div>
+                    <CSSTransition
+                        in={this.state.activated}
+                        appear={true}
+                        timeout={300}
+                        classNames="bg-icon-1"
+                    >
+                        <div className="row row--1">
+                            <i
+                                className="fas fa-home"
+                                onClick={() => scroll.scrollToTop()}
+                            />
+                        </div>
+                    </CSSTransition>
+                    <CSSTransition
+                        in={this.state.activated}
+                        appear={true}
+                        timeout={500}
+                        classNames="bg-icon-2"
+                    >
+                        <div className="row row--2">
+                            <Link
+                                activeClass="active"
+                                to="section1"
+                                spy={true}
+                                smooth={true}
+                                offset={70}
+                                duration={500}
+                            >
+                                <i className="fas fa-file-code" />
+                            </Link>
+                        </div>
+                    </CSSTransition>
+                    <CSSTransition
+                        in={this.state.activated}
+                        appear={true}
+                        timeout={700}
+                        classNames="bg-icon-3"
+                    >
+                        <div className="row row--3">
+                            <a
+                                href="./resume.pdf"
+                                download="resume.pdf"
+                                style={{ color: `${this.state.fontColor}` }}
+                            >
+                                <i className="fas fa-file-download" />
+                            </a>
+                        </div>
+                    </CSSTransition>
+                    <CSSTransition
+                        in={this.state.activated}
+                        appear={true}
+                        timeout={1000}
+                        classNames="bg-icon-4"
+                    >
+                        <div className="row row--4">
+                            <i
+                                className="fas fa-mobile-alt"
+                                onClick={this.scrollToBottom}
+                                style={{ fontSize: "1.7rem" }}
+                            />
+                        </div>
+                    </CSSTransition>
                 </div>
             </div>
         );
