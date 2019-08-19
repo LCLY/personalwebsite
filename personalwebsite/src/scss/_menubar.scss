@@ -57,7 +57,7 @@
 .menuBG-appear-active,
 .menuBG-enter-active {
     opacity: 1;
-    transition: opacity 300ms ease-in;
+    transition: opacity 500ms ease-in;
 }
 
 .menuBG-exit {
@@ -91,7 +91,7 @@
 
 .bg-icon-1-exit-active {
     opacity: 0;
-    transition: all 800ms ease-out 300ms;
+    transition: all 700ms ease-out 200ms;
 }
 .bg-icon-1-exit-done {
     opacity: 0;
