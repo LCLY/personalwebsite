@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/personalwebsite/static/css/main.db9bc878.chunk.css",
-    "main.js": "/personalwebsite/static/js/main.53e32efe.chunk.js",
-    "main.js.map": "/personalwebsite/static/js/main.53e32efe.chunk.js.map",
+    "main.css": "/personalwebsite/static/css/main.29a08344.chunk.css",
+    "main.js": "/personalwebsite/static/js/main.f68ca41e.chunk.js",
+    "main.js.map": "/personalwebsite/static/js/main.f68ca41e.chunk.js.map",
     "runtime~main.js": "/personalwebsite/static/js/runtime~main.29a1488c.js",
     "runtime~main.js.map": "/personalwebsite/static/js/runtime~main.29a1488c.js.map",
     "static/js/2.646f88f3.chunk.js": "/personalwebsite/static/js/2.646f88f3.chunk.js",
     "static/js/2.646f88f3.chunk.js.map": "/personalwebsite/static/js/2.646f88f3.chunk.js.map",
     "index.html": "/personalwebsite/index.html",
-    "precache-manifest.78f54402e8d38d4eea03e9214734a544.js": "/personalwebsite/precache-manifest.78f54402e8d38d4eea03e9214734a544.js",
+    "precache-manifest.da07e684bd3b351d17d878ce5c75e72d.js": "/personalwebsite/precache-manifest.da07e684bd3b351d17d878ce5c75e72d.js",
     "service-worker.js": "/personalwebsite/service-worker.js",
-    "static/css/main.db9bc878.chunk.css.map": "/personalwebsite/static/css/main.db9bc878.chunk.css.map",
+    "static/css/main.29a08344.chunk.css.map": "/personalwebsite/static/css/main.29a08344.chunk.css.map",
     "static/media/fliegen.PNG": "/personalwebsite/static/media/fliegen.5d03a694.PNG"
   }
 }
