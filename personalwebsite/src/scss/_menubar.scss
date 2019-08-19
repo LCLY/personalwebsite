@@ -73,7 +73,7 @@
 
 .bg-exit-active {
     opacity: 0;
-    transition: all 300ms linear;
+    transition: all 800ms ease-out;
 }
 
 .bg-exit-done {
@@ -105,7 +105,10 @@
 
 .bg-icon-1-exit-active {
     opacity: 0;
-    transition: all 300ms ease-out;
+    transition: all 800ms ease-out 300ms;
+}
+.bg-icon-1-exit-done {
+    opacity: 0;
 }
 
 /*===== icon 2 =====*/
@@ -131,7 +134,10 @@
 
 .bg-icon-2-exit-active {
     opacity: 0;
-    transition: all 300ms ease-out;
+    transition: all 700ms ease-out 200ms;
+}
+.bg-icon-2-exit-done {
+    opacity: 0;
 }
 
 /*===== icon 3 =====*/
@@ -157,7 +163,10 @@
 
 .bg-icon-3-exit-active {
     opacity: 0;
-    transition: all 300ms ease-out;
+    transition: all 500ms ease-out 100ms;
+}
+.bg-icon-3-exit-done {
+    opacity: 0;
 }
 
 /*===== icon 4  =====*/
@@ -184,4 +193,8 @@
 .bg-icon-4-exit-active {
     opacity: 0;
     transition: all 300ms ease-out;
+}
+
+.bg-icon-4-exit-done {
+    opacity: 0;
 }

@@ -70,7 +70,7 @@ class HiddenMenuBar extends React.Component {
                     <CSSTransition
                         in={this.state.activated}
                         appear={true}
-                        timeout={300}
+                        timeout={{ enter: 300, exit: 800 }}
                         classNames="bg-icon-1"
                     >
                         <div className="row row--1">
@@ -83,7 +83,7 @@ class HiddenMenuBar extends React.Component {
                     <CSSTransition
                         in={this.state.activated}
                         appear={true}
-                        timeout={500}
+                        timeout={{ enter: 500, exit: 700 }}
                         classNames="bg-icon-2"
                     >
                         <div className="row row--2">
@@ -102,7 +102,7 @@ class HiddenMenuBar extends React.Component {
                     <CSSTransition
                         in={this.state.activated}
                         appear={true}
-                        timeout={700}
+                        timeout={{ enter: 700, exit: 500 }}
                         classNames="bg-icon-3"
                     >
                         <div className="row row--3">
@@ -118,7 +118,7 @@ class HiddenMenuBar extends React.Component {
                     <CSSTransition
                         in={this.state.activated}
                         appear={true}
-                        timeout={1000}
+                        timeout={{ enter: 1000, exit: 300 }}
                         classNames="bg-icon-4"
                     >
                         <div className="row row--4">
@@ -138,7 +138,7 @@ class HiddenMenuBar extends React.Component {
                 <CSSTransition
                     in={this.state.activated}
                     appear={true}
-                    timeout={300}
+                    timeout={{ enter: 300, exit: 800 }}
                     classNames="bg"
                 >
                     <HiddenBG />
@@ -153,7 +153,7 @@ class HiddenMenuBar extends React.Component {
                     }}
                     onClick={this.handleBarClick}
                 />
-                {this.state.activated ? toPresent : ""}
+                {toPresent}
             </div>
         );
     }
