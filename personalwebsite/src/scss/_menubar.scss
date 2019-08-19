@@ -49,51 +49,37 @@
     }
 }
 
-.bg-appear {
+.menuBG-appear,
+.menuBG-enter {
     opacity: 0;
 }
 
-.bg-appear-active {
-    opacity: 0;
-    transition: all 300ms linear;
-}
-
-.bg-enter {
-    opacity: 0;
-}
-
-.bg-enter-active {
+.menuBG-appear-active,
+.menuBG-enter-active {
     opacity: 1;
-    transition: all 300ms linear;
+    transition: opacity 300ms ease-in;
 }
 
-.bg-exit {
+.menuBG-exit {
     opacity: 1;
 }
 
-.bg-exit-active {
+.menuBG-exit-active {
     opacity: 0;
-    transition: all 800ms ease-out;
+    transition: all 1000ms ease-out;
 }
 
-.bg-exit-done {
+.menuBG-exit-done {
     opacity: 0;
 }
 
 /*===== icon 1 =====*/
-.bg-icon-1-appear {
-    opacity: 0;
-}
 
-.bg-icon-1-appear-active {
-    opacity: 1;
-    transition: all 300ms ease-in;
-}
-
+.bg-icon-1-appear,
 .bg-icon-1-enter {
     opacity: 0;
 }
-
+.bg-icon-1-appear-active,
 .bg-icon-1-enter-active {
     opacity: 1;
     transition: all 300ms ease-in;
@@ -112,18 +98,13 @@
 }
 
 /*===== icon 2 =====*/
-.bg-icon-2-appear {
-    opacity: 0;
-}
 
-.bg-icon-2-appear-active {
-    opacity: 1;
-    transition: all 500ms ease-in 100ms;
-}
+.bg-icon-2-appear,
 .bg-icon-2-enter {
     opacity: 0;
 }
 
+.bg-icon-2-appear-active,
 .bg-icon-2-enter-active {
     opacity: 1;
     transition: all 500ms ease-in 100ms;
@@ -141,18 +122,12 @@
 }
 
 /*===== icon 3 =====*/
-.bg-icon-3-appear {
-    opacity: 0;
-}
-
-.bg-icon-3-appear-active {
-    opacity: 1;
-    transition: all 700ms ease-in 100ms;
-}
+.bg-icon-3-appear,
 .bg-icon-3-enter {
     opacity: 0;
 }
 
+.bg-icon-3-appear-active,
 .bg-icon-3-enter-active {
     opacity: 1;
     transition: all 700ms ease-in 100ms;
@@ -170,18 +145,12 @@
 }
 
 /*===== icon 4  =====*/
-.bg-icon-4-appear {
-    opacity: 0;
-}
-
-.bg-icon-4-appear-active {
-    opacity: 1;
-    transition: all 1000ms ease-in 100ms;
-}
+.bg-icon-4-appear,
 .bg-icon-4-enter {
     opacity: 0;
 }
 
+.bg-icon-4-appear-active,
 .bg-icon-4-enter-active {
     opacity: 1;
     transition: all 1000ms ease-in 100ms;

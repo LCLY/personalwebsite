@@ -17,6 +17,7 @@ class HiddenMenuBar extends React.Component {
             fontColor: "white",
             iconName: "fa-bars",
             activated: false,
+            firstTime: false,
         };
         this.handleBarClick = this.handleBarClick.bind(this);
     }
@@ -49,6 +50,10 @@ class HiddenMenuBar extends React.Component {
     }
 
     handleBarClick() {
+        //for the first time, dont show it
+        if (this.state.firstTime === false) {
+            this.setState({ firstTime: true });
+        }
         //if the hidden bars is clicked and activated, change to cross else change to bars
         if (this.state.activated === false) {
             this.setState({ iconName: "fa-times", activated: true });
@@ -134,18 +139,18 @@ class HiddenMenuBar extends React.Component {
         );
         return (
             <div className="hidden">
-                {/* {this.state.activated ? ( */}
-                <CSSTransition
-                    in={this.state.activated}
-                    appear={true}
-                    timeout={{ enter: 300, exit: 800 }}
-                    classNames="bg"
-                >
-                    <HiddenBG />
-                </CSSTransition>
-                {/* ) : (
+                {this.state.firstTime ? (
+                    <CSSTransition
+                        in={this.state.activated}
+                        appear={true}
+                        timeout={{ enter: 300, exit: 1000 }}
+                        classNames="menuBG"
+                    >
+                        <HiddenBG />
+                    </CSSTransition>
+                ) : (
                     ""
-                )} */}
+                )}
                 <i
                     className={`fas ${this.state.iconName} hidden--bar`}
                     style={{
@@ -153,7 +158,7 @@ class HiddenMenuBar extends React.Component {
                     }}
                     onClick={this.handleBarClick}
                 />
-                {toPresent}
+                {this.state.firstTime ? toPresent : ""}
             </div>
         );
     }
