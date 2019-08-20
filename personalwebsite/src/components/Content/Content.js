@@ -1,14 +1,9 @@
 import React from "react";
 import Card from "../Cards/Cards";
 import fliegen from "../../images/fliegen.PNG";
-import { Link, animateScroll as scroll } from "react-scroll";
-
 export default function Content({ id }) {
     return (
         <div className="ui vertical stripe segment" id={id}>
-            <button className="ui button" onClick={() => scroll.scrollToTop()}>
-                GO UP
-            </button>
             <div
                 style={{
                     textAlign: "center",
