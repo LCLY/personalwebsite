@@ -1,39 +1,24 @@
 /* This nav bar shows up when user scrolls down */
-
 import React from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 class HiddenNavbar extends React.Component {
     render() {
         return (
-            <div className="ui hidden--navbar">
-                <div className="ui large secondary inverted pointing menu hidden--navbar__flex">
-                    <a className="item menu__flex--start" id="navProject">
-                        <Link
-                            activeClass="active"
-                            to="section1"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                        >
-                            Projects
-                        </Link>
+            <div className="hidden--navbar">
+                <div
+                    className="ui secondary pointing menu hidden--navbar__flex"
+                    id="hiddenNavbar"
+                >
+                    <a
+                        className="active item"
+                        onClick={() => scroll.scrollToTop()}
+                    >
+                        Home
                     </a>
-
-                    <div className="right item menu__flex--end">
-                        <a
-                            className="ui inverted button"
-                            href="./resume.pdf"
-                            download="resume.pdf"
-                        >
-                            Resume
-                        </a>
-                        &nbsp;
-                        <a
-                            className="ui inverted button"
-                            onClick={this.scrollToBottom}
-                        >
-                            Contact
-                        </a>
+                    <a className="active item">Portfolio</a>
+                    <a className="item">Resume</a>
+                    <div className="right menu">
+                        <a className="ui item">Contact</a>
                     </div>
                 </div>
             </div>
