@@ -5,11 +5,17 @@ class HiddenNavbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeState: {
+            activeBool: {
                 homeState: false,
                 portfolioState: false,
                 resumeState: false,
                 contactState: false,
+            },
+            activeState: {
+                homeActive: "",
+                portfolioActive: "",
+                resumeActive: "",
+                contactActive: "",
             },
         };
         this.handleClick = this.handleClick.bind(this);
@@ -18,13 +24,21 @@ class HiddenNavbar extends React.Component {
     handleClick = mode => {
         switch (mode) {
             case 1:
+                //home
                 scroll.scrollToTop();
+                console.log("1");
                 break;
             case 2:
+                //portfolio
+                console.log("yes");
                 break;
             case 3:
+                //resume
+
                 break;
             case 4:
+                //contact
+                scroll.scrollToBottom();
                 break;
             default:
         }
@@ -38,23 +52,46 @@ class HiddenNavbar extends React.Component {
                     id="hiddenNavbar"
                 >
                     <a
-                        className="active item"
+                        className={`${this.state.activeState.homeActive} item`}
                         onClick={() => this.handleClick(1)}
                     >
                         Home
                     </a>
+
                     <a
-                        className={`active item`}
+                        className={`${
+                            this.state.activeState.portfolioActive
+                        } item`}
                         onClick={() => this.handleClick(2)}
+                        style={{ padding: 13 }}
                     >
-                        Portfolio
+                        <Link
+                            activeClass="active"
+                            to="section1"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            onSetActive={() => this.handleClick(2)}
+                        >
+                            Projects
+                        </Link>
                     </a>
-                    <a className="item" onClick={() => this.handleClick(3)}>
+                    <a
+                        className={`${
+                            this.state.activeState.resumeActive
+                        } item`}
+                        onClick={() => this.handleClick(3)}
+                        href="./resume.pdf"
+                        download="resume.pdf"
+                    >
                         Resume
                     </a>
                     <div className="right menu">
                         <a
-                            className="ui item"
+                            className={`ui ${
+                                this.state.activeState.contactActive
+                            } item`}
                             onClick={() => this.handleClick(4)}
                         >
                             Contact
