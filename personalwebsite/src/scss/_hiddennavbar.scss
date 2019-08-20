@@ -1,0 +1,15 @@
+/* hidden navbar after scrolling*/
+.hidden--navbar__flex {
+    position: fixed;
+    top: 0px;
+    height: 8%;
+    width: 100%;
+}
+
+#hiddenNavbar {
+    margin: 0;
+    background-color: white;
+    padding: 0 1rem 0 1rem;
+    z-index: 20;
+    font-size: 1.3rem;
+}
