@@ -5,18 +5,14 @@ class HiddenNavbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeBool: {
-                homeState: false,
-                portfolioState: false,
-                resumeState: false,
-                contactState: false,
-            },
-            activeState: {
-                homeActive: "",
-                portfolioActive: "",
-                resumeActive: "",
-                contactActive: "",
-            },
+            homeState: false,
+            portfolioState: false,
+            resumeState: false,
+            contactState: false,
+            homeActive: "",
+            portfolioActive: "",
+            resumeActive: "",
+            contactActive: "",
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -25,19 +21,42 @@ class HiddenNavbar extends React.Component {
         switch (mode) {
             case 1:
                 //home
+                this.setState({
+                    homeActive: "active",
+                    portfolioActive: "",
+                    resumeActive: "",
+                    contactActive: "",
+                });
                 scroll.scrollToTop();
-                console.log("1");
                 break;
             case 2:
                 //portfolio
-                console.log("yes");
+                this.setState({
+                    homeActive: "",
+                    portfolioActive: "active",
+                    resumeActive: "",
+                    contactActive: "",
+                });
+                scroll.scrollTo(window.innerHeight);
+
                 break;
             case 3:
                 //resume
-
+                this.setState({
+                    homeActive: "",
+                    portfolioActive: "",
+                    resumeActive: "active",
+                    contactActive: "",
+                });
                 break;
             case 4:
                 //contact
+                this.setState({
+                    homeActive: "",
+                    portfolioActive: "",
+                    resumeActive: "",
+                    contactActive: "active",
+                });
                 scroll.scrollToBottom();
                 break;
             default:
@@ -52,35 +71,21 @@ class HiddenNavbar extends React.Component {
                     id="hiddenNavbar"
                 >
                     <a
-                        className={`${this.state.activeState.homeActive} item`}
+                        className={`${this.state.homeActive} item`}
                         onClick={() => this.handleClick(1)}
                     >
                         Home
                     </a>
 
                     <a
-                        className={`${
-                            this.state.activeState.portfolioActive
-                        } item`}
+                        className={`${this.state.portfolioActive} item`}
                         onClick={() => this.handleClick(2)}
-                        style={{ padding: 13 }}
                     >
-                        <Link
-                            activeClass="active"
-                            to="section1"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onSetActive={() => this.handleClick(2)}
-                        >
-                            Projects
-                        </Link>
+                        Projects
                     </a>
+
                     <a
-                        className={`${
-                            this.state.activeState.resumeActive
-                        } item`}
+                        className={`${this.state.resumeActive} item`}
                         onClick={() => this.handleClick(3)}
                         href="./resume.pdf"
                         download="resume.pdf"
@@ -89,9 +94,7 @@ class HiddenNavbar extends React.Component {
                     </a>
                     <div className="right menu">
                         <a
-                            className={`ui ${
-                                this.state.activeState.contactActive
-                            } item`}
+                            className={`ui ${this.state.contactActive} item`}
                             onClick={() => this.handleClick(4)}
                         >
                             Contact

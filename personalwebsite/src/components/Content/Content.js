@@ -51,6 +51,37 @@ export default function Content({ id }) {
                     </div>
                 </div>
             </div>
+            <div className="ui middle aligned stackable grid container">
+                <div className="ui three column grid">
+                    <div className="column">
+                        <Card
+                            imgUrl={fliegen}
+                            imgAlt="fliegen"
+                            headerText="Fliegen"
+                            projectType="Web application"
+                            projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
+                        />
+                    </div>
+                    <div className="column">
+                        <Card
+                            imgUrl={fliegen}
+                            imgAlt="fliegen"
+                            headerText="Fliegen"
+                            projectType="Web application"
+                            projectDescription="BLABLABLA"
+                        />
+                    </div>
+                    <div className="column">
+                        <Card
+                            imgUrl={fliegen}
+                            imgAlt="fliegen"
+                            headerText="Fliegen"
+                            projectType="Web application"
+                            projectDescription="BLABLABLA"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
