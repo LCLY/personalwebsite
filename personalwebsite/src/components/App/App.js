@@ -3,9 +3,9 @@ import "../../css/style.min.css";
 import Typed from 'typed.js';
 import Navbar from '../Menu/Navbar';
 import MobileMenuBar from '../Menu/MobileMenuBar';
-import HiddenBG from '../Menu/HiddenBG';
 import Content from '../Content/Content';
 import Particles from 'react-particles-js';
+import HiddenNavbar from '../Menu/HiddenNavbar';
 
 //Control which iconname
 const PlayController = {
@@ -136,6 +136,7 @@ class App extends React.Component {
 						style={{position:"absolute", zIndex:"0",left:"0"}}/>
 						<MobileMenuBar/>
 						<Navbar />	
+						<HiddenNavbar/>
 						<div className="title title__wrap">
 							<div className="ui text container">								
 									<h1 id="title__name" className="ui inverted header">HENRY</h1>							
