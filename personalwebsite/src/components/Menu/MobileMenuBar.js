@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { CSSTransition } from "react-transition-group";
-import HiddenBG from "../Menu/HiddenBG";
+import HiddenBG from "./HiddenBG";
 // activeClass - class applied when element is reached
 // to - target to scroll to
 // spy - make Link selected when scroll is at its targets position
@@ -9,7 +9,7 @@ import HiddenBG from "../Menu/HiddenBG";
 // offset - scroll additional px (like padding)
 // duration - time of the scroll animation, can be a number or a function
 
-class HiddenMenuBar extends React.Component {
+class MobileMenuBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -164,4 +164,4 @@ class HiddenMenuBar extends React.Component {
     }
 }
 
-export default HiddenMenuBar;
+export default MobileMenuBar;
