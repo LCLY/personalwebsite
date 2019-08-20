@@ -10,7 +10,11 @@ $widthHeightRadius: 9rem;
         font-family: "Righteous", cursive;
         margin: auto;
     }
+    //only show these navbars in bigger displays
     .menu__bar {
+        display: none;
+    }
+    .hidden--navbar {
         display: none;
     }
     .hidden {
@@ -62,6 +66,9 @@ $widthHeightRadius: 9rem;
     .menu__bar {
         display: none;
     }
+    .hidden--navbar {
+        display: none;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -78,6 +85,9 @@ $widthHeightRadius: 9rem;
         font-size: 1.5rem;
     }
     .menu__bar {
+        display: block;
+    }
+    .hidden--navbar {
         display: block;
     }
     .hidden {
@@ -100,6 +110,9 @@ $widthHeightRadius: 9rem;
         font-size: 1rem;
     }
     .menu__bar {
+        display: block;
+    }
+    .hidden--navbar {
         display: block;
     }
     .hidden {

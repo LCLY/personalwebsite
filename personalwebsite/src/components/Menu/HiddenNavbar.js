@@ -4,8 +4,8 @@ import React from "react";
 class HiddenNavbar extends React.Component {
     render() {
         return (
-            <div className="ui menu__bar">
-                <div className="ui large secondary inverted pointing menu menu__flex">
+            <div className="ui hidden--navbar">
+                <div className="ui large secondary inverted pointing menu hidden--navbar__flex">
                     <a className="item menu__flex--start" id="navProject">
                         <Link
                             activeClass="active"
