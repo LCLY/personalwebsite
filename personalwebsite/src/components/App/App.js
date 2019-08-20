@@ -1,7 +1,7 @@
 import React from 'react';
 import "../../css/style.min.css";
 import Typed from 'typed.js';
-import MenuBar from '../Menu/MenuBar';
+import Navbar from '../Menu/Navbar';
 import MobileMenuBar from '../Menu/MobileMenuBar';
 import HiddenBG from '../Menu/HiddenBG';
 import Content from '../Content/Content';
@@ -135,7 +135,7 @@ class App extends React.Component {
 						}}
 						style={{position:"absolute", zIndex:"0",left:"0"}}/>
 						<MobileMenuBar/>
-						<MenuBar />	
+						<Navbar />	
 						<div className="title title__wrap">
 							<div className="ui text container">								
 									<h1 id="title__name" className="ui inverted header">HENRY</h1>							

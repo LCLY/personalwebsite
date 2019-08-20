@@ -7,7 +7,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 // offset - scroll additional px (like padding)
 // duration - time of the scroll animation, can be a number or a function
 
-class MenuBar extends React.Component {
+class Navbar extends React.Component {
     scrollToBottom = () => {
         scroll.scrollToBottom();
     };
@@ -51,4 +51,4 @@ class MenuBar extends React.Component {
     }
 }
 
-export default MenuBar;
+export default Navbar;
