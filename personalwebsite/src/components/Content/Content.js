@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../Cards/Cards";
 import fliegen from "../../images/fliegen.PNG";
+import personalweb from "../../images/personalwebsite.PNG";
 export default function Content({ id }) {
     return (
         <div className="ui vertical stripe segment" id={id}>
@@ -24,6 +25,15 @@ export default function Content({ id }) {
                 <div className="ui three column grid">
                     <div className="column">
                         <Card
+                            imgUrl={personalweb}
+                            imgAlt="personalwebsite"
+                            headerText="Portfolio"
+                            projectType="Web application"
+                            projectDescription="Portfolio to showcase my work and "
+                        />
+                    </div>
+                    <div className="column">
+                        <Card
                             imgUrl={fliegen}
                             imgAlt="fliegen"
                             headerText="Fliegen"
@@ -37,16 +47,7 @@ export default function Content({ id }) {
                             imgAlt="fliegen"
                             headerText="Fliegen"
                             projectType="Web application"
-                            projectDescription="BLABLABLA"
-                        />
-                    </div>
-                    <div className="column">
-                        <Card
-                            imgUrl={fliegen}
-                            imgAlt="fliegen"
-                            headerText="Fliegen"
-                            projectType="Web application"
-                            projectDescription="BLABLABLA"
+                            projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
                         />
                     </div>
                 </div>
