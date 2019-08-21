@@ -2,7 +2,7 @@
 .hidden--navbar__flex {
     position: fixed;
     top: 0px;
-    height: 4.5rem;
+    height: 4rem;
     width: 100%;
 }
 
@@ -14,8 +14,6 @@
     font-size: 1.3rem;
 }
 
-.hiddenNavbarTransition {
-}
 .hiddenNavbarTransition-appear,
 .hiddenNavbarTransition-enter {
     opacity: 0;
@@ -24,7 +22,7 @@
 .hiddenNavbarTransition-appear-active,
 .hiddenNavbarTransition-enter-active {
     opacity: 1;
-    transition: all 800ms ease-in 50ms;
+    transition: all 500ms ease-in;
 }
 .hiddenNavbarTransition-exit {
     opacity: 1;

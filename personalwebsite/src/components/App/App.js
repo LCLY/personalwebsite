@@ -22,7 +22,12 @@ const getCondition = condition => {
 };
 
 class App extends React.Component {
-    state = { condition: false, playText: "Playing: ", navbarAppear: false };
+    state = {
+        condition: false,
+        playText: "Playing: ",
+        navbarDisplay: false,
+        navbarAppear: false,
+    };
 
     //switch the bool val
     onInputChange = event => {
@@ -66,6 +71,21 @@ class App extends React.Component {
         };
         // this.el refers to the <span> in the render() method
         this.typed = new Typed(this.el, options);
+
+        //for scrolling, revealing the hidden navbar
+        window.onscroll = function() {
+            //start display the navbar when scroll more than 10% and then remove the navbar when go to top
+            //start the enter animation when surpass 10% and start exit animation when < 10%
+            var newWindowHeight = (window.innerHeight * 20) / 100;
+            if (window.pageYOffset > newWindowHeight) {
+                this.setState({ navbarDisplay: true, navbarAppear: true });
+            } else if (window.pageYOffset === 0) {
+                //if it reaches back to top, totally remove it
+                this.setState({ navbarDisplay: false });
+            } else if (window.pageYOffset < newWindowHeight) {
+                this.setState({ navbarAppear: false });
+            }
+        }.bind(this);
     }
 
     //Did update and rendered
@@ -75,6 +95,9 @@ class App extends React.Component {
         this.typed.destroy();
     }
 
+    componentWillUnmount() {
+        window.onscroll = null;
+    }
     render() {
         const play = getCondition(this.state.condition);
         const { iconName } = PlayController[play];
@@ -86,9 +109,9 @@ class App extends React.Component {
                         <MobileMenuBar />
                         <Navbar />
                         {/* if navbar appear show the navbar using transition */}
-                        {this.state.navbarAppear ? (
+                        {this.state.navbarDisplay ? (
                             <CSSTransition
-                                in={this.state.activated}
+                                in={this.state.navbarAppear}
                                 appear={true}
                                 timeout={{ enter: 500, exit: 500 }}
                                 classNames="hiddenNavbarTransition"
