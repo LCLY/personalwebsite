@@ -13,3 +13,28 @@
     z-index: 20;
     font-size: 1.3rem;
 }
+
+.hiddenNavbarTransition {
+}
+.hiddenNavbarTransition-appear,
+.hiddenNavbarTransition-enter {
+    opacity: 0;
+}
+
+.hiddenNavbarTransition-appear-active,
+.hiddenNavbarTransition-enter-active {
+    opacity: 1;
+    transition: all 800ms ease-in 50ms;
+}
+.hiddenNavbarTransition-exit {
+    opacity: 1;
+}
+
+.hiddenNavbarTransition-exit-active {
+    opacity: 0;
+    transition: all 500ms ease-out;
+}
+
+.hiddenNavbarTransition-exit-done {
+    opacity: 0;
+}

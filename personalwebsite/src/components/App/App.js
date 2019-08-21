@@ -6,6 +6,7 @@ import MobileMenuBar from "../Menu/MobileMenuBar";
 import Content from "../Content/Content";
 import HiddenNavbar from "../Menu/HiddenNavbar";
 import Particle from "../TopPage/Particle";
+import { CSSTransition } from "react-transition-group";
 //Control which iconname
 const PlayController = {
     play: {
@@ -21,7 +22,7 @@ const getCondition = condition => {
 };
 
 class App extends React.Component {
-    state = { condition: false, playText: "Playing: " };
+    state = { condition: false, playText: "Playing: ", navbarAppear: false };
 
     //switch the bool val
     onInputChange = event => {
@@ -84,7 +85,19 @@ class App extends React.Component {
                         <Particle />
                         <MobileMenuBar />
                         <Navbar />
-                        <HiddenNavbar />
+                        {/* if navbar appear show the navbar using transition */}
+                        {this.state.navbarAppear ? (
+                            <CSSTransition
+                                in={this.state.activated}
+                                appear={true}
+                                timeout={{ enter: 500, exit: 500 }}
+                                classNames="hiddenNavbarTransition"
+                            >
+                                <HiddenNavbar />
+                            </CSSTransition>
+                        ) : (
+                            ""
+                        )}
                         <div className="title title__wrap">
                             <div className="ui text container">
                                 <h1
