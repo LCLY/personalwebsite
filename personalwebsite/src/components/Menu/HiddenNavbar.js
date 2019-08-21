@@ -85,7 +85,8 @@ class HiddenNavbar extends React.Component {
                         className={`${this.state.resumeActive} item`}
                         onClick={() => this.handleClick(3)}
                         href="./resume.pdf"
-                        download="resume.pdf"
+                        target="_blank"
+                        // download="resume.pdf"
                     >
                         Resume
                     </a>

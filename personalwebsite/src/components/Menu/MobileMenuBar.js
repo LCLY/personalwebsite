@@ -128,10 +128,11 @@ class MobileMenuBar extends React.Component {
                         <div className="row row--3">
                             <a
                                 href="./resume.pdf"
-                                download="resume.pdf"
+                                // download="resume.pdf"
+                                target="_blank"
                                 style={{ color: `${this.state.fontColor}` }}
                             >
-                                <i className="fas fa-file-download" />
+                                <i className="fas fa-file-pdf" />
                             </a>
                         </div>
                     </CSSTransition>
