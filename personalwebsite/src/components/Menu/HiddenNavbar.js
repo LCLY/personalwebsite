@@ -5,10 +5,6 @@ class HiddenNavbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            homeState: false,
-            portfolioState: false,
-            resumeState: false,
-            contactState: false,
             homeActive: "",
             portfolioActive: "",
             resumeActive: "",
