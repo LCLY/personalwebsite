@@ -9,7 +9,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 class MenuBar extends React.Component {
     scrollToBottom = () => {
-        scroll.scrollToBottom();
+        scroll.scrollToBottom({ duration: 2000 });
     };
 
     render() {
