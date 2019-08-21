@@ -74,6 +74,7 @@ class App extends React.Component {
 
         //for scrolling, revealing the hidden navbar
         window.onscroll = function() {
+            console.log("yes");
             //start display the navbar when scroll more than 10% and then remove the navbar when go to top
             //start the enter animation when surpass 10% and start exit animation when < 10%
             var newWindowHeight = (window.innerHeight * 20) / 100;
@@ -93,9 +94,6 @@ class App extends React.Component {
         // To destroy Typed instance on unmounting
         // to prevent memory leaks
         this.typed.destroy();
-    }
-
-    componentWillUnmount() {
         window.onscroll = null;
     }
     render() {
