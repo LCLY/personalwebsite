@@ -3,7 +3,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { CSSTransition } from "react-transition-group";
 import HiddenBG from "./HiddenBG";
 import { connect } from "react-redux";
-import { toggleHidden } from "../../actions/navbar";
+import { showNavbar, domInsertion } from "../../actions/navbar";
 import PropTypes from "prop-types";
 
 // activeClass - class applied when element is reached
@@ -31,7 +31,6 @@ class MobileMenuBar extends React.Component {
     };
 
     componentDidMount() {
-        console.log(this.props.show);
         var windowHeightY = (window.innerHeight * 90) / 100;
         window.onscroll = function() {
             //when the user scroll until it passes the next page, change color to black
@@ -46,6 +45,17 @@ class MobileMenuBar extends React.Component {
                 this.setState({ iconColor: "white", fontColor: "black" }); //change the icon color to black
             } else if (window.pageYOffset >= window.innerHeight - 50) {
                 this.setState({ iconColor: "black", fontColor: "black" }); //change the icon color to black
+            }
+            /* This is for the hidden navbar in the app.js*/
+            var newWindowHeight = (window.innerHeight * 30) / 100;
+            if (window.pageYOffset > newWindowHeight) {
+                this.props.showNavbar(true); //show the navbar
+                this.props.domInsertion(true); //insert navbar to DOM
+            } else if (window.pageYOffset === 0) {
+                //if it reaches back to top, totally remove it
+                this.props.domInsertion(false); //remove the navbar from DOM
+            } else if (window.pageYOffset < newWindowHeight) {
+                this.props.showNavbar(false); //hide the navbar
             }
         }.bind(this);
     }
@@ -171,10 +181,11 @@ class MobileMenuBar extends React.Component {
 
 MobileMenuBar.propTypes = {
     show: PropTypes.bool.isRequired,
-    toggleHidden: PropTypes.func.isRequired,
+    showNavbar: PropTypes.func.isRequired,
+    domInsertion: PropTypes.func.isRequired,
 };
 
 export default connect(
     state => ({ show: state.navbar.show }),
-    { toggleHidden },
+    { showNavbar, domInsertion },
 )(MobileMenuBar);
