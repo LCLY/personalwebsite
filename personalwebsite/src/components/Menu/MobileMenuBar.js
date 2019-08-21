@@ -2,6 +2,10 @@ import React from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { CSSTransition } from "react-transition-group";
 import HiddenBG from "./HiddenBG";
+import { connect } from "react-redux";
+import { toggleHidden } from "../../actions/navbar";
+import PropTypes from "prop-types";
+
 // activeClass - class applied when element is reached
 // to - target to scroll to
 // spy - make Link selected when scroll is at its targets position
@@ -27,6 +31,7 @@ class MobileMenuBar extends React.Component {
     };
 
     componentDidMount() {
+        console.log(this.props.show);
         var windowHeightY = (window.innerHeight * 90) / 100;
         window.onscroll = function() {
             //when the user scroll until it passes the next page, change color to black
@@ -164,4 +169,12 @@ class MobileMenuBar extends React.Component {
     }
 }
 
-export default MobileMenuBar;
+MobileMenuBar.propTypes = {
+    show: PropTypes.bool.isRequired,
+    toggleHidden: PropTypes.func.isRequired,
+};
+
+export default connect(
+    state => ({ show: state.navbar.show }),
+    { toggleHidden },
+)(MobileMenuBar);
