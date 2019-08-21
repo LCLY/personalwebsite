@@ -7,6 +7,11 @@ import Content from "../Content/Content";
 import HiddenNavbar from "../Menu/HiddenNavbar";
 import Particle from "../TopPage/Particle";
 import { CSSTransition } from "react-transition-group";
+
+//redux
+import store from "./store";
+import { Provider } from "react-redux";
+
 //Control which iconname
 const PlayController = {
     play: {
@@ -100,71 +105,73 @@ class App extends React.Component {
         const play = getCondition(this.state.condition);
         const { iconName } = PlayController[play];
         return (
-            <div>
-                <div className="pusher">
-                    <div className="wrap ui inverted vertical masthead center aligned segment top_page">
-                        <Particle />
-                        <MobileMenuBar />
-                        <Navbar />
-                        {/* if navbar appear show the navbar using transition */}
-                        {this.state.navbarDisplay ? (
-                            <CSSTransition
-                                in={this.state.navbarAppear}
-                                appear={true}
-                                timeout={{ enter: 500, exit: 500 }}
-                                classNames="hiddenNavbarTransition"
-                            >
-                                <HiddenNavbar />
-                            </CSSTransition>
-                        ) : (
-                            ""
-                        )}
-                        <div className="title title__wrap">
-                            <div className="ui text container">
-                                <h1
-                                    id="title__name"
-                                    className="ui inverted header"
+            <Provider store={store}>
+                <div>
+                    <div className="pusher">
+                        <div className="wrap ui inverted vertical masthead center aligned segment top_page">
+                            <Particle />
+                            <MobileMenuBar />
+                            <Navbar />
+                            {/* if navbar appear show the navbar using transition */}
+                            {this.state.navbarDisplay ? (
+                                <CSSTransition
+                                    in={this.state.navbarAppear}
+                                    appear={true}
+                                    timeout={{ enter: 500, exit: 500 }}
+                                    classNames="hiddenNavbarTransition"
                                 >
-                                    HENRY
-                                </h1>
-                            </div>
-                            <div className="type-wrap">
-                                <h2>
-                                    <span
-                                        id="title__type"
-                                        style={{ whiteSpace: "pre" }}
-                                        ref={el => {
-                                            this.el = el;
-                                        }}
-                                    />
-                                </h2>
-                            </div>
-                            <div className="buttonsDiv" id="title__buttons">
-                                {/*get iconname at real time */}
-                                <br />
-                                <div id="play_text_container">
-                                    <div id="play_text">
-                                        {this.state.playText}
+                                    <HiddenNavbar />
+                                </CSSTransition>
+                            ) : (
+                                ""
+                            )}
+                            <div className="title title__wrap">
+                                <div className="ui text container">
+                                    <h1
+                                        id="title__name"
+                                        className="ui inverted header"
+                                    >
+                                        HENRY
+                                    </h1>
+                                </div>
+                                <div className="type-wrap">
+                                    <h2>
+                                        <span
+                                            id="title__type"
+                                            style={{ whiteSpace: "pre" }}
+                                            ref={el => {
+                                                this.el = el;
+                                            }}
+                                        />
+                                    </h2>
+                                </div>
+                                <div className="buttonsDiv" id="title__buttons">
+                                    {/*get iconname at real time */}
+                                    <br />
+                                    <div id="play_text_container">
+                                        <div id="play_text">
+                                            {this.state.playText}
+                                        </div>
+                                        <i
+                                            className={`${iconName} icon buttonHover buttonHover1`}
+                                            onClick={this.onInputChange}
+                                        />
+                                        <i
+                                            className="redo alternate icon buttonHover buttonHover2"
+                                            onClick={this.onClickReset}
+                                        />
+                                        <i
+                                            className="trash icon buttonHover buttonHover3"
+                                            onClick={this.onClickDestroyed}
+                                        />
                                     </div>
-                                    <i
-                                        className={`${iconName} icon buttonHover buttonHover1`}
-                                        onClick={this.onInputChange}
-                                    />
-                                    <i
-                                        className="redo alternate icon buttonHover buttonHover2"
-                                        onClick={this.onClickReset}
-                                    />
-                                    <i
-                                        className="trash icon buttonHover buttonHover3"
-                                        onClick={this.onClickDestroyed}
-                                    />
                                 </div>
                             </div>
                         </div>
+                        <Content id="section1" />
                     </div>
-                    <Content id="section1" />
                 </div>
-            </div>
+            </Provider>
         );
     }
 }
