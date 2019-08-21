@@ -33,7 +33,8 @@ class MenuBar extends React.Component {
                         <a
                             className="ui inverted button"
                             href="./resume.pdf"
-                            download="resume.pdf"
+                            target="_blank"
+                            // download="resume.pdf"
                         >
                             Resume
                         </a>
