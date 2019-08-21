@@ -1,4 +1,5 @@
 import React from "react";
+
 const Cards = props => {
     return (
         <div className="ui fluid link card" id="card--hover">
@@ -14,14 +15,13 @@ const Cards = props => {
             </div>
             <div className="extra content extra--content">
                 <span className="extra--content__start">
-                    <i className="user icon" />
-                    75 Friends
+                    <a>What I've learnt</a>
                 </span>
                 <span className="right floated extra--content__end">
-                    <button className="ui button" id="btn--github">
+                    <a href={props.linktoGithub} target="_blank">
                         View code &nbsp;
                         <i class="github icon" />
-                    </button>
+                    </a>
                 </span>
             </div>
         </div>
