@@ -1,10 +1,16 @@
 //import types
-import { SHOW_NAVBAR, HIDE_NAVBAR } from "../actions/types";
+import {
+    SHOW_NAVBAR,
+    HIDE_NAVBAR,
+    INSERT_NAVBAR,
+    REMOVE_NAVBAR,
+} from "../actions/types";
 
 //initial states
 const initialState = {
     //initial value/bool values
     show: false,
+    insert: false,
 };
 //reducer function
 export default function(state = initialState, action) {
@@ -22,6 +28,16 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 show: false,
+            };
+        case INSERT_NAVBAR:
+            return {
+                ...state,
+                insert: true,
+            };
+        case REMOVE_NAVBAR:
+            return {
+                ...state,
+                insert: false,
             };
         default:
             return state;
