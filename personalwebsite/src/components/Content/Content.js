@@ -29,7 +29,7 @@ export default function Content({ id }) {
                             imgAlt="personalwebsite"
                             headerText="Portfolio"
                             projectType="Web application"
-                            projectDescription="Portfolio to showcase my work and "
+                            projectDescription="Portfolio website to demonstrate my skill sets and let people get to discover more about me"
                         />
                     </div>
                     <div className="column">
