@@ -21,6 +21,7 @@ export default function Content({ id }) {
                     My Projects
                 </h1>
             </div>
+
             <div className="ui middle aligned stackable grid container">
                 <div className="ui three column grid">
                     <div className="column">

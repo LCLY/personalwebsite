@@ -1,6 +1,7 @@
 import React from "react";
 
 const Cards = props => {
+    const flipCard = () => {};
     return (
         <a
             href={props.pageUrl}
@@ -22,7 +23,7 @@ const Cards = props => {
                 </div>
                 <div className="extra content extra--content">
                     <span className="extra--content__start">
-                        <a>What I've learnt</a>
+                        <a onClick={flipCard}>Learn more</a>
                     </span>
                     <span className="right floated extra--content__end">
                         <a href={props.linktoGithub} target="_blank">
