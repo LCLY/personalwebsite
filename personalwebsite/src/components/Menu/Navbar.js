@@ -31,7 +31,7 @@ class MenuBar extends React.Component {
                         <a
                             className="ui inverted button"
                             onClick={() =>
-                                this.scrollToBottom({ duration: 2000 })
+                                scroll.scrollToBottom({ duration: 2000 })
                             }
                         >
                             Contact
