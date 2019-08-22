@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App/App";
-
+import "react-app-polyfill/ie11";
+import "react-app-polyfill/stable";
 import store from "./store";
 import { Provider, ReactReduxContext } from "react-redux";
 
