@@ -7,7 +7,7 @@ const Cards = props => {
                 <img src={props.imgUrl} alt={props.imgAlt} />
             </div>
             <div className="content">
-                <a className="header">{props.headerText}</a>
+                <p className="header">{props.headerText}</p>
                 <div className="meta">
                     <h5>{props.projectType}</h5>
                 </div>
