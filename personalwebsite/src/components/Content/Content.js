@@ -31,7 +31,7 @@ export default function Content({ id }) {
                             headerText="Portfolio"
                             projectType="Web application"
                             projectDescription="Portfolio website to demonstrate my skill sets and let people get to discover more about me"
-                            linktoGithub="https://github.com/LCLY/Personal-Website"
+                            linktoGithub="https://github.com/LCLY/personalwebsite"
                             pageUrl="https://lcly.github.io/personalwebsite/"
                         />
                     </div>
