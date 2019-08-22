@@ -5,7 +5,7 @@
     "homepage": "https://lcly.github.io/personalwebsite",
     "dependencies": {
         "bootstrap": "^4.3.1",
-        "react": "^16.8.6",
+        "react": "^16.9.0",
         "react-app-polyfill": "^1.0.2",
         "react-bootstrap": "^1.0.0-beta.11",
         "react-dom": "^16.8.6",
@@ -36,10 +36,10 @@
             "not op_mini all"
         ],
         "development": [
+            "last 1 ie version",
             "last 1 chrome version",
             "last 1 firefox version",
-            "last 1 safari version",
-            "last 1 ie version"
+            "last 1 safari version"
         ]
     },
     "devDependencies": {
