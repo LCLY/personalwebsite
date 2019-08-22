@@ -8,25 +8,14 @@ import { Link, animateScroll as scroll } from "react-scroll";
 // duration - time of the scroll animation, can be a number or a function
 
 class MenuBar extends React.Component {
-    scrollToBottom = () => {
-        scroll.scrollToBottom({ duration: 2000 });
-    };
-
     render() {
         return (
             <div className="ui menu__bar">
                 <div className="ui large secondary inverted pointing menu menu__flex">
                     <div className="item menu__flex--start" id="navProject">
-                        <Link
-                            activeClass="active"
-                            to="section1"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                        >
+                        <a onClick={() => scroll.scrollTo(window.innerHeight)}>
                             Projects
-                        </Link>
+                        </a>
                     </div>
 
                     <div className="right item menu__flex--end">
@@ -41,7 +30,9 @@ class MenuBar extends React.Component {
                         &nbsp;
                         <a
                             className="ui inverted button"
-                            onClick={this.scrollToBottom}
+                            onClick={() =>
+                                this.scrollToBottom({ duration: 2000 })
+                            }
                         >
                             Contact
                         </a>
