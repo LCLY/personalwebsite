@@ -33,6 +33,8 @@ export default function Content({ id }) {
                             projectDescription="Portfolio website to demonstrate my skill sets and let people get to discover more about me"
                             linktoGithub="https://github.com/LCLY/personalwebsite"
                             pageUrl="https://lcly.github.io/personalwebsite/"
+                            projectChallenges="blablablablablablablala"
+                            projectLessons="blablablablablablablala"
                         />
                     </div>
                     <div className="column">
@@ -44,6 +46,8 @@ export default function Content({ id }) {
                             projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
                             linktoGithub="https://github.com/LCLY/boilermake2018"
                             pageUrl="http://fliegen.lcly1996.com/signIn"
+                            projectChallenges="blablablablablablablala"
+                            projectLessons="blablablablablablablala"
                         />
                     </div>
                     <div className="column">
