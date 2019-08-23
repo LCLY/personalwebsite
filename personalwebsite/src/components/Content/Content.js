@@ -3,6 +3,20 @@ import Card from "../Cards/Cards";
 import fliegen from "../../images/fliegen.PNG";
 import personalweb from "../../images/personalwebsite.PNG";
 export default function Content({ id }) {
+    let allTools = {
+        personalwebTools: [
+            "HTML",
+            "SCSS",
+            "CSS",
+            "JS",
+            "React",
+            "Redux",
+            "Semantic UI",
+            "Typed.js",
+            "Particle.js",
+        ],
+    };
+
     return (
         <div className="ui vertical stripe segment" id={id}>
             <div
@@ -35,6 +49,7 @@ export default function Content({ id }) {
                             pageUrl="https://lcly.github.io/personalwebsite/"
                             projectChallenges="blablablablablablablala"
                             projectLessons="blablablablablablablala"
+                            projectTools={allTools.personalwebTools}
                         />
                     </div>
                     <div className="column">
@@ -48,6 +63,7 @@ export default function Content({ id }) {
                             pageUrl="http://fliegen.lcly1996.com/signIn"
                             projectChallenges="blablablablablablablala"
                             projectLessons="blablablablablablablala"
+                            projectTools={allTools.personalwebTools}
                         />
                     </div>
                     <div className="column">
@@ -57,6 +73,7 @@ export default function Content({ id }) {
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
+                            projectTools={allTools.personalwebTools}
                         />
                     </div>
                 </div>
@@ -70,6 +87,7 @@ export default function Content({ id }) {
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
+                            projectTools={allTools.personalwebTools}
                         />
                     </div>
                     <div className="column">
@@ -79,6 +97,7 @@ export default function Content({ id }) {
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="BLABLABLA"
+                            projectTools={allTools.personalwebTools}
                         />
                     </div>
                     <div className="column">
@@ -88,6 +107,7 @@ export default function Content({ id }) {
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="BLABLABLA"
+                            projectTools={allTools.personalwebTools}
                         />
                     </div>
                 </div>
