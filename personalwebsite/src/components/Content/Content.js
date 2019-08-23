@@ -5,15 +5,15 @@ import personalweb from "../../images/personalwebsite.PNG";
 export default function Content({ id }) {
     let allTools = {
         personalwebTools: [
-            "HTML",
-            "SCSS",
-            "CSS",
-            "JS",
             "React",
             "Redux",
             "Semantic UI",
             "Typed.js",
             "Particle.js",
+            "HTML",
+            "SCSS",
+            "CSS",
+            "JS",
         ],
     };
 
