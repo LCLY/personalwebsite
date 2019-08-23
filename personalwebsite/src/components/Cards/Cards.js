@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Label } from "semantic-ui-react";
 import _ from "lodash";
-const sizes = ["mini", "tiny", "small", "medium", "large", "big"];
 
 const Cards = props => {
     const [formData, setFormData] = useState({
@@ -14,7 +13,6 @@ const Cards = props => {
             test: !test,
         });
     };
-
     return (
         <div>
             {test ? (
@@ -85,7 +83,11 @@ const Cards = props => {
                             <h5 className="description__heading">Challenges</h5>
                         </div>
                         <div className="description description__info">
-                            {props.projectChallenges}
+                            <ul>
+                                {props.projectChallenges.map(challenge => (
+                                    <li key={challenge}>{challenge}</li>
+                                ))}
+                            </ul>
                         </div>
                         <div className="meta">
                             <h5 className="description__heading">
@@ -93,7 +95,11 @@ const Cards = props => {
                             </h5>
                         </div>
                         <div className="description description__info">
-                            {props.projectLessons}
+                            <ul>
+                                {props.projectLessons.map(lesson => (
+                                    <li key={lesson}>{lesson}</li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                     <div

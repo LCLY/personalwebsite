@@ -4,17 +4,28 @@ import fliegen from "../../images/fliegen.PNG";
 import personalweb from "../../images/personalwebsite.PNG";
 export default function Content({ id }) {
     let allTools = {
-        personalwebTools: [
-            "React",
-            "Redux",
-            "Semantic UI",
-            "Typed.js",
-            "Particle.js",
-            "HTML",
-            "SCSS",
-            "CSS",
-            "JS",
-        ],
+        personalweb: {
+            tools: [
+                "React",
+                "Redux",
+                "Semantic UI",
+                "Typed.js",
+                "Particle.js",
+                "HTML",
+                "SCSS",
+                "CSS",
+                "JS",
+            ],
+            challenges: [
+                "Integrating other libraries and utilize them appropriately.",
+                "Making the application web responsive",
+            ],
+            lessons: [
+                "Read the document of the libraries thoroughly.",
+                "Note down the problems that need to be solved somewhere.",
+                "Make use of media queries to achieve web responsive.",
+            ],
+        },
     };
 
     return (
@@ -47,9 +58,9 @@ export default function Content({ id }) {
                             projectDescription="Portfolio website to demonstrate my skill sets and let people get to discover more about me"
                             linktoGithub="https://github.com/LCLY/personalwebsite"
                             pageUrl="https://lcly.github.io/personalwebsite/"
-                            projectChallenges="blablablablablablablala"
-                            projectLessons="blablablablablablablala"
-                            projectTools={allTools.personalwebTools}
+                            projectChallenges={allTools.personalweb.challenges}
+                            projectLessons={allTools.personalweb.lessons}
+                            projectTools={allTools.personalweb.tools}
                         />
                     </div>
                     <div className="column">
@@ -61,9 +72,9 @@ export default function Content({ id }) {
                             projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
                             linktoGithub="https://github.com/LCLY/boilermake2018"
                             pageUrl="http://fliegen.lcly1996.com/signIn"
-                            projectChallenges="blablablablablablablala"
-                            projectLessons="blablablablablablablala"
-                            projectTools={allTools.personalwebTools}
+                            projectChallenges={allTools.personalweb.challenges}
+                            projectLessons={allTools.personalweb.lessons}
+                            projectTools={allTools.personalweb.tools}
                         />
                     </div>
                     <div className="column">
@@ -73,7 +84,9 @@ export default function Content({ id }) {
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
-                            projectTools={allTools.personalwebTools}
+                            projectChallenges={allTools.personalweb.challenges}
+                            projectLessons={allTools.personalweb.lessons}
+                            projectTools={allTools.personalweb.tools}
                         />
                     </div>
                 </div>
@@ -87,7 +100,9 @@ export default function Content({ id }) {
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
-                            projectTools={allTools.personalwebTools}
+                            projectChallenges={allTools.personalweb.challenges}
+                            projectLessons={allTools.personalweb.lessons}
+                            projectTools={allTools.personalweb.tools}
                         />
                     </div>
                     <div className="column">
@@ -97,7 +112,9 @@ export default function Content({ id }) {
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="BLABLABLA"
-                            projectTools={allTools.personalwebTools}
+                            projectChallenges={allTools.personalweb.challenges}
+                            projectLessons={allTools.personalweb.lessons}
+                            projectTools={allTools.personalweb.tools}
                         />
                     </div>
                     <div className="column">
@@ -107,7 +124,9 @@ export default function Content({ id }) {
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="BLABLABLA"
-                            projectTools={allTools.personalwebTools}
+                            projectChallenges={allTools.personalweb.challenges}
+                            projectLessons={allTools.personalweb.lessons}
+                            projectTools={allTools.personalweb.tools}
                         />
                     </div>
                 </div>
