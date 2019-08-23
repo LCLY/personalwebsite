@@ -1,7 +1,7 @@
 .description {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 1.2rem;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
 }
 
 .card {
@@ -26,4 +26,28 @@
 .extra--content__end {
     margin-left: auto;
     justify-content: flex-end;
+}
+
+#linkFormat {
+    padding-bottom: 0.5rem;
+}
+
+.description__info {
+    font-size: 1rem;
+}
+
+.description__heading {
+    font-size: 1.2rem;
+    color: rgb(110, 110, 110);
+}
+
+.toolsLabel--div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.toolsLabel__format {
+    margin-bottom: 0.2rem;
+    color: rgb(236, 236, 236);
 }

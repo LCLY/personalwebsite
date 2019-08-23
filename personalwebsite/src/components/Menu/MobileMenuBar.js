@@ -23,7 +23,6 @@ class MobileMenuBar extends React.Component {
             activated: false,
             firstTime: false,
         };
-        this.handleBarClick = this.handleBarClick.bind(this);
     }
 
     scrollToBottom = () => {
@@ -64,7 +63,7 @@ class MobileMenuBar extends React.Component {
         window.onscroll = null;
     }
 
-    handleBarClick() {
+    handleBarClick = () => {
         //for the first time, dont show it
         if (this.state.firstTime === false) {
             this.setState({ firstTime: true });
@@ -75,7 +74,13 @@ class MobileMenuBar extends React.Component {
         } else {
             this.setState({ iconName: "fa-bars", activated: false });
         }
-    }
+    };
+
+    handleExit = () => {
+        if (this.state.firstTime === true) {
+            this.setState({ firstTime: false });
+        }
+    };
 
     render() {
         const toPresent = (
@@ -160,6 +165,7 @@ class MobileMenuBar extends React.Component {
                         in={this.state.activated}
                         appear={true}
                         timeout={{ enter: 500, exit: 1000 }}
+                        onExited={this.handleExit}
                         classNames="menuBG"
                     >
                         <HiddenBG />
