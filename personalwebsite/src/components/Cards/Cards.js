@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Label } from "semantic-ui-react";
 import _ from "lodash";
-const sizes = ["mini", "tiny", "small", "medium", "large", "big"];
 
 const Cards = props => {
     const [formData, setFormData] = useState({
-        test: true,
+        changeContent: true,
     });
-    const { test } = formData;
+    const { changeContent } = formData;
+
+    //set the front to true when mount component
     const handleLearnMore = () => {
         setFormData({
             ...formData,
-            test: !test,
+            changeContent: !changeContent,
         });
     };
 
     return (
         <div>
-            {test ? (
+            {changeContent ? (
                 <div className="ui fluid link card" id="card--hover">
                     <div className="image">
                         <a href={props.pageUrl} target="_blank" id="linkFormat">
@@ -28,6 +29,7 @@ const Cards = props => {
                             />
                         </a>
                     </div>
+
                     <div className="content" style={{ cursor: "default" }}>
                         <a
                             href={props.pageUrl}
@@ -85,7 +87,11 @@ const Cards = props => {
                             <h5 className="description__heading">Challenges</h5>
                         </div>
                         <div className="description description__info">
-                            {props.projectChallenges}
+                            <ul>
+                                {props.projectChallenges.map(challenge => (
+                                    <li key={challenge}>{challenge}</li>
+                                ))}
+                            </ul>
                         </div>
                         <div className="meta">
                             <h5 className="description__heading">
@@ -93,9 +99,14 @@ const Cards = props => {
                             </h5>
                         </div>
                         <div className="description description__info">
-                            {props.projectLessons}
+                            <ul>
+                                {props.projectLessons.map(lesson => (
+                                    <li key={lesson}>{lesson}</li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
+
                     <div
                         className="extra content extra--content"
                         style={{ cursor: "default" }}
