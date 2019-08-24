@@ -1,31 +1,48 @@
 import React, { useState, useEffect } from "react";
 import { Label } from "semantic-ui-react";
+import { CSSTransition } from "react-transition-group";
 import _ from "lodash";
 
 const Cards = props => {
     const [formData, setFormData] = useState({
-        test: true,
+        changeContent: true,
+        flipCard: false,
     });
-    const { test } = formData;
+    const { changeContent, flipCard } = formData;
+
+    //set the front to true when mount component
     const handleLearnMore = () => {
         setFormData({
             ...formData,
-            test: !test,
+            changeContent: !changeContent,
+            flipCard: !flipCard,
         });
     };
+
     return (
         <div>
-            {test ? (
+            {changeContent ? (
                 <div className="ui fluid link card" id="card--hover">
-                    <div className="image">
-                        <a href={props.pageUrl} target="_blank" id="linkFormat">
-                            <img
-                                src={props.imgUrl}
-                                alt={props.imgAlt}
-                                style={{ width: "100%", height: "100%" }}
-                            />
-                        </a>
-                    </div>
+                    <CSSTransition
+                        in={flipCard}
+                        appear={true}
+                        timeout={1000}
+                        classNames="flip--front"
+                    >
+                        <div className="image">
+                            <a
+                                href={props.pageUrl}
+                                target="_blank"
+                                id="linkFormat"
+                            >
+                                <img
+                                    src={props.imgUrl}
+                                    alt={props.imgAlt}
+                                    style={{ width: "100%", height: "100%" }}
+                                />
+                            </a>
+                        </div>
+                    </CSSTransition>
                     <div className="content" style={{ cursor: "default" }}>
                         <a
                             href={props.pageUrl}
@@ -75,33 +92,42 @@ const Cards = props => {
                 </div>
             ) : (
                 <div className="ui fluid link card" id="card--hover">
-                    <div className="content" style={{ cursor: "default" }}>
-                        <div id="linkFormat" className="header">
-                            Project Details
+                    <CSSTransition
+                        in={flipCard}
+                        appear={true}
+                        timeout={1000}
+                        classNames="flip--back"
+                    >
+                        <div className="content" style={{ cursor: "default" }}>
+                            <div id="linkFormat" className="header">
+                                Project Details
+                            </div>
+                            <div className="meta">
+                                <h5 className="description__heading">
+                                    Challenges
+                                </h5>
+                            </div>
+                            <div className="description description__info">
+                                <ul>
+                                    {props.projectChallenges.map(challenge => (
+                                        <li key={challenge}>{challenge}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="meta">
+                                <h5 className="description__heading">
+                                    What I've learnt
+                                </h5>
+                            </div>
+                            <div className="description description__info">
+                                <ul>
+                                    {props.projectLessons.map(lesson => (
+                                        <li key={lesson}>{lesson}</li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div className="meta">
-                            <h5 className="description__heading">Challenges</h5>
-                        </div>
-                        <div className="description description__info">
-                            <ul>
-                                {props.projectChallenges.map(challenge => (
-                                    <li key={challenge}>{challenge}</li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="meta">
-                            <h5 className="description__heading">
-                                What I've learnt
-                            </h5>
-                        </div>
-                        <div className="description description__info">
-                            <ul>
-                                {props.projectLessons.map(lesson => (
-                                    <li key={lesson}>{lesson}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
+                    </CSSTransition>
                     <div
                         className="extra content extra--content"
                         style={{ cursor: "default" }}

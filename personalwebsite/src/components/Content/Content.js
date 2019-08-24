@@ -17,6 +17,18 @@ export default function Content({ id }) {
                 "JS",
             ],
             challenges: [
+                "Integrating external libraries and utilize them appropriately.",
+                "Making the application web responsive",
+            ],
+            lessons: [
+                "Read the document of the libraries thoroughly multiple times.",
+                "Note down the problems that need to be solved.",
+                "Make use of media queries to achieve web responsive.",
+            ],
+        },
+        fliegen: {
+            tools: ["Sqlite3", "Heroku", "Bootstrap", "HTML", "CSS", "JS"],
+            challenges: [
                 "Integrating other libraries and utilize them appropriately.",
                 "Making the application web responsive",
             ],
@@ -68,13 +80,13 @@ export default function Content({ id }) {
                             imgUrl={fliegen}
                             imgAlt="fliegen"
                             headerText="Fliegen"
-                            projectType="Web application"
-                            projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
+                            projectType="Web application/Hackathon"
+                            projectDescription="A mock web application designed for students and recruiters/professionals to connect more effectively"
                             linktoGithub="https://github.com/LCLY/boilermake2018"
                             pageUrl="http://fliegen.lcly1996.com/signIn"
-                            projectChallenges={allTools.personalweb.challenges}
-                            projectLessons={allTools.personalweb.lessons}
-                            projectTools={allTools.personalweb.tools}
+                            projectChallenges={allTools.fliegen.challenges}
+                            projectLessons={allTools.fliegen.lessons}
+                            projectTools={allTools.fliegen.tools}
                         />
                     </div>
                     <div className="column">
