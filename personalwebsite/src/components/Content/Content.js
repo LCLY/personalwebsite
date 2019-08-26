@@ -1,45 +1,12 @@
 import React from "react";
 import Card from "../Cards/Cards";
-import fliegen from "../../images/fliegen.PNG";
-import personalweb from "../../images/personalwebsite.PNG";
-export default function Content({ id }) {
-    let allTools = {
-        personalweb: {
-            tools: [
-                "React",
-                "Redux",
-                "Semantic UI",
-                "Typed.js",
-                "Particle.js",
-                "HTML",
-                "SCSS",
-                "CSS",
-                "JS",
-            ],
-            challenges: [
-                "Integrating external libraries and utilize them appropriately.",
-                "Making the application web responsive",
-            ],
-            lessons: [
-                "Read the document of the libraries thoroughly multiple times.",
-                "Note down the problems that need to be solved.",
-                "Make use of media queries to achieve web responsive.",
-            ],
-        },
-        fliegen: {
-            tools: ["Sqlite3", "Heroku", "Bootstrap", "HTML", "CSS", "JS"],
-            challenges: [
-                "Integrating other libraries and utilize them appropriately.",
-                "Making the application web responsive",
-            ],
-            lessons: [
-                "Read the document of the libraries thoroughly.",
-                "Note down the problems that need to be solved somewhere.",
-                "Make use of media queries to achieve web responsive.",
-            ],
-        },
-    };
+import fliegenImg from "../../images/fliegen.PNG";
+import personalWebImg from "../../images/personalwebsite.PNG";
+import boilerideImg from "../../images/boileride.PNG";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
+const Content = ({ id, project }) => {
     return (
         <div className="ui vertical stripe segment" id={id}>
             <div
@@ -62,43 +29,46 @@ export default function Content({ id }) {
             <div className="ui middle aligned stackable grid container">
                 <div className="ui three column grid">
                     <div className="column">
+                        {/* personal website */}
                         <Card
-                            imgUrl={personalweb}
+                            imgUrl={personalWebImg}
                             imgAlt="personalwebsite"
-                            headerText="Portfolio"
-                            projectType="Web application"
-                            projectDescription="Portfolio website to demonstrate my skill sets and let people get to discover more about me"
-                            linktoGithub="https://github.com/LCLY/personalwebsite"
+                            headerText={project.personalweb.headerText}
+                            projectType={project.personalweb.projectType}
+                            projectDescription={project.personalweb.desc}
+                            linktoGithub={project.personalweb.linktoGithub}
                             pageUrl="https://lcly.github.io/personalwebsite/"
-                            projectChallenges={allTools.personalweb.challenges}
-                            projectLessons={allTools.personalweb.lessons}
-                            projectTools={allTools.personalweb.tools}
+                            projectChallenges={project.personalweb.challenges}
+                            projectLessons={project.personalweb.lessons}
+                            projectTools={project.personalweb.tools}
                         />
                     </div>
                     <div className="column">
+                        {/* fliegen */}
                         <Card
-                            imgUrl={fliegen}
+                            imgUrl={fliegenImg}
                             imgAlt="fliegen"
-                            headerText="Fliegen"
-                            projectType="Web application/Hackathon"
-                            projectDescription="A mock web application designed for students and recruiters/professionals to connect more effectively"
-                            linktoGithub="https://github.com/LCLY/boilermake2018"
+                            headerText={project.fliegen.headerText}
+                            projectType={project.fliegen.projectType}
+                            projectDescription={project.fliegen.desc}
+                            linktoGithub={project.fliegen.linktoGithub}
                             pageUrl="http://fliegen.lcly1996.com/signIn"
-                            projectChallenges={allTools.fliegen.challenges}
-                            projectLessons={allTools.fliegen.lessons}
-                            projectTools={allTools.fliegen.tools}
+                            projectChallenges={project.fliegen.challenges}
+                            projectLessons={project.fliegen.lessons}
+                            projectTools={project.fliegen.tools}
                         />
                     </div>
                     <div className="column">
+                        {/* boileride */}
                         <Card
-                            imgUrl={fliegen}
-                            imgAlt="fliegen"
+                            imgUrl={boilerideImg}
+                            imgAlt="Boileride"
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
-                            projectChallenges={allTools.personalweb.challenges}
-                            projectLessons={allTools.personalweb.lessons}
-                            projectTools={allTools.personalweb.tools}
+                            projectChallenges={project.personalweb.challenges}
+                            projectLessons={project.personalweb.lessons}
+                            projectTools={project.personalweb.tools}
                         />
                     </div>
                 </div>
@@ -107,42 +77,51 @@ export default function Content({ id }) {
                 <div className="ui three column grid">
                     <div className="column">
                         <Card
-                            imgUrl={fliegen}
-                            imgAlt="fliegen"
+                            imgUrl={fliegenImg}
+                            imgAlt="fliegenImg"
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
-                            projectChallenges={allTools.personalweb.challenges}
-                            projectLessons={allTools.personalweb.lessons}
-                            projectTools={allTools.personalweb.tools}
+                            projectChallenges={project.personalweb.challenges}
+                            projectLessons={project.personalweb.lessons}
+                            projectTools={project.personalweb.tools}
                         />
                     </div>
                     <div className="column">
                         <Card
-                            imgUrl={fliegen}
-                            imgAlt="fliegen"
+                            imgUrl={fliegenImg}
+                            imgAlt="fliegenImg"
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="BLABLABLA"
-                            projectChallenges={allTools.personalweb.challenges}
-                            projectLessons={allTools.personalweb.lessons}
-                            projectTools={allTools.personalweb.tools}
+                            projectChallenges={project.personalweb.challenges}
+                            projectLessons={project.personalweb.lessons}
+                            projectTools={project.personalweb.tools}
                         />
                     </div>
                     <div className="column">
                         <Card
-                            imgUrl={fliegen}
-                            imgAlt="fliegen"
+                            imgUrl={fliegenImg}
+                            imgAlt="fliegenImg"
                             headerText="Fliegen"
                             projectType="Web application"
                             projectDescription="BLABLABLA"
-                            projectChallenges={allTools.personalweb.challenges}
-                            projectLessons={allTools.personalweb.lessons}
-                            projectTools={allTools.personalweb.tools}
+                            projectChallenges={project.personalweb.challenges}
+                            projectLessons={project.personalweb.lessons}
+                            projectTools={project.personalweb.tools}
                         />
                     </div>
                 </div>
             </div>
         </div>
     );
-}
+};
+Content.propTypes = {
+    //states
+    project: PropTypes.object.isRequired,
+};
+
+export default connect(
+    state => ({ project: state.content.project }),
+    {},
+)(Content);
