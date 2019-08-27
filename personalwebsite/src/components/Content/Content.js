@@ -5,7 +5,6 @@ import personalWebImg from "../../images/personalwebsite.PNG";
 import boilerideImg from "../../images/boileride.PNG";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-
 const Content = ({ id, project }) => {
     return (
         <div className="ui vertical stripe segment" id={id}>

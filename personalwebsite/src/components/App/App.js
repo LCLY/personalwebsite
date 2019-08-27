@@ -7,7 +7,7 @@ import Content from "../Content/Content";
 import HiddenNavbar from "../Menu/HiddenNavbar";
 import Particle from "../TopPage/Particle";
 import { CSSTransition } from "react-transition-group";
-
+import Footer from "../Footer/Footer";
 //redux
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -151,6 +151,7 @@ class App extends React.Component {
                         </div>
                     </div>
                     <Content id="section1" />
+                    <Footer />
                 </div>
             </div>
         );
