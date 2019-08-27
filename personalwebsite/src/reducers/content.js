@@ -26,7 +26,7 @@ const initialState = {
             lessons: [
                 "Read the document of the libraries thoroughly multiple times.",
                 "Note down the problems that need to be solved.",
-                "Make use of media queries to achieve web responsive.",
+                "Make use of media queries to achieve mobile and web responsive.",
             ],
         },
         fliegen: {
@@ -54,10 +54,15 @@ const initialState = {
                 "Allocate more time for more important tasks.",
                 "Distribute tasks among team members",
                 "Communicate with teammates from time to time.",
-                "Guide teammates with what I know to save time.",
+                "Guide teammates with what I know to increase efficiency.",
             ],
         },
         boileride: {
+            headerText: "Boileride",
+            projectType: "Web application",
+            desc:
+                "A ride sharing web application that allows users to list, search and reserve rides around Purdue University.",
+            linktoGithub: "https://github.com/ryanteo96/Boileride",
             tools: [
                 "Bootstrap",
                 "jQuery",
@@ -65,20 +70,16 @@ const initialState = {
                 "Java",
                 "MySQL",
                 "Google Maps Platform",
-                "HTML",
-                "CSS",
-                "JS",
+                "Agile/Scrum",
             ],
             challenges: [
-                "Work under pressure, deliver within 36 hours.",
-                "Collaborate closely with the design team",
-                "Work with team members that were new to web technologies",
+                "Write detail project documentations such as product backlog and software testing.",
+                "Work with backend team to build the application",
+                "Understand black box, incremental, high order and regression testing ",
             ],
             lessons: [
-                "Allocate more time for more important tasks.",
-                "Distribute tasks among team members",
-                "Communicate with teammates from time to time.",
-                "Guide teammates with what I know to save time.",
+                "Plan discussion topics ahead before having a meeting.",
+                "Communicate with team leader/team members on technical or other issues.",
             ],
         },
     },

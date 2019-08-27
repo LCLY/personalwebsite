@@ -95,6 +95,11 @@ $widthHeightRadius: 9rem;
     .hidden {
         display: none;
     }
+    .card__innerContainer {
+        right: -14px;
+        //for debug purposes
+        // background-color: green;
+    }
 }
 
 /* Large Devices, Wide Screens */
