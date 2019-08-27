@@ -1,4 +1,15 @@
-.footer--Format {
-    display: block;
-    bottom: 0;
+.footer__innerContainer {
+    text-align: center;
+}
+.footer__icon {
+    cursor: pointer;
+    padding: 0 0.5rem 0 0.5rem;
+    font-size: 2rem;
+    &:hover {
+        color: grey;
+    }
+}
+
+.footer__spacing {
+    margin: 1rem 0 1rem 0;
 }
