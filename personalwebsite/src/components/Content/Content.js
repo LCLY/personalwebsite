@@ -12,7 +12,6 @@ const Content = ({ id, project }) => {
             <div
                 style={{
                     textAlign: "center",
-                    margin: "0 auto 0 auto",
                     paddingDown: "1rem",
                 }}
             >
@@ -26,8 +25,8 @@ const Content = ({ id, project }) => {
                 </h1>
             </div>
 
-            <div className="ui middle aligned stackable grid container">
-                <div className="ui three column grid">
+            <div className="ui middle aligned stackable grid container card--outerContainer">
+                <div className="ui three column grid card__innerContainer">
                     <div className="column">
                         {/* personal website */}
                         <Card
@@ -41,6 +40,20 @@ const Content = ({ id, project }) => {
                             projectChallenges={project.personalweb.challenges}
                             projectLessons={project.personalweb.lessons}
                             projectTools={project.personalweb.tools}
+                        />
+                    </div>
+                    <div className="column">
+                        {/* boileride */}
+                        <Card
+                            imgUrl={boilerideImg}
+                            imgAlt="Boileride"
+                            headerText={project.boileride.headerText}
+                            projectType={project.boileride.projectType}
+                            projectDescription={project.boileride.desc}
+                            projectChallenges={project.boileride.challenges}
+                            linktoGithub={project.boileride.linktoGithub}
+                            projectLessons={project.boileride.lessons}
+                            projectTools={project.boileride.tools}
                         />
                     </div>
                     <div className="column">
@@ -59,23 +72,6 @@ const Content = ({ id, project }) => {
                         />
                     </div>
                     <div className="column">
-                        {/* boileride */}
-                        <Card
-                            imgUrl={boilerideImg}
-                            imgAlt="Boileride"
-                            headerText="Fliegen"
-                            projectType="Web application"
-                            projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
-                            projectChallenges={project.personalweb.challenges}
-                            projectLessons={project.personalweb.lessons}
-                            projectTools={project.personalweb.tools}
-                        />
-                    </div>
-                </div>
-            </div>
-            <div className="ui middle aligned stackable grid container">
-                <div className="ui three column grid">
-                    <div className="column">
                         <Card
                             imgUrl={fliegenImg}
                             imgAlt="fliegenImg"
@@ -93,7 +89,7 @@ const Content = ({ id, project }) => {
                             imgAlt="fliegenImg"
                             headerText="Fliegen"
                             projectType="Web application"
-                            projectDescription="BLABLABLA"
+                            projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
                             projectChallenges={project.personalweb.challenges}
                             projectLessons={project.personalweb.lessons}
                             projectTools={project.personalweb.tools}
@@ -105,7 +101,7 @@ const Content = ({ id, project }) => {
                             imgAlt="fliegenImg"
                             headerText="Fliegen"
                             projectType="Web application"
-                            projectDescription="BLABLABLA"
+                            projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
                             projectChallenges={project.personalweb.challenges}
                             projectLessons={project.personalweb.lessons}
                             projectTools={project.personalweb.tools}
