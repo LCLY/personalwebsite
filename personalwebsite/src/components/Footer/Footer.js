@@ -28,7 +28,14 @@ const Footer = () => {
                     <h1 style={{ fontFamily: "Poppins, cursive" }}>
                         Let's talk
                     </h1>
-                    <div className="footer__email" />
+                    <a href="mailto:lchoo9294@gmail.com" target="_blank">
+                        <button
+                            className="ui button inverted"
+                            style={{ fontSize: "1.5rem" }}
+                        >
+                            Contact me
+                        </button>
+                    </a>
                 </div>
                 <div className="footer__spacing">
                     <a
