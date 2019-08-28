@@ -70,42 +70,6 @@ const Content = ({ id, project }) => {
                             projectTools={project.fliegen.tools}
                         />
                     </div>
-                    <div className="column">
-                        <Card
-                            imgUrl={fliegenImg}
-                            imgAlt="fliegenImg"
-                            headerText="Fliegen"
-                            projectType="Web application"
-                            projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
-                            projectChallenges={project.personalweb.challenges}
-                            projectLessons={project.personalweb.lessons}
-                            projectTools={project.personalweb.tools}
-                        />
-                    </div>
-                    <div className="column">
-                        <Card
-                            imgUrl={fliegenImg}
-                            imgAlt="fliegenImg"
-                            headerText="Fliegen"
-                            projectType="Web application"
-                            projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
-                            projectChallenges={project.personalweb.challenges}
-                            projectLessons={project.personalweb.lessons}
-                            projectTools={project.personalweb.tools}
-                        />
-                    </div>
-                    <div className="column">
-                        <Card
-                            imgUrl={fliegenImg}
-                            imgAlt="fliegenImg"
-                            headerText="Fliegen"
-                            projectType="Web application"
-                            projectDescription="A web application designed for students and recruiters/professionals to connect more effectively"
-                            projectChallenges={project.personalweb.challenges}
-                            projectLessons={project.personalweb.lessons}
-                            projectTools={project.personalweb.tools}
-                        />
-                    </div>
                 </div>
             </div>
         </div>

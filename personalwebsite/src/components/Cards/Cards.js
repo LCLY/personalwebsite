@@ -81,7 +81,7 @@ const Cards = props => {
                 <div className="ui fluid link card" id="card--hover">
                     <div className="content" style={{ cursor: "default" }}>
                         <div id="linkFormat" className="header">
-                            Project Details
+                            Reflections
                         </div>
                         <div className="meta">
                             <h5 className="description__heading">Challenges</h5>
