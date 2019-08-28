@@ -19,16 +19,30 @@ const Footer = () => {
         }, 3000);
     }
     return (
-        <div className="ui inverted vertical segment">
+        <div
+            className="ui inverted vertical segment"
+            style={{ padding: "5rem 0 5rem 0" }}
+        >
             <div className="container footer__innerContainer">
                 <div className="footer__spacing">
-                    <h1>Contact me</h1>
+                    <h1 style={{ fontFamily: "Poppins, cursive" }}>
+                        Let's talk
+                    </h1>
+                    <div className="footer__email" />
                 </div>
                 <div className="footer__spacing">
-                    <a>
+                    <a
+                        href="https://github.com/LCLY"
+                        target="_blank"
+                        style={{ color: "inherit" }}
+                    >
                         <i className="fab fa-github footer__icon" />
                     </a>
-                    <a>
+                    <a
+                        href="https://linkedin.com/in/lcly9294/"
+                        target="_blank"
+                        style={{ color: "inherit" }}
+                    >
                         <i className="fab fa-linkedin footer__icon" />
                     </a>
                     <a>
@@ -46,7 +60,8 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="footer__spacing">
-                    <i class="far fa-copyright" /> 2019 Henry Choo
+                    <i class="far fa-copyright" /> 2019 Henry Choo. All rights
+                    reserved.
                 </div>
             </div>
             {/* hidden textarea to copy the email */}
