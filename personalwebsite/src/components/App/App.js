@@ -99,7 +99,7 @@ class App extends React.Component {
                             <CSSTransition
                                 in={this.props.show}
                                 appear={true}
-                                timeout={{ enter: 500, exit: 500 }}
+                                timeout={{ enter: 300, exit: 300 }}
                                 classNames="hiddenNavbarTransition"
                             >
                                 <HiddenNavbar />
