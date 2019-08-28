@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52d7e6ebd1d9fa65476822357b2f2976",
+    "revision": "a2aa9c151cadca840c6ae22216728871",
     "url": "/personalwebsite/index.html"
   },
   {
-    "revision": "56b156f33d99934a88ab",
-    "url": "/personalwebsite/static/css/main.1c6bdb76.chunk.css"
+    "revision": "3e4b2002d2641fb0dcc2",
+    "url": "/personalwebsite/static/css/main.d143c02b.chunk.css"
   },
   {
-    "revision": "44a503781f32b6ce46d7",
-    "url": "/personalwebsite/static/js/2.decd0a42.chunk.js"
+    "revision": "2af468ed8c2f517faaeb",
+    "url": "/personalwebsite/static/js/2.22683d47.chunk.js"
   },
   {
-    "revision": "56b156f33d99934a88ab",
-    "url": "/personalwebsite/static/js/main.325f26cd.chunk.js"
+    "revision": "3e4b2002d2641fb0dcc2",
+    "url": "/personalwebsite/static/js/main.198cd8c2.chunk.js"
   },
   {
     "revision": "1f782c562390b2e61027",
     "url": "/personalwebsite/static/js/runtime~main.29a1488c.js"
+  },
+  {
+    "revision": "d8c1d040de7ab9c36504dfa07b28a125",
+    "url": "/personalwebsite/static/media/boileride.d8c1d040.PNG"
   },
   {
     "revision": "5d03a694112e4e64b8a642c09f9e456a",
