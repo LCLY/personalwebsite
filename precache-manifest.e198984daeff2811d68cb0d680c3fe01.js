@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bde6ee3a59702a4fbc7042f2e428fca4",
+    "revision": "d1120066a0a7b9fb10500df18e2a56de",
     "url": "/personalwebsite/index.html"
   },
   {
-    "revision": "8b9113e81a552e677563",
+    "revision": "7908f5ad05c1167f749f",
     "url": "/personalwebsite/static/css/main.d143c02b.chunk.css"
   },
   {
-    "revision": "4c0121b797d084e333df",
-    "url": "/personalwebsite/static/js/2.96d99f1a.chunk.js"
+    "revision": "2c40d6fa8b43642a3571",
+    "url": "/personalwebsite/static/js/2.ab6f00ad.chunk.js"
   },
   {
-    "revision": "8b9113e81a552e677563",
-    "url": "/personalwebsite/static/js/main.1943c6f8.chunk.js"
+    "revision": "7908f5ad05c1167f749f",
+    "url": "/personalwebsite/static/js/main.194a736d.chunk.js"
   },
   {
     "revision": "1f782c562390b2e61027",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5d03a694112e4e64b8a642c09f9e456a",
     "url": "/personalwebsite/static/media/fliegen.5d03a694.PNG"
+  },
+  {
+    "revision": "db88ed6869edb437e12b7b367bc1d61d",
+    "url": "/personalwebsite/static/media/hololens.db88ed68.jpg"
   },
   {
     "revision": "041051ed04fb18558f958564f4652850",
