@@ -4,8 +4,10 @@ import fliegenImg from "../../images/fliegen.PNG";
 import personalWebImg from "../../images/personalwebsite.PNG";
 import boilerideImg from "../../images/boileride.PNG";
 import libGDX from "../../images/libgdx.png";
+import hololens from "../../images/hololens.jpg";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+
 const Content = ({ id, project }) => {
     return (
         <div className="ui vertical stripe segment" id={id}>
@@ -58,6 +60,21 @@ const Content = ({ id, project }) => {
                         />
                     </div>
                     <div className="column">
+                        {/* hololens */}
+                        <Card
+                            imgUrl={hololens}
+                            imgAlt="Hololens"
+                            headerText={project.hololens.headerText}
+                            projectType={project.hololens.projectType}
+                            projectDescription={project.hololens.desc}
+                            linktoGithub={project.hololens.linktoGithub}
+                            pageUrl={project.hololens.linktoGithub}
+                            projectChallenges={project.hololens.challenges}
+                            projectLessons={project.hololens.lessons}
+                            projectTools={project.hololens.tools}
+                        />
+                    </div>
+                    <div className="column">
                         {/* fliegen */}
                         <Card
                             imgUrl={fliegenImg}
@@ -85,6 +102,21 @@ const Content = ({ id, project }) => {
                             projectChallenges={project.dungeoncoder.challenges}
                             projectLessons={project.dungeoncoder.lessons}
                             projectTools={project.dungeoncoder.tools}
+                        />
+                    </div>
+                    <div className="column">
+                        {/* vr */}
+                        <Card
+                            imgUrl={libGDX}
+                            imgAlt="vr"
+                            headerText={project.vr.headerText}
+                            projectType={project.vr.projectType}
+                            projectDescription={project.vr.desc}
+                            linktoGithub={project.vr.linktoGithub}
+                            pageUrl={project.vr.linktoGithub}
+                            projectChallenges={project.vr.challenges}
+                            projectLessons={project.vr.lessons}
+                            projectTools={project.vr.tools}
                         />
                     </div>
                 </div>

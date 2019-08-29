@@ -57,6 +57,33 @@ const initialState = {
                 "Guide teammates with what I know to increase efficiency.",
             ],
         },
+        hololens: {
+            headerText: "Research Assistant",
+            projectType: "AR application",
+            desc:
+                "An application utilizing Microsoft Hololens Augmented reality to detect cracked walls",
+            linktoGithub: "https://github.com/LCLY/ARMicrosoftHololens",
+            tools: [
+                "Unity",
+                "C#",
+                "Microsoft Azure",
+                "Microsoft Hololens",
+                "Vuforia",
+                "Python",
+                "Augmented Reality",
+            ],
+            challenges: [
+                "Learn a totally different and new technology.",
+                "Understand the nature of Augmented Reality.",
+                "A lot of self-learning due to the technology involved.",
+                "Work with civil engineering team",
+            ],
+            lessons: [
+                "The importance of documentations for self reminders and future students reference.",
+                "Do research is really important to prevent reinventing the wheel",
+                "Weekly meetings are important to make sure that everything is on track.",
+            ],
+        },
         boileride: {
             headerText: "Boileride",
             projectType: "Web application",
@@ -85,6 +112,34 @@ const initialState = {
         dungeoncoder: {
             headerText: "Dungeon Coder",
             projectType: "Java application",
+            desc:
+                "A fun and interactive game to help students learn the fundamentals of programming with dashboards for teachers to track students' progress.",
+            linktoGithub: "https://github.com/LCLY/dungeon-coder/",
+            tools: [
+                "Java",
+                "libGDX",
+                "MySQL",
+                "AWS",
+                "HTML",
+                "JS",
+                "CSS",
+                "PHP",
+            ],
+            challenges: [
+                "A lot of unpredicted bugs that are hard to catch.",
+                "Learn how to do sprite animations",
+                "Sending data back and forth from the game to the database",
+                "Unfamiliar with GitHub and libGDX game development framework.",
+            ],
+            lessons: [
+                "Learn from teammates and watch a lot of tutorials online.",
+                "Write multiple test cases and debug messages at critical parts",
+                "Free memory every time when something is not used to prevent memory leak",
+            ],
+        },
+        vr: {
+            headerText: "Dungeon Coder",
+            projectType: "VR application",
             desc:
                 "A fun and interactive game to help students learn the fundamentals of programming with dashboards for teachers to track students' progress.",
             linktoGithub: "https://github.com/LCLY/dungeon-coder/",
