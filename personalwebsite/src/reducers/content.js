@@ -31,7 +31,7 @@ const initialState = {
         },
         fliegen: {
             headerText: "Fliegen",
-            projectType: "Web application/Hackthon",
+            projectType: "Web application/Hackathon",
             desc:
                 "A mock web application designed for students and recruiters/professionals to connect more effectively",
             linktoGithub: "https://github.com/LCLY/boilermake2018",
@@ -76,6 +76,33 @@ const initialState = {
                 "Write detail project documentations such as product backlog and software testing.",
                 "Work with backend team to build the application",
                 "Understand black box, incremental, high order and regression testing ",
+            ],
+            lessons: [
+                "Plan discussion topics ahead before having a meeting.",
+                "Communicate with team leader/team members on technical or other issues.",
+            ],
+        },
+        dungeoncoder: {
+            headerText: "Dungeon Coder",
+            projectType: "Java application",
+            desc:
+                "A fun and interactive game to help students learn the fundamentals of programming with dashboards for teachers to track students' progress.",
+            linktoGithub: "https://github.com/LCLY/dungeon-coder/",
+            tools: [
+                "Java",
+                "libGDX",
+                "MySQL",
+                "AWS",
+                "HTML",
+                "JS",
+                "CSS",
+                "PHP",
+            ],
+            challenges: [
+                "A lot of weird and unpredicted bugs.",
+                "Learn libGDX game development framework.",
+                "Deal with game characters' sprite animations",
+                "Sending data back and forth from the game to database",
             ],
             lessons: [
                 "Plan discussion topics ahead before having a meeting.",

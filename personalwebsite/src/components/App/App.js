@@ -11,7 +11,6 @@ import Footer from "../Footer/Footer";
 //redux
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-
 //Control which iconname
 const PlayController = {
     play: {

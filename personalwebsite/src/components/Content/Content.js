@@ -3,6 +3,7 @@ import Card from "../Cards/Cards";
 import fliegenImg from "../../images/fliegen.PNG";
 import personalWebImg from "../../images/personalwebsite.PNG";
 import boilerideImg from "../../images/boileride.PNG";
+import libGDX from "../../images/libgdx.png";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 const Content = ({ id, project }) => {
@@ -49,9 +50,10 @@ const Content = ({ id, project }) => {
                             headerText={project.boileride.headerText}
                             projectType={project.boileride.projectType}
                             projectDescription={project.boileride.desc}
+                            pageUrl={project.boileride.linktoGithub}
                             projectChallenges={project.boileride.challenges}
                             linktoGithub={project.boileride.linktoGithub}
-                            projectLessons={project.boileride.lessons}
+                            projectLessons={project.boileride.lesson}
                             projectTools={project.boileride.tools}
                         />
                     </div>
@@ -68,6 +70,21 @@ const Content = ({ id, project }) => {
                             projectChallenges={project.fliegen.challenges}
                             projectLessons={project.fliegen.lessons}
                             projectTools={project.fliegen.tools}
+                        />
+                    </div>
+                    <div className="column">
+                        {/* dungeon coder */}
+                        <Card
+                            imgUrl={libGDX}
+                            imgAlt="dungeoncoder"
+                            headerText={project.dungeoncoder.headerText}
+                            projectType={project.dungeoncoder.projectType}
+                            projectDescription={project.dungeoncoder.desc}
+                            linktoGithub={project.dungeoncoder.linktoGithub}
+                            pageUrl={project.dungeoncoder.linktoGithub}
+                            projectChallenges={project.dungeoncoder.challenges}
+                            projectLessons={project.dungeoncoder.lessons}
+                            projectTools={project.dungeoncoder.tools}
                         />
                     </div>
                 </div>
