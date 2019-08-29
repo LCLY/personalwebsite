@@ -72,7 +72,7 @@ const Footer = () => {
                 </div>
             </div>
             {/* hidden textarea to copy the email */}
-            <div style={{ display: "none" }}>
+            <div style={{ position: "fixed", opacity: 0 }}>
                 <form>
                     <textarea ref={textAreaRef} value="lchoo9294@gmail.com" />
                 </form>
