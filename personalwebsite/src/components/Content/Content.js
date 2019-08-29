@@ -53,7 +53,7 @@ const Content = ({ id, project }) => {
                             pageUrl={project.boileride.linktoGithub}
                             projectChallenges={project.boileride.challenges}
                             linktoGithub={project.boileride.linktoGithub}
-                            projectLessons={project.boileride.lesson}
+                            projectLessons={project.boileride.lessons}
                             projectTools={project.boileride.tools}
                         />
                     </div>
