@@ -5,6 +5,7 @@ import personalWebImg from "../../images/personalwebsite.PNG";
 import boilerideImg from "../../images/boileride.PNG";
 import libGDX from "../../images/libgdx.png";
 import hololens from "../../images/hololens.jpg";
+import carnival from "../../images/carnival.png";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
@@ -107,13 +108,13 @@ const Content = ({ id, project }) => {
                     <div className="column">
                         {/* vr */}
                         <Card
-                            imgUrl={libGDX}
+                            imgUrl={carnival}
                             imgAlt="vr"
                             headerText={project.vr.headerText}
                             projectType={project.vr.projectType}
                             projectDescription={project.vr.desc}
                             linktoGithub={project.vr.linktoGithub}
-                            pageUrl={project.vr.linktoGithub}
+                            pageUrl="https://www.youtube.com/embed/kZ6j14Q1mc8"
                             projectChallenges={project.vr.challenges}
                             projectLessons={project.vr.lessons}
                             projectTools={project.vr.tools}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Label } from "semantic-ui-react";
-import _ from "lodash";
 const Cards = props => {
     const [formData, setFormData] = useState({
         changeContent: true,

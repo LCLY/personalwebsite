@@ -138,21 +138,12 @@ const initialState = {
             ],
         },
         vr: {
-            headerText: "Dungeon Coder",
+            headerText: "Carnival VR",
             projectType: "VR application",
             desc:
-                "A fun and interactive game to help students learn the fundamentals of programming with dashboards for teachers to track students' progress.",
+                "A Virtual Reality Carnival game that consists of multiple mini games, allows user to gain points and exchange them for gifts.",
             linktoGithub: "https://github.com/LCLY/dungeon-coder/",
-            tools: [
-                "Java",
-                "libGDX",
-                "MySQL",
-                "AWS",
-                "HTML",
-                "JS",
-                "CSS",
-                "PHP",
-            ],
+            tools: ["Virtual Reality", "Unity", "C#", "SteamVR", "Oculus Rift"],
             challenges: [
                 "A lot of unpredicted bugs that are hard to catch.",
                 "Learn how to do sprite animations",
