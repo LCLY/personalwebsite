@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1225d81b1bcc222f9e422a163828f80",
+    "revision": "243d9968639e967b12aecb9fbe8fa0f1",
     "url": "/personalwebsite/index.html"
   },
   {
-    "revision": "ebdbe51492fe9e61b921",
+    "revision": "841b5ffe0420b2781801",
     "url": "/personalwebsite/static/css/main.d143c02b.chunk.css"
   },
   {
-    "revision": "5f607e7529321c014562",
-    "url": "/personalwebsite/static/js/2.bcccdc4e.chunk.js"
+    "revision": "2c0993cf495f1d7cc576",
+    "url": "/personalwebsite/static/js/2.6943a800.chunk.js"
   },
   {
-    "revision": "ebdbe51492fe9e61b921",
-    "url": "/personalwebsite/static/js/main.b2f7abc8.chunk.js"
+    "revision": "841b5ffe0420b2781801",
+    "url": "/personalwebsite/static/js/main.f4dc958a.chunk.js"
   },
   {
     "revision": "1f782c562390b2e61027",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "acf3e6132e8913be59f36e28bce5119a",
     "url": "/personalwebsite/static/media/carnival.acf3e613.png"
+  },
+  {
+    "revision": "0a4b878e2b21b628c78b8a2e229411c9",
+    "url": "/personalwebsite/static/media/escaperoom.0a4b878e.png"
   },
   {
     "revision": "5d03a694112e4e64b8a642c09f9e456a",
