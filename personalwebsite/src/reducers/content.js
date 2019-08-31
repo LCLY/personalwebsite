@@ -61,7 +61,7 @@ const initialState = {
             headerText: "Research Assistant",
             projectType: "AR application",
             desc:
-                "An mixed reality application utilizing Microsoft Hololens Augmented reality to detect cracked walls",
+                "A mixed reality application utilizing Microsoft Hololens Augmented reality to detect cracked walls",
             linktoGithub: "https://github.com/LCLY/ARMicrosoftHololens",
             tools: [
                 "Unity",
@@ -75,8 +75,8 @@ const initialState = {
             challenges: [
                 "Learn a totally different and new technology.",
                 "Understand the nature of Augmented Reality.",
-                "A lot of self-learning due to the technology involved.",
-                "Work with civil engineering team",
+                "Heavily involves self-learning due to the technology involved.",
+                "Work with different teams such as civil engineering team",
             ],
             lessons: [
                 "The importance of documentations for self reminders and future students reference.",
@@ -126,7 +126,7 @@ const initialState = {
                 "PHP",
             ],
             challenges: [
-                "A lot of unpredicted bugs that are hard to catch.",
+                "Numerous unpredicted and hard to catch bugs.",
                 "Learn how to do sprite animations",
                 "Sending data back and forth from the game to the database",
                 "Unfamiliar with GitHub and libGDX game development framework.",
@@ -144,15 +144,11 @@ const initialState = {
                 "Virtual reality carnival that consists of multiple mini games, allows player to gain points and exchange them for gifts.",
             linktoGithub: "https://github.com/LCLY/dungeon-coder/",
             tools: ["Virtual Reality", "Unity", "C#", "SteamVR", "Oculus Rift"],
-            challenges: [
-                "Configuring SteamVR in the project and getting use to C# scripting .",
-                "Lightings, audios and animations in Unity.",
-                "Figure out different types of physical interactions and sequential puzzles.",
-            ],
+            challenges: ["Lightings, audios and animations in Unity."],
             lessons: [
-                "Lightings.",
-                "Clear and concise instructions for better in game experience",
-                "Free memory every time when something is not used to prevent memory leak",
+                "Refrain from placing too many light sources on moving objects to avoid FPS performance issues.",
+                "Transition from one game scene to another game scene and add a loading screen.",
+                "Use blender to create holes in 3D planes",
             ],
         },
         escaperoom: {
@@ -163,15 +159,14 @@ const initialState = {
             linktoGithub: "https://github.com/LCLY/dungeon-coder/",
             tools: ["Virtual Reality", "Unity", "C#", "SteamVR", "Oculus Rift"],
             challenges: [
-                "A lot of unpredicted bugs that are hard to catch.",
-                "Learn how to do sprite animations",
-                "Sending data back and forth from the game to the database",
-                "Unfamiliar with GitHub and libGDX game development framework.",
+                "Configuring SteamVR in the project and getting use to C# scripting .",
+                "Usage of lightings and audios to create scary and creepy atmosphere.",
+                "Figure out different types of physical interactions and sequential puzzles.",
             ],
             lessons: [
-                "Refrain from placing too many light sources on moving objects to avoid FPS performance issues.",
-                "Write multiple test cases and debug messages at critical parts",
-                "Free memory every time when something is not used to prevent memory leak",
+                "Clear and concise instructions for better in-game experience.",
+                "Triggering animations and revealing clues based on player's actions",
+                "Accessing other scripts' components and variables.",
             ],
         },
     },

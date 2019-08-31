@@ -115,7 +115,7 @@ const Content = ({ id, project }) => {
                             projectType={project.escaperoom.projectType}
                             projectDescription={project.escaperoom.desc}
                             linktoGithub={project.escaperoom.linktoGithub}
-                            pageUrl="https://www.youtube.com/embed/kZ6j14Q1mc8"
+                            pageUrl="https://www.youtube.com/embed/c8QX4yS26Pc"
                             projectChallenges={project.escaperoom.challenges}
                             projectLessons={project.escaperoom.lessons}
                             projectTools={project.escaperoom.tools}
