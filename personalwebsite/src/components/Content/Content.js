@@ -6,6 +6,7 @@ import boilerideImg from "../../images/boileride.PNG";
 import libGDX from "../../images/libgdx.png";
 import hololens from "../../images/hololens.jpg";
 import carnival from "../../images/carnival.png";
+import escaperoom from "../../images/escaperoom.png";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
@@ -106,18 +107,33 @@ const Content = ({ id, project }) => {
                         />
                     </div>
                     <div className="column">
-                        {/* vr */}
+                        {/* escape room */}
+                        <Card
+                            imgUrl={escaperoom}
+                            imgAlt="escaperoom"
+                            headerText={project.escaperoom.headerText}
+                            projectType={project.escaperoom.projectType}
+                            projectDescription={project.escaperoom.desc}
+                            linktoGithub={project.escaperoom.linktoGithub}
+                            pageUrl="https://www.youtube.com/embed/kZ6j14Q1mc8"
+                            projectChallenges={project.escaperoom.challenges}
+                            projectLessons={project.escaperoom.lessons}
+                            projectTools={project.escaperoom.tools}
+                        />
+                    </div>
+                    <div className="column">
+                        {/* Carnival */}
                         <Card
                             imgUrl={carnival}
-                            imgAlt="vr"
-                            headerText={project.vr.headerText}
-                            projectType={project.vr.projectType}
-                            projectDescription={project.vr.desc}
-                            linktoGithub={project.vr.linktoGithub}
+                            imgAlt="carnival"
+                            headerText={project.carnival.headerText}
+                            projectType={project.carnival.projectType}
+                            projectDescription={project.carnival.desc}
+                            linktoGithub={project.carnival.linktoGithub}
                             pageUrl="https://www.youtube.com/embed/kZ6j14Q1mc8"
-                            projectChallenges={project.vr.challenges}
-                            projectLessons={project.vr.lessons}
-                            projectTools={project.vr.tools}
+                            projectChallenges={project.carnival.challenges}
+                            projectLessons={project.carnival.lessons}
+                            projectTools={project.carnival.tools}
                         />
                     </div>
                 </div>

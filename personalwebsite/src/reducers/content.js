@@ -61,7 +61,7 @@ const initialState = {
             headerText: "Research Assistant",
             projectType: "AR application",
             desc:
-                "An application utilizing Microsoft Hololens Augmented reality to detect cracked walls",
+                "An mixed reality application utilizing Microsoft Hololens Augmented reality to detect cracked walls",
             linktoGithub: "https://github.com/LCLY/ARMicrosoftHololens",
             tools: [
                 "Unity",
@@ -88,7 +88,7 @@ const initialState = {
             headerText: "Boileride",
             projectType: "Web application",
             desc:
-                "A ride sharing web application that allows users to list, search and reserve rides around Purdue University.",
+                "Ride sharing web application that allows users to list, search and reserve rides around Purdue University.",
             linktoGithub: "https://github.com/ryanteo96/Boileride",
             tools: [
                 "Bootstrap",
@@ -137,11 +137,29 @@ const initialState = {
                 "Free memory every time when something is not used to prevent memory leak",
             ],
         },
-        vr: {
+        carnival: {
             headerText: "Carnival VR",
             projectType: "VR application",
             desc:
-                "A Virtual Reality Carnival game that consists of multiple mini games, allows user to gain points and exchange them for gifts.",
+                "Virtual reality carnival that consists of multiple mini games, allows player to gain points and exchange them for gifts.",
+            linktoGithub: "https://github.com/LCLY/dungeon-coder/",
+            tools: ["Virtual Reality", "Unity", "C#", "SteamVR", "Oculus Rift"],
+            challenges: [
+                "Configuring SteamVR in the project and getting use to C# scripting .",
+                "Lightings, audios and animations in Unity.",
+                "Figure out different types of physical interactions and sequential puzzles.",
+            ],
+            lessons: [
+                "Lightings.",
+                "Clear and concise instructions for better in game experience",
+                "Free memory every time when something is not used to prevent memory leak",
+            ],
+        },
+        escaperoom: {
+            headerText: "Escape Room VR",
+            projectType: "VR application",
+            desc:
+                "Virtual Reality scary theme escape room that requires player to solve puzzles, obtain key and escape the room",
             linktoGithub: "https://github.com/LCLY/dungeon-coder/",
             tools: ["Virtual Reality", "Unity", "C#", "SteamVR", "Oculus Rift"],
             challenges: [
@@ -151,7 +169,7 @@ const initialState = {
                 "Unfamiliar with GitHub and libGDX game development framework.",
             ],
             lessons: [
-                "Learn from teammates and watch a lot of tutorials online.",
+                "Refrain from placing too many light sources on moving objects to avoid FPS performance issues.",
                 "Write multiple test cases and debug messages at critical parts",
                 "Free memory every time when something is not used to prevent memory leak",
             ],
