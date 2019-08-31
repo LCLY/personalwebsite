@@ -137,20 +137,6 @@ const initialState = {
                 "Free memory every time when something is not used to prevent memory leak",
             ],
         },
-        carnival: {
-            headerText: "Carnival VR",
-            projectType: "VR application",
-            desc:
-                "Virtual reality carnival that consists of multiple mini games, allows player to gain points and exchange them for gifts.",
-            linktoGithub: "https://github.com/LCLY/dungeon-coder/",
-            tools: ["Virtual Reality", "Unity", "C#", "SteamVR", "Oculus Rift"],
-            challenges: ["Lightings, audios and animations in Unity."],
-            lessons: [
-                "Refrain from placing too many light sources on moving objects to avoid FPS performance issues.",
-                "Transition from one game scene to another game scene and add a loading screen.",
-                "Use blender to create holes in 3D planes",
-            ],
-        },
         escaperoom: {
             headerText: "Escape Room VR",
             projectType: "VR application",
@@ -167,6 +153,25 @@ const initialState = {
                 "Clear and concise instructions for better in-game experience.",
                 "Triggering animations and revealing clues based on player's actions",
                 "Accessing other scripts' components and variables.",
+                "Creating sparkles using particle effects",
+            ],
+        },
+        carnival: {
+            headerText: "Carnival VR",
+            projectType: "VR application",
+            desc:
+                "Virtual reality carnival that consists of multiple mini games, allows player to gain points and exchange them for gifts.",
+            linktoGithub: "https://github.com/LCLY/dungeon-coder/",
+            tools: ["Virtual Reality", "Unity", "C#", "SteamVR", "Oculus Rift"],
+            challenges: [
+                "Transition from one game scene to another game scene and add a loading screen.",
+                "Implement point based and time based game mechanics.",
+                "Implement bow/arrow and basketball mechanics",
+            ],
+            lessons: [
+                "Refrain from placing too many light sources on moving objects to avoid FPS performance issues.",
+                "Use blender to create holes in 3D planes",
+                "Customizing the gravity on objects to create gravity simulator",
             ],
         },
     },
