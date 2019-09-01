@@ -21,7 +21,8 @@
         "redux": "^4.0.4",
         "redux-thunk": "^2.3.0",
         "semantic-ui-react": "^0.87.3",
-        "typed.js": "^2.0.10"
+        "typed.js": "^2.0.10",
+        "uuidv4": "^5.0.0"
     },
     "scripts": {
         "start": "react-scripts start",

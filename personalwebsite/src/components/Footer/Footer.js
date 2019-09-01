@@ -67,8 +67,8 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="footer__spacing">
-                    <i class="far fa-copyright" /> 2019 Henry Choo. All rights
-                    reserved.
+                    <i className="far fa-copyright" /> 2019 Henry Choo. All
+                    rights reserved.
                 </div>
             </div>
             {/* hidden textarea to copy the email */}
