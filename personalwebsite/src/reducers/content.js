@@ -5,6 +5,7 @@ import libGDX from "../images/libgdx.png";
 import hololens from "../images/hololens.jpg";
 import carnival from "../images/carnival.png";
 import escaperoom from "../images/escaperoom.png";
+import card from "../images/card.jpg";
 //initial states
 
 const initialState = {
@@ -98,6 +99,36 @@ const initialState = {
                 "Microsoft Hololens",
                 "Vuforia",
                 "Python",
+                "Augmented Reality",
+            ],
+        },
+        //AR card
+        {
+            imgUrl: card,
+            imgAlt: "CardAR",
+            headerText: "Business Card AR",
+            projectType: "AR application",
+            desc:
+                "Implemented Augmented Reality on business card as a target to generate interactive 3D model",
+            githubLink: "https://github.com/LCLY/BusinessCardAR",
+            pageUrl: "https://github.com/LCLY/BusinessCardAR",
+            challenges: [
+                "Revise on how to use Unity program application",
+                "Configuring Vuforia library into Unity",
+                "3D model's rotations and transformations are unusual due to AR implementation.",
+            ],
+            lessons: [
+                "Brainstorming on how to make a simple, useful, interactive and interesting AR application using a business card.",
+                "Add image targets to Vuforia's database and separate them in the same game scene.",
+                "Made changes to Vuforia's library AR code to add instructions, set it to disappear when image targets are detected.",
+            ],
+            tools: [
+                "Unity",
+                "Unity Asset Store",
+                "C#",
+                "Android device",
+                "Paint 3D",
+                "Vuforia",
                 "Augmented Reality",
             ],
         },
