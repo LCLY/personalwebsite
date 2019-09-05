@@ -111,7 +111,7 @@ const initialState = {
             desc:
                 "Implemented Augmented Reality on business card as a target to generate interactive 3D model",
             githubLink: "https://github.com/LCLY/BusinessCardAR",
-            pageUrl: "https://github.com/LCLY/BusinessCardAR",
+            pageUrl: "https://lcly.github.io/BusinessCardAR/",
             challenges: [
                 "Revise on how to use Unity program application",
                 "Configuring Vuforia library into Unity",
