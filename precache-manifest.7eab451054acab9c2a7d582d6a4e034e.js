@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "243d9968639e967b12aecb9fbe8fa0f1",
+    "revision": "7883b3acd7afe604cd1c0b07b4a2ee61",
     "url": "/personalwebsite/index.html"
   },
   {
-    "revision": "841b5ffe0420b2781801",
+    "revision": "fb2332144055cef8a944",
     "url": "/personalwebsite/static/css/main.d143c02b.chunk.css"
   },
   {
-    "revision": "2c0993cf495f1d7cc576",
-    "url": "/personalwebsite/static/js/2.6943a800.chunk.js"
+    "revision": "710cc0cd0bba434f3fb0",
+    "url": "/personalwebsite/static/js/2.bd301d66.chunk.js"
   },
   {
-    "revision": "841b5ffe0420b2781801",
-    "url": "/personalwebsite/static/js/main.f4dc958a.chunk.js"
+    "revision": "fb2332144055cef8a944",
+    "url": "/personalwebsite/static/js/main.e35bef7f.chunk.js"
   },
   {
     "revision": "1f782c562390b2e61027",
@@ -24,12 +24,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/personalwebsite/static/media/boileride.d8c1d040.PNG"
   },
   {
+    "revision": "a227a7a338d95d4abff245bd2ba2c6e1",
+    "url": "/personalwebsite/static/media/card.a227a7a3.jpg"
+  },
+  {
     "revision": "acf3e6132e8913be59f36e28bce5119a",
     "url": "/personalwebsite/static/media/carnival.acf3e613.png"
   },
   {
-    "revision": "0a4b878e2b21b628c78b8a2e229411c9",
-    "url": "/personalwebsite/static/media/escaperoom.0a4b878e.png"
+    "revision": "4fa910236e2372df81c2122057eaedff",
+    "url": "/personalwebsite/static/media/escaperoom.4fa91023.png"
   },
   {
     "revision": "5d03a694112e4e64b8a642c09f9e456a",
