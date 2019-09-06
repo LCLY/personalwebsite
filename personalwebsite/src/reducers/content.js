@@ -206,7 +206,7 @@ const initialState = {
             desc:
                 "Virtual Reality scary theme escape room that requires player to solve puzzles, obtain key and escape the room",
             githubLink: "https://github.com/LCLY",
-            pageUrl: "https://github.com/LCLY",
+            pageUrl: "https://www.youtube.com/embed/c8QX4yS26Pc",
             challenges: [
                 "Configuring SteamVR in the project and getting use to C# scripting .",
                 "Usage of lightings and audios to create scary and creepy atmosphere.",
@@ -229,7 +229,7 @@ const initialState = {
             desc:
                 "Virtual reality carnival that consists of multiple mini games, allows player to gain points and exchange them for gifts.",
             githubLink: "https://github.com/LCLY",
-            pageUrl: "https://github.com/LCLY",
+            pageUrl: "https://www.youtube.com/embed/kZ6j14Q1mc8",
             challenges: [
                 "Transition from one game scene to another game scene and add a loading screen.",
                 "Implement point based and time based game mechanics.",
