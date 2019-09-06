@@ -114,13 +114,14 @@ const initialState = {
             pageUrl: "https://lcly.github.io/BusinessCardAR/",
             challenges: [
                 "Revise on how to use Unity program application",
-                "Configuring Vuforia library into Unity",
+                "Made a website to show more info about the app",
                 "3D model's rotations and transformations are unusual due to AR implementation.",
             ],
             lessons: [
-                "Brainstorming on how to make a simple, useful, interactive and interesting AR application using a business card.",
+                "Brainstorming on how to make a simple, interactive and interesting AR application using a business card.",
                 "Add image targets to Vuforia's database and separate them in the same game scene.",
                 "Made changes to Vuforia's library AR code to add instructions, set it to disappear when image targets are detected.",
+                "Adding video element to html and making it responsive.",
             ],
             tools: [
                 "Unity",
