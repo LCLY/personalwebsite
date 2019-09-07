@@ -101,7 +101,11 @@ const Content = ({ id, project }) => {
             <div style={{ display: "flex", paddingTop: "1rem" }}>
                 <div
                     className="ui button basic"
-                    style={{ marginLeft: "auto", marginRight: "auto" }}
+                    style={{
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        fontSize: "1.3rem",
+                    }}
                     onClick={viewMore}
                 >
                     {buttonText}&nbsp; <i className={`fas ${arrow}`}></i>
