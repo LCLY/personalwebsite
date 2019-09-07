@@ -150,6 +150,7 @@ class App extends React.Component {
                         </div>
                     </div>
                     <Content id="section1" />
+
                     <Footer />
                 </div>
             </div>
