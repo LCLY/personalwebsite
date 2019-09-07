@@ -5,18 +5,32 @@ import PropTypes from "prop-types";
 
 const Content = ({ id, project }) => {
     const [formData, setFormData] = useState({
-        displayBool: false,
+        displayBool: true,
         displayMore: "none",
+        arrow: "fa-caret-down",
+        buttonText: "View More",
     });
-    const { displayBool, displayMore } = formData;
+    const { displayBool, displayMore, arrow, buttonText } = formData;
 
     const viewMore = () => {
         if (displayBool) {
             //if true then set to display
-            setFormData({ ...state, displayMore: "", displayBool: false });
+            setFormData({
+                ...formData,
+                displayMore: "",
+                displayBool: false,
+                arrow: "fa-caret-up",
+                buttonText: "View Less",
+            });
         } else {
             //set to display none
-            setFormData({ ...state, displayMore: "none", displayBool: true });
+            setFormData({
+                ...formData,
+                displayMore: "none",
+                displayBool: true,
+                arrow: "fa-caret-down",
+                buttonText: "View More",
+            });
         }
     };
 
@@ -84,13 +98,13 @@ const Content = ({ id, project }) => {
                     ))}
                 </div>
             </div>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", paddingTop: "1rem" }}>
                 <div
-                    className="ui button"
+                    className="ui button basic"
                     style={{ marginLeft: "auto", marginRight: "auto" }}
                     onClick={viewMore}
                 >
-                    View More&nbsp; <i className="fas fa-caret-down"></i>
+                    {buttonText}&nbsp; <i className={`fas ${arrow}`}></i>
                 </div>
             </div>
         </div>
