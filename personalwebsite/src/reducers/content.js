@@ -78,9 +78,9 @@ const initialState = {
             headerText: "Research Assistant",
             projectType: "MR application",
             desc:
-                "A mixed reality application utilizing Microsoft Hololens Augmented reality to detect cracked walls.",
-            githubLink: "https://github.com/LCLY/ARHololens",
-            pageUrl: "https://lcly.github.io/ARHololens/",
+                "A mixed reality application utilizing Microsoft Hololens to detect cracked walls of a building.",
+            githubLink: "https://github.com/LCLY/MRHololens",
+            pageUrl: "https://lcly.github.io/MRHololens/",
             challenges: [
                 "Learn a totally different and new technology.",
                 "Understand the nature of Augmented Reality.",
@@ -99,7 +99,7 @@ const initialState = {
                 "Microsoft Hololens",
                 "Vuforia",
                 "Python",
-                "Augmented Reality",
+                "Mixed Reality",
             ],
         },
         //AR card
