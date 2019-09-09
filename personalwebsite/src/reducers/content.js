@@ -79,8 +79,8 @@ const initialState = {
             projectType: "MR application",
             desc:
                 "A mixed reality application utilizing Microsoft Hololens Augmented reality to detect cracked walls.",
-            githubLink: "https://github.com/LCLY/ARMicrosoftHololens",
-            pageUrl: "https://github.com/LCLY/ARHololens",
+            githubLink: "https://github.com/LCLY/ARHololens",
+            pageUrl: "https://lcly.github.io/ARHololens/",
             challenges: [
                 "Learn a totally different and new technology.",
                 "Understand the nature of Augmented Reality.",
