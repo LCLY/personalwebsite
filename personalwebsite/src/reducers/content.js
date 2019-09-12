@@ -89,7 +89,7 @@ const initialState = {
             ],
             lessons: [
                 "The importance of documentations for self reminders and future students reference.",
-                "Do research is really important to prevent reinventing the wheel",
+                "Doing research before building something is really important to prevent reinventing the wheel",
                 "Weekly meetings are important to make sure that everything is on track.",
             ],
             tools: [
