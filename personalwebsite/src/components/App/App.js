@@ -1,12 +1,15 @@
 import React from "react";
 import "../../css/style.min.css";
 import Typed from "typed.js";
+
+import { CSSTransition } from "react-transition-group";
+//components
+import Title from "../TopPage/Title";
 import Navbar from "../Menu/Navbar";
 import MobileMenuBar from "../Menu/MobileMenuBar";
 import Content from "../Content/Content";
 import HiddenNavbar from "../Menu/HiddenNavbar";
 import Particle from "../TopPage/Particle";
-import { CSSTransition } from "react-transition-group";
 import Footer from "../Footer/Footer";
 //redux
 import { connect } from "react-redux";
@@ -107,14 +110,7 @@ class App extends React.Component {
                             ""
                         )}
                         <div className="title title__wrap">
-                            <div className="ui text container">
-                                <h1
-                                    id="title__name"
-                                    className="ui inverted header"
-                                >
-                                    HENRY
-                                </h1>
-                            </div>
+                            <Title />
                             <div className="type-wrap">
                                 <h2>
                                     <span
