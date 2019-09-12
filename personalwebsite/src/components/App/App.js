@@ -111,6 +111,9 @@ class App extends React.Component {
                                 <h1
                                     id="title__name"
                                     className="ui inverted header"
+                                    style={{
+                                        fontFamily: " Righteous, cursive",
+                                    }}
                                 >
                                     HENRY
                                 </h1>
