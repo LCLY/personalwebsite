@@ -51,7 +51,7 @@ const initialState = {
             desc:
                 "Ride sharing web application that allows users to list, search and reserve rides around Purdue University.",
             githubLink: "https://github.com/ryanteo96/Boileride",
-            pageUrl: "https://github.com/ryanteo96/Boileride",
+            pageUrl: "https://lcly.github.io/boilerideweb",
             challenges: [
                 "Write detail project documentations such as product backlog and software testing.",
                 "Work with backend team to build the application",
