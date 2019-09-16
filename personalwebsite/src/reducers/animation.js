@@ -6,6 +6,7 @@ const initialState = {
     //initial value/bool values
     show_Typing: false,
     show_Buttons: false,
+    opacity: 0,
 };
 //reducer function
 export default function(state = initialState, action) {
@@ -20,7 +21,7 @@ export default function(state = initialState, action) {
                 show_Buttons: true,
             };
         case START_TYPING:
-            return { ...state, show_Typing: true };
+            return { ...state, show_Typing: true, opacity: payload };
 
         default:
             return state;

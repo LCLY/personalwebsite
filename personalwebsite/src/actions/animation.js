@@ -9,6 +9,7 @@ export const showTyping = show_Typing => dispatch => {
         dispatch({
             //goes to reducer
             type: START_TYPING,
+            payload: 1,
         });
         //e.g. dispatch( someActionFunc() )
     }

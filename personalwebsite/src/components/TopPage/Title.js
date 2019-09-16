@@ -13,8 +13,16 @@ class Title extends React.Component {
         };
     }
     componentDidMount() {
-        //load animation when the components render
         this.setState({ load: true });
+        this.intervalId = setInterval(this.timer, 500);
+    }
+
+    timer = () => {
+        this.props.showTyping(true);
+    };
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
     }
 
     render() {
@@ -22,11 +30,9 @@ class Title extends React.Component {
             <div className="ui text container">
                 <CSSTransition
                     in={this.state.load}
-                    timeout={2000}
+                    timeout={1000}
                     classNames="top-title"
-                    unmountOnExit
                     appear={true}
-                    onEntered={this.props.showTyping(true)}
                 >
                     <h1 id="title__name" className="ui inverted header">
                         HENRY
