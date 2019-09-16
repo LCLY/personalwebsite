@@ -37,6 +37,7 @@ class App extends React.Component {
         navbarDisplay: false,
         navbarAppear: false,
         load: false,
+        startButtons: false,
     };
 
     //switch the bool val
@@ -69,7 +70,10 @@ class App extends React.Component {
     };
     //trigger show button after certain time
     timer = () => {
-        this.props.showButtons(true);
+        if (this.state.startButtons === false) {
+            this.props.showButtons(true);
+            this.setState({ startButtons: true });
+        }
     };
 
     //Did rendered

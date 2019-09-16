@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+
 // activeClass - class applied when element is reached
 // to - target to scroll to
 // spy - make Link selected when scroll is at its targets position

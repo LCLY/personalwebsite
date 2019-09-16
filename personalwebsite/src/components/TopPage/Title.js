@@ -10,6 +10,7 @@ class Title extends React.Component {
         super();
         this.state = {
             load: false,
+            startTimer: false,
         };
     }
     componentDidMount() {
@@ -18,7 +19,10 @@ class Title extends React.Component {
     }
 
     timer = () => {
-        this.props.showTyping(true);
+        if (this.state.startTimer === false) {
+            this.props.showTyping(true);
+            this.setState({ startTimer: true });
+        }
     };
 
     componentWillUnmount() {
