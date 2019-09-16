@@ -1,5 +1,10 @@
 import React from "react";
 import { CSSTransition } from "react-transition-group";
+//redux
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { showTyping } from "../../actions/animation";
+
 class Title extends React.Component {
     constructor() {
         super();
@@ -12,8 +17,6 @@ class Title extends React.Component {
         this.setState({ load: true });
     }
 
-    callTypingAnimation = () => {};
-
     render() {
         return (
             <div className="ui text container">
@@ -23,7 +26,7 @@ class Title extends React.Component {
                     classNames="top-title"
                     unmountOnExit
                     appear={true}
-                    onEntering={this.callTypingAnimation}
+                    onEntering={this.props.showTyping(true)}
                 >
                     <h1 id="title__name" className="ui inverted header">
                         HENRY
@@ -33,4 +36,12 @@ class Title extends React.Component {
         );
     }
 }
-export default Title;
+Title.propTypes = {
+    show_Typing: PropTypes.bool.isRequired,
+    showTyping: PropTypes.func.isRequired,
+};
+
+export default connect(
+    state => ({ show_Typing: state.animation.show_Typing }),
+    { showTyping },
+)(Title);

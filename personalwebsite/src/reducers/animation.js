@@ -4,8 +4,8 @@ import { START_TYPING, SHOW_BUTTONS } from "../actions/types";
 //initial states
 const initialState = {
     //initial value/bool values
-    startTyping: false,
-    showButtons: false,
+    show_Typing: false,
+    show_Buttons: false,
 };
 //reducer function
 export default function(state = initialState, action) {
@@ -17,10 +17,10 @@ export default function(state = initialState, action) {
         case SHOW_BUTTONS:
             return {
                 ...state,
-                showButtons: true,
+                show_Buttons: true,
             };
         case START_TYPING:
-            return { ...state, startTyping: true };
+            return { ...state, show_Typing: true };
 
         default:
             return state;

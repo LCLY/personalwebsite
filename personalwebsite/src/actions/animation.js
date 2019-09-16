@@ -3,18 +3,22 @@ import { SHOW_BUTTONS, START_TYPING } from "./types";
 
 //logic in actions
 //add async if needed
-export const showTyping = () => dispatch => {
-    dispatch({
-        //goes to reducer
-        type: START_TYPING,
-    });
 
-    //e.g. dispatch( someActionFunc() )
+export const showTyping = show_Typing => dispatch => {
+    if (show_Typing) {
+        dispatch({
+            //goes to reducer
+            type: START_TYPING,
+        });
+        //e.g. dispatch( someActionFunc() )
+    }
 };
 
-export const showButtons = () => dispatch => {
-    dispatch({
-        //goes to reducer
-        type: SHOW_BUTTONS,
-    });
+export const showButtons = show_Buttons => dispatch => {
+    if (show_Buttons) {
+        dispatch({
+            //goes to reducer
+            type: SHOW_BUTTONS,
+        });
+    }
 };
