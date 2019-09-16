@@ -1,5 +1,5 @@
 //actions roles: backend call, dispatch for reducers(change state and rerender), calling other actions/functions
-import { SHOW_BUTTONS, START_TYPING } from "./types";
+import { SHOW_BUTTONS, START_TYPING, SHOW_CARDS } from "./types";
 
 //logic in actions
 //add async if needed
@@ -20,6 +20,16 @@ export const showButtons = show_Buttons => dispatch => {
         dispatch({
             //goes to reducer
             type: SHOW_BUTTONS,
+            payload: 1,
+        });
+    }
+};
+
+export const showCards = show_Cards => dispatch => {
+    if (show_Cards) {
+        dispatch({
+            //goes to reducer
+            type: SHOW_CARDS,
         });
     }
 };

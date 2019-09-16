@@ -45,3 +45,17 @@
 .button-title-enter-done {
     opacity: 1;
 }
+
+.show-cards-appear,
+.show-cards-enter {
+    opacity: 0;
+}
+.show-cards-appear-active,
+.show-cards-enter-active {
+    opacity: 1;
+    transition: all 1000ms;
+}
+
+.show-cards-enter-done {
+    opacity: 1;
+}

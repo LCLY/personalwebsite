@@ -4,6 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import HiddenBG from "./HiddenBG";
 import { connect } from "react-redux";
 import { showNavbar, domInsertion } from "../../actions/navbar";
+import { showCards } from "../../actions/animation";
 import PropTypes from "prop-types";
 
 // activeClass - class applied when element is reached
@@ -49,6 +50,7 @@ class MobileMenuBar extends React.Component {
             var newWindowHeight = (window.innerHeight * 30) / 100;
             if (window.pageYOffset > newWindowHeight) {
                 this.props.showNavbar(true); //show the navbar
+                this.props.showCards(true);
                 this.props.domInsertion(true); //insert navbar to DOM
             } else if (window.pageYOffset === 0) {
                 //if it reaches back to top, totally remove it
@@ -194,5 +196,5 @@ MobileMenuBar.propTypes = {
 
 export default connect(
     state => ({ show: state.navbar.show }),
-    { showNavbar, domInsertion },
+    { showNavbar, domInsertion, showCards },
 )(MobileMenuBar);
