@@ -34,6 +34,7 @@ class App extends React.Component {
         playText: "Playing: ",
         navbarDisplay: false,
         navbarAppear: false,
+        load: false,
     };
 
     //switch the bool val
@@ -78,6 +79,9 @@ class App extends React.Component {
         };
         // this.el refers to the <span> in the render() method
         this.typed = new Typed(this.el, options);
+
+        //load animation on component mount
+        this.setState({ load: true });
     }
 
     //Did update and rendered
@@ -111,38 +115,53 @@ class App extends React.Component {
                         )}
                         <div className="title title__wrap">
                             <Title />
-                            <div className="type-wrap">
-                                <h2>
-                                    <span
-                                        id="title__type"
-                                        style={{ whiteSpace: "pre" }}
-                                        ref={el => {
-                                            this.el = el;
-                                        }}
-                                    />
-                                </h2>
-                            </div>
-                            <div className="buttonsDiv" id="title__buttons">
-                                {/*get iconname at real time */}
-                                <br />
-                                <div id="play_text_container">
-                                    <div id="play_text">
-                                        {this.state.playText}
-                                    </div>
-                                    <i
-                                        className={`${iconName} icon buttonHover buttonHover1`}
-                                        onClick={this.onInputChange}
-                                    />
-                                    <i
-                                        className="redo alternate icon buttonHover buttonHover2"
-                                        onClick={this.onClickReset}
-                                    />
-                                    <i
-                                        className="trash icon buttonHover buttonHover3"
-                                        onClick={this.onClickDestroyed}
-                                    />
+                            <CSSTransition
+                                in={this.state.load}
+                                timeout={2000}
+                                classNames="play-title"
+                                appear={true}
+                                onEntering={this.callTypingAnimation}
+                            >
+                                <div className="type-wrap">
+                                    <h2>
+                                        <span
+                                            id="title__type"
+                                            style={{ whiteSpace: "pre" }}
+                                            ref={el => {
+                                                this.el = el;
+                                            }}
+                                        />
+                                    </h2>
                                 </div>
-                            </div>
+                            </CSSTransition>
+                            <CSSTransition
+                                in={this.state.load}
+                                timeout={2000}
+                                classNames="play-title"
+                                appear={true}
+                            >
+                                <div className="buttonsDiv" id="title__buttons">
+                                    {/*get iconname at real time */}
+                                    <br />
+                                    <div id="play_text_container">
+                                        <div id="play_text">
+                                            {this.state.playText}
+                                        </div>
+                                        <i
+                                            className={`${iconName} icon buttonHover buttonHover1`}
+                                            onClick={this.onInputChange}
+                                        />
+                                        <i
+                                            className="redo alternate icon buttonHover buttonHover2"
+                                            onClick={this.onClickReset}
+                                        />
+                                        <i
+                                            className="trash icon buttonHover buttonHover3"
+                                            onClick={this.onClickDestroyed}
+                                        />
+                                    </div>
+                                </div>
+                            </CSSTransition>
                         </div>
                     </div>
                     <Content id="section1" />
