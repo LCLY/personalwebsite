@@ -4,8 +4,8 @@ import { START_TYPING, SHOW_BUTTONS } from "../actions/types";
 //initial states
 const initialState = {
     //initial value/bool values
-    show: false,
-    insert: false,
+    startTyping: false,
+    showButtons: false,
 };
 //reducer function
 export default function(state = initialState, action) {
@@ -14,11 +14,13 @@ export default function(state = initialState, action) {
 
     //switch case
     switch (type) {
-        case SHOW_NAVBAR:
+        case SHOW_BUTTONS:
             return {
                 ...state,
-                show: true,
+                showButtons: true,
             };
+        case START_TYPING:
+            return { ...state, startTyping: true };
 
         default:
             return state;

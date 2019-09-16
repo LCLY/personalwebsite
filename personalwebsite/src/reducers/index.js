@@ -4,4 +4,5 @@ import content from "./content";
 export default combineReducers({
     navbar,
     content,
+    animation,
 });
