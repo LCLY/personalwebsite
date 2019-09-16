@@ -14,6 +14,8 @@ import Footer from "../Footer/Footer";
 //redux
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { showButtons } from "../../actions/animation";
+
 //Control which iconname
 const PlayController = {
     play: {
@@ -34,6 +36,7 @@ class App extends React.Component {
         playText: "Playing: ",
         navbarDisplay: false,
         navbarAppear: false,
+        load: false,
     };
 
     //switch the bool val
@@ -64,6 +67,10 @@ class App extends React.Component {
             this.setState({ playText: "Playing: " });
         }
     };
+    //trigger show button after certain time
+    timer = () => {
+        this.props.showButtons(true);
+    };
 
     //Did rendered
     componentDidMount() {
@@ -78,6 +85,11 @@ class App extends React.Component {
         };
         // this.el refers to the <span> in the render() method
         this.typed = new Typed(this.el, options);
+
+        //load animation on component mount
+        this.setState({ load: true });
+
+        this.intervalId = setInterval(this.timer, 1000);
     }
 
     //Did update and rendered
@@ -85,6 +97,8 @@ class App extends React.Component {
         // To destroy Typed instance on unmounting
         // to prevent memory leaks
         this.typed.destroy();
+
+        clearInterval(this.intervalId);
     }
     render() {
         const play = getCondition(this.state.condition);
@@ -111,38 +125,61 @@ class App extends React.Component {
                         )}
                         <div className="title title__wrap">
                             <Title />
-                            <div className="type-wrap">
-                                <h2>
-                                    <span
-                                        id="title__type"
-                                        style={{ whiteSpace: "pre" }}
-                                        ref={el => {
-                                            this.el = el;
-                                        }}
-                                    />
-                                </h2>
-                            </div>
-                            <div className="buttonsDiv" id="title__buttons">
-                                {/*get iconname at real time */}
-                                <br />
-                                <div id="play_text_container">
-                                    <div id="play_text">
-                                        {this.state.playText}
-                                    </div>
-                                    <i
-                                        className={`${iconName} icon buttonHover buttonHover1`}
-                                        onClick={this.onInputChange}
-                                    />
-                                    <i
-                                        className="redo alternate icon buttonHover buttonHover2"
-                                        onClick={this.onClickReset}
-                                    />
-                                    <i
-                                        className="trash icon buttonHover buttonHover3"
-                                        onClick={this.onClickDestroyed}
-                                    />
+
+                            <CSSTransition
+                                in={this.props.show_Typing}
+                                timeout={1500}
+                                classNames="play-title"
+                                appear={this.props.show_Typing}
+                            >
+                                <div className="type-wrap">
+                                    <h2 style={{ opacity: this.props.opacity }}>
+                                        <span
+                                            id="title__type"
+                                            style={{ whiteSpace: "pre" }}
+                                            ref={el => {
+                                                this.el = el;
+                                            }}
+                                        />
+                                    </h2>
                                 </div>
-                            </div>
+                            </CSSTransition>
+
+                            {this.props.show_Buttons ? (
+                                <CSSTransition
+                                    in={this.props.show_Buttons}
+                                    timeout={1500}
+                                    classNames="button-title"
+                                    appear={this.props.show_Buttons}
+                                >
+                                    <div
+                                        className="buttonsDiv"
+                                        id="title__buttons"
+                                    >
+                                        {/*get iconname at real time */}
+                                        <br />
+                                        <div id="play_text_container">
+                                            <div id="play_text">
+                                                {this.state.playText}
+                                            </div>
+                                            <i
+                                                className={`${iconName} icon buttonHover buttonHover1`}
+                                                onClick={this.onInputChange}
+                                            />
+                                            <i
+                                                className="redo alternate icon buttonHover buttonHover2"
+                                                onClick={this.onClickReset}
+                                            />
+                                            <i
+                                                className="trash icon buttonHover buttonHover3"
+                                                onClick={this.onClickDestroyed}
+                                            />
+                                        </div>
+                                    </div>
+                                </CSSTransition>
+                            ) : (
+                                ""
+                            )}
                         </div>
                     </div>
                     <Content id="section1" />
@@ -159,6 +196,12 @@ App.propTypes = {
 };
 
 export default connect(
-    state => ({ show: state.navbar.show, insert: state.navbar.insert }),
-    {},
+    state => ({
+        show: state.navbar.show,
+        insert: state.navbar.insert,
+        opacity: state.animation.opacity,
+        show_Typing: state.animation.show_Typing,
+        show_Buttons: state.animation.show_Buttons,
+    }),
+    { showButtons },
 )(App);
