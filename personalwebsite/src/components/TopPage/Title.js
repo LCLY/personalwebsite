@@ -26,7 +26,7 @@ class Title extends React.Component {
                     classNames="top-title"
                     unmountOnExit
                     appear={true}
-                    onEntering={this.props.showTyping(true)}
+                    onEntered={this.props.showTyping(true)}
                 >
                     <h1 id="title__name" className="ui inverted header">
                         HENRY

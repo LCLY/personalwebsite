@@ -14,6 +14,8 @@ import Footer from "../Footer/Footer";
 //redux
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { showButtons } from "../../actions/animation";
+
 //Control which iconname
 const PlayController = {
     play: {
@@ -116,11 +118,11 @@ class App extends React.Component {
                         <div className="title title__wrap">
                             <Title />
                             <CSSTransition
-                                in={this.state.load}
+                                in={this.props.show_Typing}
                                 timeout={2000}
                                 classNames="play-title"
                                 appear={true}
-                                onEntering={this.callTypingAnimation}
+                                onEntered={this.props.showButtons(true)}
                             >
                                 <div className="type-wrap">
                                     <h2>
@@ -135,7 +137,7 @@ class App extends React.Component {
                                 </div>
                             </CSSTransition>
                             <CSSTransition
-                                in={this.state.load}
+                                in={this.props.show_Buttons}
                                 timeout={2000}
                                 classNames="play-title"
                                 appear={true}
@@ -178,6 +180,11 @@ App.propTypes = {
 };
 
 export default connect(
-    state => ({ show: state.navbar.show, insert: state.navbar.insert }),
-    {},
+    state => ({
+        show: state.navbar.show,
+        insert: state.navbar.insert,
+        show_Typing: state.animation.show_Typing,
+        show_Buttons: state.animation.show_Buttons,
+    }),
+    { showButtons },
 )(App);
