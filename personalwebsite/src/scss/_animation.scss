@@ -59,3 +59,39 @@
 .show-cards-enter-done {
     opacity: 1;
 }
+
+.project-buttons-appear,
+.project-buttons-enter {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+.project-buttons-appear-active,
+.project-buttons-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 2000ms;
+}
+
+.resume-buttons-appear,
+.resume-buttons-enter {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+.resume-buttons-appear-active,
+.resume-buttons-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 2000ms;
+}
+
+.contact-buttons-appear,
+.contact-buttons-enter {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+.contact-buttons-appear-active,
+.contact-buttons-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 2000ms;
+}
