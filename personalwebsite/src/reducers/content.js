@@ -6,6 +6,7 @@ import hololens from "../images/hololens.jpg";
 import carnival from "../images/carnival.png";
 import escaperoom from "../images/escaperoom.png";
 import card from "../images/card.jpg";
+import virtualTour from "../images/virtualtour.PNG";
 //initial states
 
 const initialState = {
@@ -69,6 +70,40 @@ const initialState = {
                 "MySQL",
                 "Google Maps Platform",
                 "Agile/Scrum",
+            ],
+        },
+        //virtual tour
+        {
+            imgUrl: virtualTour,
+            imgAlt: "Apt Virtual Tour",
+            headerText: "Apt Virtual Tour",
+            projectType: "Web application",
+            desc:
+                "A virtual tour for apartment viewing to let customers have a better understanding of the interior of the apartment.",
+            githubLink: "https://github.com/LCLY/VirtualTourApt",
+            pageUrl: "https://lcly.github.io/VirtualTourApt/",
+            challenges: [
+                "Integrating Unity into HTML and add more stuffs to it.",
+                "Recreating a website with similar layout.",
+                "A lot of trial and errors for CSS to act as expected.",
+                "Creating transition effect from one scene to another scene in Unity",
+                "Make use of 360 image and a custom shader to create 360 view effect",
+            ],
+            lessons: [
+                "Require a backend since with only frontend javascript can't directly change the content of the Unity WebGL.",
+                "How to add chart/graph onto a website",
+                "Change content dynamically using jQuery",
+                "There's another way of doing this without Unity but requires more time to execute",
+                "For transitioning, add a filter in front of the camera and change the opacity upon click in Unity",
+            ],
+            tools: [
+                "HTML",
+                "CSS",
+                "JS",
+                "JQuery",
+                "Bootstrap",
+                "WebGL",
+                "Unity",
             ],
         },
         //hololens
