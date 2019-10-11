@@ -83,9 +83,7 @@ const initialState = {
             githubLink: "https://github.com/LCLY/VirtualTourApt",
             pageUrl: "https://lcly.github.io/VirtualTourApt/",
             challenges: [
-                "Integrating Unity into HTML and add more stuffs to it.",
                 "Recreating a website with similar layout.",
-                "A lot of trial and errors for CSS to act as expected.",
                 "Creating transition effect from one scene to another scene in Unity",
                 "Make use of 360 image and a custom shader to create 360 view effect",
             ],
