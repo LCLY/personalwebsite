@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/personalwebsite/static/css/main.d4ac9f27.chunk.css",
-    "main.js": "/personalwebsite/static/js/main.0e9ec3f4.chunk.js",
-    "main.js.map": "/personalwebsite/static/js/main.0e9ec3f4.chunk.js.map",
+    "main.js": "/personalwebsite/static/js/main.f36343c7.chunk.js",
+    "main.js.map": "/personalwebsite/static/js/main.f36343c7.chunk.js.map",
     "runtime~main.js": "/personalwebsite/static/js/runtime~main.29a1488c.js",
     "runtime~main.js.map": "/personalwebsite/static/js/runtime~main.29a1488c.js.map",
-    "static/js/2.e7ea7997.chunk.js": "/personalwebsite/static/js/2.e7ea7997.chunk.js",
-    "static/js/2.e7ea7997.chunk.js.map": "/personalwebsite/static/js/2.e7ea7997.chunk.js.map",
+    "static/js/2.68d33333.chunk.js": "/personalwebsite/static/js/2.68d33333.chunk.js",
+    "static/js/2.68d33333.chunk.js.map": "/personalwebsite/static/js/2.68d33333.chunk.js.map",
     "index.html": "/personalwebsite/index.html",
-    "precache-manifest.6e8ed78202acdc2f201e33180362f2aa.js": "/personalwebsite/precache-manifest.6e8ed78202acdc2f201e33180362f2aa.js",
+    "precache-manifest.c59f391140e3c27305ec42b78d778359.js": "/personalwebsite/precache-manifest.c59f391140e3c27305ec42b78d778359.js",
     "service-worker.js": "/personalwebsite/service-worker.js",
     "static/css/main.d4ac9f27.chunk.css.map": "/personalwebsite/static/css/main.d4ac9f27.chunk.css.map",
     "static/media/boileride.PNG": "/personalwebsite/static/media/boileride.d8c1d040.PNG",
@@ -17,6 +17,7 @@
     "static/media/escaperoom.png": "/personalwebsite/static/media/escaperoom.4fa91023.png",
     "static/media/fliegen.PNG": "/personalwebsite/static/media/fliegen.5d03a694.PNG",
     "static/media/hololens.jpg": "/personalwebsite/static/media/hololens.db88ed68.jpg",
-    "static/media/personalwebsite.PNG": "/personalwebsite/static/media/personalwebsite.041051ed.PNG"
+    "static/media/personalwebsite.PNG": "/personalwebsite/static/media/personalwebsite.041051ed.PNG",
+    "static/media/virtualtour.PNG": "/personalwebsite/static/media/virtualtour.f6ee8867.PNG"
   }
 }
